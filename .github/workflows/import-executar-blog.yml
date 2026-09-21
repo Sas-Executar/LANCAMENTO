@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz"\n      - "_governance/imports/EXECUTAR_BLOG_IMPORT.trigger"
+      - "_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz"
+      - "_governance/imports/EXECUTAR_BLOG_IMPORT.trigger"
   workflow_dispatch:
 
 permissions:
