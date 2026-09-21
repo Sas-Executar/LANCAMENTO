@@ -1,0 +1,58 @@
+schema_version: "1.0"
+manifest:
+  asset_manifest_id: "ASSET-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  release_id: "REL-OBS-EDITORIAL-001"
+  product_type: "skill_workflow"
+  visual_tokens_version: null
+
+assets:
+  store_card:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "store/STORE_CARD.yaml"
+  poster:
+    required: true
+    status: "VISUAL_TOKENS_PENDING"
+    output_ref: null
+  video_master:
+    required: true
+    status: "BRIEF_READY"
+    output_ref: "VIDEO_PRODUCTION.yaml"
+  video_variants:
+    required: true
+    status: "PENDING"
+    outputs: []
+  video_loop:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  gif_fallback:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  vertical_carousel:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "store/VERTICAL_CAROUSEL.yaml"
+  screenshots:
+    required: true
+    status: "PENDING"
+    outputs: []
+  onboarding_html:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "store/ONBOARDING.yaml"
+  download_package:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  store_listing:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "store_submission.yaml"
+
+blockers:
+  - "VISUAL_TOKENS não fornecidos."
+  - "Render e derivados ainda não produzidos."
+  - "Pacote final de download e URLs públicas ainda não definidos."
