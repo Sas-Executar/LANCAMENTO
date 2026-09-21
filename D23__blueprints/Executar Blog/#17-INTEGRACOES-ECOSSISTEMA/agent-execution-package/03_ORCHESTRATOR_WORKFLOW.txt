@@ -1,0 +1,59 @@
+ARTIFACT_ID: BLOG-DEV-ORCHESTRATOR
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+OBJECTIVE
+Provide the deterministic execution graph for building or completing the Blog.
+
+PHASE 0 — DISCOVERY
+Actions:
+1. Read governance and this package.
+2. Inventory repository/project structure.
+3. Identify framework, runtime, package manager, CMS, deployment target, test stack, analytics and authentication if present.
+4. Locate existing Blog implementation.
+5. Produce CURRENT_STATE inventory.
+Exit gate: CURRENT_STATE_RESOLVED.
+
+PHASE 1 — PRODUCT CONTRACT
+Execute BLOG-04.
+Then execute BLOG-03 using BLOG-04 as requirement baseline.
+Exit gates: PRD_APPROVED_FOR_BUILD + UX_CONTRACT_READY.
+
+PHASE 2 — APPLICATION CONTRACT
+Execute BLOG-18.
+Execute BLOG-17.
+Both may proceed in parallel after Phase 1 if separate agents are used.
+Exit gates: ROUTE_CONTRACT_READY + DESIGN_SYSTEM_READY.
+
+PHASE 3 — CONTENT PLATFORM
+Execute BLOG-08.
+Required inputs: PRD, route table, content surfaces, current CMS/infrastructure constraints.
+Exit gate: CMS_CONTRACT_READY.
+
+PHASE 4 — FEATURE IMPLEMENTATION
+Execute BLOG-09.
+Exit gate: MAP_FEATURE_READY.
+
+PHASE 5 — AGENT LAYER
+Execute BLOG-13 then BLOG-15.
+BLOG-15 may update BLOG-13 contracts if VERA requires a new skill, but duplication is forbidden.
+Exit gates: SKILLS_REGISTRY_READY + VERA_AGENT_READY.
+
+PHASE 6 — INTEGRATION
+Integrate routes, components, content loaders, map, analytics, skills and VERA surfaces.
+Run lint/typecheck/unit/integration/e2e/accessibility checks available in the repository.
+Exit gate: INTEGRATION_GREEN.
+
+PHASE 7 — RELEASE READINESS
+Verify SEO metadata, structured data if used, robots/sitemap behavior, error states, performance budget, content preview, publication workflow, analytics event names and accessibility.
+Do not deploy unless current user authorization includes deployment.
+Exit gate: RELEASE_CANDIDATE_READY.
+
+PHASE 8 — HANDOFF
+Generate standardized output envelope with artifacts read/changed, evidence, tests, unresolved items, rollback notes and next actions.
+If governed repository/Notion mutations occurred, include changelog action.
+Exit gate: HANDOFF_COMPLETE.
+
+BLOCKING RULE
+If a required upstream gate fails, downstream implementation must not be represented as complete.
+The agent may continue only on independent tasks and must label the final run PARTIAL.

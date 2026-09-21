@@ -1,0 +1,92 @@
+ARTIFACT_ID: BLOG-DEV-MASTER
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: SOURCE_EXTRACT_PLUS_EXECUTION_MAPPING
+SOURCE_OF_TRUTH: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+
+BLOG DEVELOPMENT WORKSTREAMS
+
+BLOG-03
+Macroblock: UX
+Item: UIX e Journey
+Canonical source scope: Descoberta -> leitura -> exploração -> CTA -> conversão.
+Execution owner: UX implementation agent.
+Primary supporting matrix: D11__experiencia-e-projeto.
+Required output: validated end-to-end user journey, screen/state inventory, interaction requirements, accessibility states and analytics events.
+Execution dependency: BLOG-04.
+Gate after completion: UX_CONTRACT_READY.
+
+BLOG-04
+Macroblock: Produto
+Item: Usabilidade Transversal PRD
+Canonical source scope: Requisitos comuns de UX, leitura, navegação e conversão.
+Execution owner: Product/PRD agent.
+Primary supporting matrix: D10__gestao-de-produto.
+Required output: implementation-grade PRD covering functional and non-functional requirements.
+Execution dependency: MASTER_INDEX and current product context.
+Gate after completion: PRD_APPROVED_FOR_BUILD.
+
+BLOG-08
+Macroblock: CMS
+Item: CMS
+Canonical source scope: Modelo de conteúdo, campos, taxonomia, workflow e publicação.
+Execution owner: CMS/data-contract agent.
+Supporting matrices: D12__engenharia and D18__contratos-e-esquemas.
+Required output: content model, schema, lifecycle, validation, preview and publishing contract.
+Execution dependencies: BLOG-04, BLOG-18.
+Gate: CMS_CONTRACT_READY.
+
+BLOG-09
+Macroblock: Produto
+Item: Mapa
+Canonical source scope: Mapa interativo, conteúdo, função e integração no journey.
+Execution owner: feature agent.
+Supporting matrices: D10, D11, D12.
+Required output: map feature contract, states, data interface, fallback and tests.
+Dependencies: BLOG-03, BLOG-04, BLOG-17, BLOG-18, BLOG-08.
+Gate: MAP_FEATURE_READY.
+
+BLOG-13
+Macroblock: Agentes
+Item: Skills
+Canonical source scope: Skills associadas ao Blog e à Oficina.
+Execution owner: agent-systems engineer.
+Supporting matrices: D12 and D18.
+Required output: skill registry, trigger rules, I/O schemas, permissions, failure behavior and observability.
+Dependencies: BLOG-04, BLOG-08, BLOG-15.
+Gate: SKILLS_REGISTRY_READY.
+
+BLOG-15
+Macroblock: Agente
+Item: VERA
+Canonical source scope: Papel, funções, entradas, saídas e limites.
+Execution owner: agent architect.
+Supporting matrices: D10, D12, D18.
+Required output: agent contract, tool policy, context policy, output contract, guardrails and evaluation suite.
+Dependencies: BLOG-04, BLOG-08, BLOG-13.
+Gate: VERA_AGENT_READY.
+
+BLOG-17
+Macroblock: Design
+Item: Design System
+Canonical source scope: Componentes, tokens, editorial UI e padrões.
+Execution owner: design-system/frontend agent.
+Supporting matrices: D11 and D12.
+Required output: token contract, component inventory, responsive behavior, content patterns and accessibility rules.
+Dependencies: BLOG-04 and BLOG-03.
+Gate: DESIGN_SYSTEM_READY.
+
+BLOG-18
+Macroblock: Navegação
+Item: Rotas
+Canonical source scope: Arquitetura de rotas e páginas.
+Execution owner: application architecture agent.
+Supporting matrices: D10, D11, D12.
+Required output: route table, page contracts, dynamic params, loading/error/empty states, metadata and redirects.
+Dependencies: BLOG-04 and BLOG-03.
+Gate: ROUTE_CONTRACT_READY.
+
+SOURCE STATUS
+MASTER_INDEX currently does not provide filled values for status/responsible/reference/deliverable/next-step fields for these BLOG records.
+This package does not overwrite that fact.
+Instead it supplies explicit PACKAGE_EXECUTION_STATUS values and executable contracts so an AI agent can proceed without empty operational fields.

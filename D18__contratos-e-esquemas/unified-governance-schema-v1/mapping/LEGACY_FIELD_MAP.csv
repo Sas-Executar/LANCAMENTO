@@ -1,0 +1,92 @@
+legacy_order,legacy_field,target_entity,target_field,transform,note
+1,schema_version,schema_registry,version,direct,Schema-level value
+2,row_id,knowledge_record,knowledge_id,rename,Preserve legacy ID as alias when nonconforming
+3,funcoes_fundamentais_gestao_projetos,knowledge_record,management_function,direct,
+4,funcoes_executivas_area_gestao_projetos,knowledge_record,executive_domain,direct,
+5,capacidades_humanas_operacionais_exigidas,knowledge_record,human_capacity,direct,
+6,funcao_deficit_tdah,knowledge_record,investigated_vulnerability,direct,Do not universalize
+7,fonte_clinica,source,source_id,resolve_reference,Deduplicate source
+8,fonte_cientifica,source,source_id,resolve_reference,Deduplicate source
+9,funcao_executiva_cognitiva,taxonomy_term,term_id,resolve_term,Controlled vocabulary
+10,evidencia,evidence,evidence_id,split_and_resolve,One evidence per source fragment
+11,impacto_operacional_funcao_afetada,knowledge_record,operational_function,direct,
+12,impacto_operacional_mecanismo,knowledge_record,operational_mechanism,direct,
+13,impacto_operacional_consequencia,knowledge_record,operational_consequence,direct,
+14,impacto_operacional_compensacao,knowledge_record,candidate_compensation,direct,Also create hypothesis when promoted
+15,conclusao_produto_design,knowledge_record,product_design_conclusion,direct,Inference unless own evidence exists
+16,classe_epistemica,object_registry,epistemic_class,map_enum,A/B/C/D/E to canonical enum
+17,estado_validacao,object_registry,validation_status,map_enum,
+18,observacoes,knowledge_record,limitations,direct,
+19,objetivo_id,problem,objective_id,direct,
+20,contexto_execucao,problem,execution_context,direct,
+21,dominio_gestao,problem,management_domain,direct,
+22,etapa_ciclo,problem,lifecycle_stage,direct,
+23,demanda_cognitiva,risk,cognitive_demand,direct,
+24,tipo_custo_cognitivo,risk,cognitive_cost_type,direct,
+25,gatilho_exposicao,risk,exposure_trigger,direct,
+26,evento_risco_cognitivo,risk,risk_event,direct,
+27,causa,mechanism,cause,direct,Does not authorize CAUSES relation
+28,mecanismo,mechanism,description,direct,
+29,efeito,mechanism,effect,direct,
+30,sintoma,mechanism,manifestation,direct,
+31,impacto_objetivo,risk,impact,direct,
+32,classificacao_risco,risk,classification,map_term,
+33,tipo_controle,intervention,control_type,map_term,
+34,classe_intervencao,intervention,intervention_class,map_term,
+35,metodo,intervention,method,direct,
+36,tatica,intervention,tactic,direct,
+37,tecnica,intervention,technique,direct,
+38,ferramenta,intervention,tool,direct,Create FEATURE only when implemented
+39,alvo_mecanismo,compensation_hypothesis,target_mechanism_id,resolve_reference,
+40,evidencia_intervencao,evidence_claim,evidence_id,resolve_reference,Link rather than duplicate
+41,metrica_validacao,compensation_hypothesis,success_metric_name,direct,
+42,resultado_observado,metric_event,value,parse_metric,Requires unit window and source
+43,pilar_editorial,taxonomy_term,term_id,resolve_term,Editorial vocabulary
+44,nivel_consciencia,taxonomy_term,term_id,resolve_term,Awareness vocabulary
+45,contexto_aplicacao,object_registry,metadata,json_key:application_context,
+46,cta_produto_servico,cta,cta_id,resolve_or_create,
+47,problem_id,problem,problem_id,direct,Canonical pivot
+48,problem_title,object_registry,title,direct,
+49,problem_statement,problem,statement,direct,
+50,audience,problem,audience,direct,
+51,consequence,problem,consequence,direct,
+52,principle_mechanism,problem,principle_mechanism_id,resolve_reference,
+53,priority,problem,priority,parse_integer,
+54,problem_status,object_registry,status,map_enum,
+55,solution_id,solution,solution_id,direct,
+56,solution_name,solution,name,direct,
+57,solution_family,solution,family,map_term,
+58,solution_input,solution,input_description,direct,
+59,solution_transformation,solution,transformation,direct,
+60,solution_output,solution,output_description,direct,
+61,before_state,solution,before_state,direct,
+62,after_state,solution,after_state,direct,
+63,offer_route,solution,offer_route,direct,
+64,asset_id,asset,asset_id,direct,
+65,asset_format,asset,format,map_term,
+66,asset_sequence,asset,sequence,parse_integer,
+67,funnel_stage,asset,funnel_stage,map_term,
+68,channel,distribution_event,channel,map_term,Move from asset to publication event
+69,asset_objective,asset,objective,direct,
+70,core_message,asset,core_message,direct,
+71,hook,asset,hook,direct,
+72,cta_id,asset,primary_cta_id,resolve_reference,
+73,production_owner,asset,production_owner,direct,
+74,asset_status,asset_version,status,map_enum,Status belongs to version
+75,version,asset_version,version,parse_integer,
+76,planned_date,distribution_event,planned_at,parse_timestamp,
+77,published_date,distribution_event,occurred_at,parse_timestamp,
+78,asset_url,distribution_event,url,direct,
+79,primary_kpi,object_registry,metadata,json_key:primary_kpi,Definition only; value is metric event
+80,views,metric_event,value,emit_event:views,Requires window source and unit=count
+81,saves,metric_event,value,emit_event:saves,Requires window source and unit=count
+82,shares,metric_event,value,emit_event:shares,Requires window source and unit=count
+83,clicks,metric_event,value,emit_event:clicks,Requires window source and unit=count
+84,tool_uses,metric_event,value,emit_event:tool_uses,Requires window source and unit=count
+85,leads,metric_event,value,emit_event:leads,Requires window source and unit=count
+86,conversions,metric_event,value,emit_event:conversions,Requires window source and unit=count
+87,returning_users,metric_event,value,emit_event:returning_users,Requires window source and unit=count
+88,problems_submitted,metric_event,value,emit_event:problems_submitted,Requires window source and unit=count
+89,learning_decision,learning,decision,map_enum,
+90,next_review,learning,next_review_at,parse_timestamp,
+

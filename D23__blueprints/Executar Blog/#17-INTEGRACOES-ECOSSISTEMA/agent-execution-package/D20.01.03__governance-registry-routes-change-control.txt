@@ -1,0 +1,27 @@
+ARTIFACT_ID: D20.01.03
+STATUS: CANONICAL_GOVERNANCE_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc7813589aee2b8a9aff160
+
+INVARIANTS
+MASTER_INDEX is the only repository-level navigation artifact.
+D01-D23 are the only canonical first-level domain directories.
+Every operational artifact belongs to exactly one primary matrix.
+Cross-domain use is via references, not duplicate sources of truth.
+CREATE/UPDATE/RENAME/MOVE must be registered in D22.
+DELETE is never implicit.
+
+REGISTRY REQUIRED FIELDS
+artifact_id; canonical_route; canonical_title; matrix; status; source_of_truth; owner; dependencies; last_updated; last_task_id.
+
+MUTATION PROTOCOL
+1. Resolve D01-D23 owner.
+2. Read existing source of truth.
+3. Apply smallest complete change.
+4. Validate name/hierarchy.
+5. Update dependencies/backlinks.
+6. Append change log.
+7. Record decision when structure/ownership/policy changes.
+8. Return standardized handoff.
+
+AUDIT
+Detect generic titles, duplicate sources, orphan artifacts, wrong ownership, undocumented mutations, stale routes, broken dependencies, missing owner/status and superseded references.

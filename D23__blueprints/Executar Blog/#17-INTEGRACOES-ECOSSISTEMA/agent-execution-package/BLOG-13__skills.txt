@@ -1,0 +1,89 @@
+ARTIFACT_ID: BLOG-13
+TITLE: Skills do Blog e Oficina
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D12__engenharia
+CANONICAL_MASTER_SCOPE: Skills associadas ao Blog e à Oficina
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade Skills do Blog e Oficina artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: Skills do Blog e Oficina owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- BLOG-08 CMS
+- current agent/tool architecture
+- BLOG-15 VERA contract where available
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-13.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Skill registry
+- Skill trigger and responsibility boundaries
+- Input/output schema for every skill
+- Permission and side-effect classification
+- Idempotency/retry behavior
+- Observability/audit fields
+- Test/evaluation cases
+- Skill-to-VERA mapping
+
+EXECUTION PROCEDURE
+1. Inventory existing skills/tools/connectors before defining new skills.
+2. Group capabilities by single responsibility rather than by UI screen.
+3. For each skill define name, purpose, trigger, required context, input schema, output schema, side effects and permission level.
+4. Classify each skill as read-only, draft-producing, write/mutation, publish/deploy, or external-action.
+5. Require explicit authorization for irreversible/external actions according to current environment policy.
+6. Define deterministic errors, retries and idempotency keys for mutation skills.
+7. Define audit payload: task id, actor, source, action, target, result and evidence.
+8. Map which skills VERA may invoke automatically versus only after user confirmation.
+9. Create tests/evals for valid input, invalid input, tool failure, duplicate retry and permission denial.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] No two skills own the same canonical side effect.
+- [PASS] Every mutation skill has permission, retry and idempotency behavior.
+- [PASS] Every skill has typed/structured input and output.
+- [PASS] Skill failures are machine-actionable rather than free-text only.
+- [PASS] VERA access is explicit per skill.
+- [PASS] No undocumented publishing/deployment capability is enabled.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If two existing skills overlap, select a canonical candidate and do not create a third.
+- If a required connector/tool is unavailable, define the contract and mark runtime binding BLOCKED.
+- If a skill could perform destructive action, default to no execution until explicit authorization.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+- D18: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514
+- D20 governance: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b

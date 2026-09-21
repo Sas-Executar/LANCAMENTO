@@ -1,0 +1,86 @@
+ARTIFACT_ID: BLOG-04
+TITLE: Usabilidade Transversal PRD
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D10__gestao-de-produto
+CANONICAL_MASTER_SCOPE: Requisitos comuns de UX, leitura, navegação e conversão
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade Usabilidade Transversal PRD artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: Usabilidade Transversal PRD owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- MASTER_INDEX
+- current Blog implementation
+- BLOG business/content requirements if available
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-04.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Product scope and non-goals
+- Personas/jobs-to-be-done expressed only from available evidence; do not invent research
+- Functional requirements for reading, navigation, discovery, CTA and conversion
+- Non-functional requirements: accessibility, performance, responsive behavior, resilience, SEO and privacy
+- State matrix: default/loading/empty/error/offline where relevant
+- Acceptance criteria mapped to requirements
+- Analytics/event requirements for critical journey transitions
+- Dependency and risk register
+
+EXECUTION PROCEDURE
+1. Inventory existing Blog surfaces and identify the current implemented behavior.
+2. Translate MASTER_INDEX scope into testable product requirements.
+3. Define in-scope and out-of-scope behavior to prevent feature creep.
+4. Specify read/discovery/navigation/conversion flows and each critical state.
+5. Specify accessibility baseline: semantic structure, keyboard access, focus order, contrast dependency, reduced motion where applicable.
+6. Specify performance/SEO expectations without inventing numeric budgets if none are provided; use repository or platform defaults and mark exact discovered values.
+7. Map each requirement to at least one acceptance criterion.
+8. List dependencies on CMS, routes, design system, map and agent layer.
+9. Review for contradictions and hand off to BLOG-03.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] Every functional requirement is testable.
+- [PASS] Every core flow has loading/error/empty behavior where applicable.
+- [PASS] No persona/research claim is fabricated.
+- [PASS] CTA/conversion behavior has deterministic destination/event behavior or is explicitly blocked by missing business input.
+- [PASS] Requirements are sufficient for BLOG-03 and BLOG-18 to execute.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If business goals conflict, mark PARTIAL and isolate the conflicting requirements.
+- If repository implementation already defines behavior, preserve it unless current user instruction explicitly changes it.
+- If critical product input is absent, implement only non-controversial structural requirements and surface the missing decision.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D10: https://app.notion.com/p/3e207a814fc781e5bc6cdd72f00898da
+- D20 governance: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b

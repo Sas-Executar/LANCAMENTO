@@ -1,0 +1,25 @@
+{
+  "package": "BLOG_DEV_AGENT_EXECUTION_FULL",
+  "version": "2.0",
+  "entrypoint": "00_AGENT_ENTRYPOINT.txt",
+  "execution_order": [
+    "BLOG-04__usabilidade-transversal-prd.txt",
+    "BLOG-03__uix-journey.txt",
+    "BLOG-18__rotas.txt",
+    "BLOG-17__design-system.txt",
+    "BLOG-08__cms.txt",
+    "BLOG-09__mapa-interativo.txt",
+    "BLOG-13__skills.txt",
+    "BLOG-15__vera.txt",
+    "06_INTEGRATION_RUNBOOK.txt",
+    "07_RELEASE_READINESS.txt",
+    "08_AGENT_HANDOFF_TEMPLATE.txt"
+  ],
+  "rules": {
+    "search_before_create": true,
+    "prefer_update": true,
+    "delete_requires_explicit_authorization": true,
+    "deploy_requires_explicit_authorization": true,
+    "no_empty_handoff_fields": true
+  }
+}

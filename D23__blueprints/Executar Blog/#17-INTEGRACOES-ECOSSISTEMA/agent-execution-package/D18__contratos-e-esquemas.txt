@@ -1,0 +1,12 @@
+ARTIFACT_ID: D18
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514
+
+SOURCE CONTENT
+Scope: Contracts, schemas, interfaces and formal structures.
+Routing rule: Content in this domain belongs to this matrix or direct subpages. MASTER_INDEX remains at root and references the matrix.
+State: Canonical matrix structure.
+
+BLOG RELATION
+D18 supports BLOG-08 CMS schemas, BLOG-13 skill I/O contracts and BLOG-15 VERA structured interfaces.
+Formal schemas should have one canonical source and versioning/migration notes when changed.

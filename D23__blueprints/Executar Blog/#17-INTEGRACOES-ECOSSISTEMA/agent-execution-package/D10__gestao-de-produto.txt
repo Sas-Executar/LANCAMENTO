@@ -1,0 +1,12 @@
+ARTIFACT_ID: D10
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc781e5bc6cdd72f00898da
+
+SOURCE CONTENT
+Scope: Product management, requirements, roadmap and product lifecycle.
+Routing rule: Content in this domain belongs to this matrix or direct subpages. MASTER_INDEX remains at root and references the matrix.
+State: Canonical matrix structure.
+
+BLOG RELATION
+BLOG-04 PRD and product decisions use D10 as the product-domain authority.
+The executable package may carry a derived copy for agent operation, but permanent product requirements should have one canonical governed source.

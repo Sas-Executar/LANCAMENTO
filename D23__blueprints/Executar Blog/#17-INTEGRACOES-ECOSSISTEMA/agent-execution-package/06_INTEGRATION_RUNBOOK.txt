@@ -1,0 +1,34 @@
+ARTIFACT_ID: BLOG-DEV-INTEGRATION-RUNBOOK
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+PRECONDITION
+BLOG-04, BLOG-03, BLOG-18, BLOG-17 and BLOG-08 gates pass.
+Feature/agent gates are required only when those features are in the requested scope.
+
+RUNBOOK
+1. Pull/inspect the exact current repository state.
+2. Resolve changed modules and dependency boundaries.
+3. Ensure route code consumes the canonical content contract.
+4. Ensure editorial components consume semantic design tokens.
+5. Ensure article/category/index pages render all required states.
+6. Ensure map and VERA integrations degrade safely when unavailable.
+7. Ensure analytics events do not contain unintended sensitive content.
+8. Run formatter/lint/typecheck.
+9. Run schema/content validation.
+10. Run unit/integration tests.
+11. Run relevant e2e journey tests.
+12. Run accessibility checks available in the project.
+13. Run production build.
+14. Inspect generated routes/output for broken links/assets if tooling allows.
+15. Produce change summary and rollback note.
+
+DO NOT
+- deploy automatically;
+- publish content automatically;
+- delete migrations/data;
+- rewrite unrelated code;
+- replace existing architecture solely to match this package.
+
+PASS
+INTEGRATION_GREEN only when the build and available critical checks pass, or when a non-applicable check is documented with reason.

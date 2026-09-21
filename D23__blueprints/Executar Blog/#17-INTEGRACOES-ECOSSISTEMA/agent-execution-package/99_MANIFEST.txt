@@ -1,0 +1,41 @@
+ARTIFACT_ID: BLOG-DEV-MANIFEST
+STATUS: COMPLETE
+PACKAGE: BLOG_DEV_AGENT_EXECUTION_FULL
+VERSION: 2.0
+DATE: 2026-09-21
+
+VALIDATION
+Files listed: 30
+Detected empty-placeholder/TODO issues: 0
+- none
+
+FILES
+00_AGENT_ENTRYPOINT.txt | 2940 bytes | sha256=57b52e1d26f7a517b2d48838f3c2a7d3632d52fc77668b55d28c6d46def16fc3
+01_MASTER_INDEX_BLOG_DEV.txt | 3710 bytes | sha256=02addbd6e54e1ed224dbdc3e91dfbef7c10c887cb2807b36901dfb68c1eca82a
+02_REPOSITORY_AND_ROUTE_MODEL.txt | 2657 bytes | sha256=90db603b9f9c4db2bb0bf5e2cb418352ace1c6755836f3e22ea820fe820b6a26
+03_ORCHESTRATOR_WORKFLOW.txt | 2382 bytes | sha256=e6a88efc1a8f50c0b888b141b56d3e5d0a3ee895f97e4725382e2dda146f3cbb
+04_RUNTIME_IO_CONTRACT.txt | 2058 bytes | sha256=ff106804deec6cde8e8a9afa511b83d74f5bdf224b1f842305ee7bb4bd75c8a8
+05_VALIDATION_AND_GATES.txt | 2432 bytes | sha256=a58ac87d65a3b6df18d9aef2dc7170a542c0e02dd54d5c76adcf0d709c2539bf
+06_INTEGRATION_RUNBOOK.txt | 1380 bytes | sha256=1dc3e663ea2271f1ceae2c7ee60cd393290359b198ceac4f741df8591827a555
+07_RELEASE_READINESS.txt | 1096 bytes | sha256=e2055d498d4915fbef759ccd5a44ed14029b46199d56714c0f2711894ad15046
+08_AGENT_HANDOFF_TEMPLATE.txt | 1175 bytes | sha256=9b2f74859782ede00b0ae497a9cb0ca39ad101c3cadd81188213305bbbf9b1d9
+09_MACHINE_INDEX.txt | 713 bytes | sha256=1419c1b15b1b0ace0992b6fb26dc20f6e692b94bcf0e70e034e0358bd5ebcb3b
+98_SOURCE_MAP.txt | 1829 bytes | sha256=0e1fb72bdfd348c8310aef1975235c2b0794899d23c2d674dbde1dedb26c90cc
+BLOG-03__uix-journey.txt | 4156 bytes | sha256=1bcf72f284c84a1ccaa8c4b6ce46b1b59989281f22b68ea3a55d4c187d1fe9f6
+BLOG-04__usabilidade-transversal-prd.txt | 4539 bytes | sha256=30c4b9d68417b7a8b1c163e046c667f99a70ffee98976d16f8568e2c36b4c392
+BLOG-08__cms.txt | 4391 bytes | sha256=6ed7a8e051d357a4f2b96e40aea70dc3bd5e92a1d13b876a4dc8ca3b05573b57
+BLOG-09__mapa-interativo.txt | 4383 bytes | sha256=2e5007302c8bd99d466aeb71fea2e42f8dd0db363300f63d14aac2bf7ee0b818
+BLOG-13__skills.txt | 4329 bytes | sha256=700ee3e949e2dd8e64ef8f13931a20e5307b74108cae10f4ef7db9d293ba8501
+BLOG-15__vera.txt | 4664 bytes | sha256=8480eee3d945e24363c59522dd4fc29f86e008c31b5a2804db7aa622c9021e87
+BLOG-17__design-system.txt | 4384 bytes | sha256=b8f11d401dc7fe56641da0acce8368c855db98cbef131d623fab01bfb8db8140
+BLOG-18__rotas.txt | 4077 bytes | sha256=6734020ad8b483360930729d70d045753c6f1782d781e996e9270e9f48259f1c
+D10__gestao-de-produto.txt | 615 bytes | sha256=cac13f06aece75f1ab87b9128eb0ef426d3c3616d05783c1968f7d4d96587684
+D11__experiencia-e-projeto.txt | 415 bytes | sha256=84eb8c8ecc43b0e6cea4f46629bc977fe35eb7dadbb262bac217563b4549caf4
+D12__engenharia.txt | 751 bytes | sha256=8f27e03bbe3ae8a46e032e3fb97e2bd5d163cb3d64d1fdabc2ee17a9733b92a3
+D18__contratos-e-esquemas.txt | 577 bytes | sha256=af9f9942815f313d0023631850ca54809291138388f99c341cc80712a5c2fb14
+D19__assets-e-cta.txt | 599 bytes | sha256=4a4cbaaeca97e23af8ba411a9b43bb2731662059d9a306b0baacf13af0ad325c
+D20.01.01__agent-runner-instructions.txt | 1294 bytes | sha256=e4e3d0a5e3417533885e9868e163696fd852995287f251336d08db2e180e0e6e
+D20.01.02__io-protocol-and-handoff.txt | 915 bytes | sha256=2f34e4f613ae24b35bb93bce47d185c2c8625f47355309419b194b78bc2f5dd5
+D20.01.03__governance-registry-routes-change-control.txt | 1116 bytes | sha256=713858111cee1432d2fa86ab1a8d609f5e6b663a9c8bf4030569d59048df5bc3
+D20.01__agent-governance.txt | 1116 bytes | sha256=b7f7277ac0d016077ae3ce72484174ea318db5156e70faf462df0316459e3d93
+D23__blueprints.txt | 742 bytes | sha256=73b969aee5df448cce7e7e8c619ea45f8e03a70547d754e6da7b236094719c15

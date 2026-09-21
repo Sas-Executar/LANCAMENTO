@@ -1,0 +1,86 @@
+ARTIFACT_ID: BLOG-17
+TITLE: Design System do Blog
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D11__experiencia-e-projeto
+CANONICAL_MASTER_SCOPE: Componentes, tokens, editorial UI e padrões
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade Design System do Blog artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: Design System do Blog owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- BLOG-03 UX journey
+- existing global design system
+- user-provided visual tokens/references when available
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-17.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Token mapping to existing design system
+- Editorial component inventory
+- Component variants and state contracts
+- Typography/content rhythm rules
+- Responsive composition rules
+- Accessibility requirements
+- Implementation mapping to existing component library
+
+EXECUTION PROCEDURE
+1. Inventory existing tokens/components before defining anything new.
+2. Separate global primitives from Blog-specific editorial composition.
+3. Define required components: article shell, heading hierarchy, metadata, author block, media, figure/caption, callout, quote, table, code/pre, related content, CTA, cards, navigation and any actually required feature controls.
+4. For each component define props/content slots, states, responsive behavior and accessibility semantics.
+5. Map colors/spacing/type to existing tokens; never invent final brand tokens if the user has stated they will be supplied later.
+6. Define graceful handling for long titles, missing images, long words, rich embeds and narrow screens.
+7. Implement with existing library conventions.
+8. Run visual/DOM/accessibility verification available in the repository.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] No unnecessary duplicate primitive is introduced.
+- [PASS] All required editorial content types render without overflow.
+- [PASS] Heading semantics remain ordered and meaningful.
+- [PASS] Interactive components expose focus/disabled/loading/error states where relevant.
+- [PASS] Responsive layouts remain usable at narrow widths.
+- [PASS] Unknown final visual tokens are referenced semantically rather than fabricated.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If final visual tokens are not supplied, use existing repository tokens and semantic aliases; do not lock fabricated brand values.
+- If a supplied reference cannot be reproduced accessibly, implement the closest accessible behavior and document the deviation.
+- If the repository already has a design system, extend it instead of creating a second system.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D11: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72
+- D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3

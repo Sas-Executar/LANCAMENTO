@@ -1,0 +1,21 @@
+ARTIFACT_ID: D20.01.02
+STATUS: CANONICAL_GOVERNANCE_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc7819c994bd0e684e57927
+
+INPUT REQUIRED
+agent_id; task_id; requested_by; target_route; operation; objective; included/excluded scope; sources; dependencies; constraints; expected_output.
+
+OUTPUT REQUIRED
+task_id; status; canonical_route; artifacts_read; artifacts_created; artifacts_updated; artifacts_renamed; artifacts_moved; decisions; evidence; unresolved; next_actions; changelog_entry.
+
+HANDOFF
+State what was requested, what changed, exact canonical route, source of truth, dependencies affected, unresolved conflicts and next action.
+
+FAILURE
+Do not guess canonical location.
+Do not silently duplicate.
+Return blocked/partial when route/source conflict cannot be safely resolved.
+Preserve existing content.
+
+IDEMPOTENCY
+Repeated execution must not create duplicate pages, sections or renamed variants.

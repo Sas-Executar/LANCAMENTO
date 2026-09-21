@@ -1,0 +1,84 @@
+ARTIFACT_ID: BLOG-03
+TITLE: UIX e Journey
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D11__experiencia-e-projeto
+CANONICAL_MASTER_SCOPE: Descoberta -> leitura -> exploração -> CTA -> conversão
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade UIX e Journey artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: UIX e Journey owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- current route/page inventory
+- existing design-system/components
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-03.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Journey map from entry to conversion
+- Screen/page/state inventory
+- Interaction model and navigation transitions
+- Responsive behavior requirements
+- Accessibility interaction contract
+- Analytics event map for journey-critical actions
+- UX edge-case matrix
+
+EXECUTION PROCEDURE
+1. Identify entry points: homepage, article, category/search/external referral and other routes actually present.
+2. Map the primary journey from discovery to reading, exploration, CTA and conversion.
+3. For each step, define user goal, system response, next actions, failure states and analytics event.
+4. Define page-level information hierarchy without inventing visual tokens.
+5. Define keyboard/focus behavior for menus, dialogs, filters, map controls and CTAs where present.
+6. Define mobile/tablet/desktop adaptations at behavioral level; exact breakpoints come from the design system or existing code.
+7. Cross-check every UX state against BLOG-04 requirements.
+8. Produce the state/transition contract required by BLOG-18 and BLOG-17.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] Primary journey has no dead end.
+- [PASS] Back/forward/deep-link behavior is considered for routable states.
+- [PASS] Core interactive elements are keyboard-operable in the specification.
+- [PASS] Responsive behavior does not rely on hover-only interaction.
+- [PASS] Each conversion step has a defined success and failure outcome.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If a route or CTA destination is unknown, mark it as an explicit unresolved product dependency rather than inventing a destination.
+- If supplied visual references conflict with accessibility, preserve intent while documenting the required accessible adaptation.
+- If an interaction depends on unavailable technology, define a non-interactive fallback.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D11: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72
+- D20 governance: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b

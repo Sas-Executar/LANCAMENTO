@@ -1,0 +1,61 @@
+ARTIFACT_ID: BLOG-DEV-RUNTIME-IO
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC_ALIGNED_WITH_D20
+
+RUNTIME INPUT CONTRACT
+The agent derives all fields from the current request and inspected repository; it must not leave them blank.
+
+agent_id:
+Generate "agent-{role}-{UTC_YYYYMMDDTHHMMSSZ}".
+
+task_id:
+Generate "blog-dev-{UTC_YYYYMMDDTHHMMSSZ}-{short-action-slug}".
+
+requested_by:
+Set to "user" unless a connected system provides a stronger authenticated identity.
+
+target_route:
+Set to the exact resolved repository or Notion route after discovery.
+
+operation:
+One of read, create, update, rename, move.
+DELETE is outside this contract unless separately authorized.
+
+objective:
+Restate the user's requested outcome in one concrete sentence.
+
+scope.include:
+Exact artifacts/modules/routes to modify.
+
+scope.exclude:
+Production deploy, destructive data migration, unrelated refactors and governance mutations unless explicitly authorized.
+
+sources:
+This package, MASTER_INDEX, relevant current repository files, and any explicit user-provided reference.
+
+dependencies:
+Exact upstream artifacts found during discovery.
+
+constraints:
+Repository conventions, governance, backwards compatibility, security, accessibility, and current user constraints.
+
+expected_output:
+Concrete file/code/spec/test results.
+
+RUNTIME OUTPUT CONTRACT
+status: completed | partial | blocked
+canonical_route: exact target route used
+artifacts_read: exact paths
+artifacts_created: exact paths
+artifacts_updated: exact paths
+artifacts_renamed: exact paths
+artifacts_moved: exact paths
+decisions: decision + reason + impacted artifacts
+evidence: tests/checks and their results
+unresolved: only real unresolved blockers
+next_actions: executable next actions
+changelog_entry: ready-to-record summary if a governed mutation occurred
+
+NO-EMPTY-FIELD RULE
+If a field has no applicable value, write the literal value "not_applicable" plus a short reason.
+Never emit an empty string, empty unexplained list or unknown value when the value can be resolved by inspection.

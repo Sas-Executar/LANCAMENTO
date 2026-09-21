@@ -1,0 +1,66 @@
+ARTIFACT_ID: BLOG-DEV-ENTRYPOINT
+STATUS: READY_FOR_AGENT_EXECUTION
+PACKAGE_VERSION: 2.0
+DATE: 2026-09-21
+PRIMARY_BLUEPRINT_MATRIX: D23__blueprints
+ENGINEERING_MATRIX: D12__engenharia
+PRODUCT_MATRIX: D10__gestao-de-produto
+UX_MATRIX: D11__experiencia-e-projeto
+SCHEMA_MATRIX: D18__contratos-e-esquemas
+ASSET_MATRIX: D19__assets-e-cta
+
+PURPOSE
+This is the mandatory entrypoint for any AI agent executing development work for EXECUTAR Blog.
+The package is self-contained operational guidance derived from the current Notion source material.
+When a dedicated BLOG-XX source page does not exist, this package marks the specification as DERIVED_OPERATIONAL_SPEC instead of pretending it is an original Notion artifact.
+
+SOURCE PRIORITY
+1. Explicit current user instruction.
+2. MASTER_INDEX — Ecossistema.
+3. D20 agent governance and its runner / I-O / change-control protocols.
+4. D23 blueprint routing rule.
+5. D10/D11/D12/D18/D19 domain routing rules.
+6. This package's derived operational specifications.
+
+MANDATORY READ ORDER
+1. 00_AGENT_ENTRYPOINT.txt
+2. 01_MASTER_INDEX_BLOG_DEV.txt
+3. 02_REPOSITORY_AND_ROUTE_MODEL.txt
+4. 03_ORCHESTRATOR_WORKFLOW.txt
+5. 04_RUNTIME_IO_CONTRACT.txt
+6. 05_VALIDATION_AND_GATES.txt
+7. D20.01__agent-governance.txt
+8. D20.01.01__agent-runner-instructions.txt
+9. D20.01.02__io-protocol-and-handoff.txt
+10. D20.01.03__governance-registry-routes-change-control.txt
+11. Workflow files BLOG-04, BLOG-03, BLOG-18, BLOG-17, BLOG-08, BLOG-09, BLOG-13, BLOG-15.
+12. 98_SOURCE_MAP.txt
+13. 99_MANIFEST.txt
+
+EXECUTION MODE
+Default mode: PLAN_VALIDATE_EXECUTE.
+The agent must first inventory the current target repository/project, detect existing implementations, and update rather than duplicate.
+The agent may create files or code only inside the explicit task scope.
+The agent must never delete, rename, move, publish, deploy, alter production data, or modify Notion governance records unless the current user request authorizes that mutation.
+
+RUNTIME IDENTIFIERS
+agent_id: generate as "agent-" + capability + UTC timestamp.
+task_id: generate as "blog-dev-" + UTC date/time + short action slug.
+run_id: generate as task_id + "-" + 6-character deterministic suffix from target route and task objective.
+
+GLOBAL DEFINITION OF DONE
+A run is complete only when:
+- requested deliverables exist;
+- the relevant workflow acceptance criteria pass;
+- no duplicate source of truth was created;
+- routes and dependencies are documented;
+- tests appropriate to the change pass;
+- unresolved items are explicit;
+- handoff output is produced;
+- mutation logging instructions are supplied when a governed repository was modified.
+
+AUTHORITATIVE NOTION SOURCES
+MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+D23: https://app.notion.com/p/3e207a814fc7815a921cf482e4143281
+D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+D20 GOVERNANCE: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b

@@ -1,0 +1,12 @@
+ARTIFACT_ID: D19
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc781579fc6dc37ba09c1be
+
+SOURCE CONTENT
+Scope: Assets, materials, resources and CTAs.
+Routing rule: Content in this domain belongs to this matrix or direct subpages. MASTER_INDEX remains at root and references the matrix.
+State: Canonical matrix structure.
+
+BLOG RELATION
+CTA destinations, downloadable assets and reusable conversion resources referenced by Blog features should resolve to D19-owned canonical assets when applicable.
+BLOG implementation must reference assets rather than duplicate them.

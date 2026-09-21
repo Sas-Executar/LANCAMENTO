@@ -1,0 +1,13 @@
+ARTIFACT_ID: D12
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+
+SOURCE CONTENT
+Scope: Engineering, technical architecture, development and infrastructure.
+Routing rule: Content in this domain belongs to this matrix or direct subpages. MASTER_INDEX remains at root and references the matrix.
+State: Canonical matrix structure.
+
+BLOG RELATION
+D12 is the technical implementation authority for route implementation, CMS integration, interactive map engineering, agent runtime, skills runtime, tests, build and infrastructure.
+D23 may own the reusable Blog blueprint while D12 owns concrete engineering artifacts.
+Cross-domain use must reference, not duplicate, the canonical implementation source.
