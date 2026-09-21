@@ -1,7 +1,7 @@
 schema_version: "1.0"
 onboarding_id: "ONBOARDING-OBS-EDITORIAL-001"
 solution_id: "SOL-OBS-EDITORIAL-001"
-status: "STRUCTURE_READY_VISUAL_TOKENS_PENDING"
+status: "BRIEF_READY"
 entry_action: "Start"
 
 steps:
@@ -22,4 +22,5 @@ outputs:
   assets_directory: null
   downloadable_package: null
 
-visual_tokens_ref: null
+visual_tokens_ref: "../../../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/tokens/design-tokens.json"
+design_system_binding_ref: "../../../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
