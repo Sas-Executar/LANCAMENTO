@@ -3,6 +3,17 @@ schema_id: "OFICINA_WIREFRAME_TOKENS"
 status: "canonical"
 scope: "estrutura, hierarquia, comportamento e responsividade; não identidade visual"
 source_reference: "screenshots fornecidos pelo mantenedor em 2026-09-21"
+source_images:
+  - "IMG_3191(2).jpeg"
+  - "IMG_3194.jpeg"
+  - "IMG_3192(2).jpeg"
+  - "IMG_3193.jpeg"
+  - "IMG_3195.png"
+  - "IMG_3196.png"
+  - "IMG_3198.png"
+  - "IMG_3199.jpeg"
+  - "IMG_3203.png"
+  - "IMG_3201.png"
 
 visual_tokens:
   status: "EXTERNAL_PENDING"
