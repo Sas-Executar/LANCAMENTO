@@ -1,0 +1,50 @@
+ARTIFACT_ID: BLOG-DEV-SOURCES
+STATUS: COMPLETE
+
+MASTER_INDEX — Ecossistema
+URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+Authority: Canonical Blog workstream scope for BLOG-03/04/08/09/13/15/17/18.
+
+D23__blueprints
+URL: https://app.notion.com/p/3e207a814fc7815a921cf482e4143281
+Authority: Blueprint domain scope and routing.
+
+D10__gestao-de-produto
+URL: https://app.notion.com/p/3e207a814fc781e5bc6cdd72f00898da
+Authority: Product requirements domain.
+
+D11__experiencia-e-projeto
+URL: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72
+Authority: Experience/design domain identification.
+
+D12__engenharia
+URL: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+Authority: Engineering/development/infrastructure domain.
+
+D18__contratos-e-esquemas
+URL: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514
+Authority: Contracts/schemas/interfaces.
+
+D19__assets-e-cta
+URL: https://app.notion.com/p/3e207a814fc781579fc6dc37ba09c1be
+Authority: Assets/resources/CTAs.
+
+D20.01__agent-governance
+URL: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b
+Authority: Agent governance.
+
+D20.01.01__agent-runner-instructions
+URL: https://app.notion.com/p/3e207a814fc78110ba72e12ac2bc9a8c
+Authority: Agent execution rules.
+
+D20.01.02__io-protocol-and-handoff
+URL: https://app.notion.com/p/3e207a814fc7819c994bd0e684e57927
+Authority: Runtime input/output and handoff.
+
+D20.01.03__governance-registry-routes-change-control
+URL: https://app.notion.com/p/3e207a814fc7813589aee2b8a9aff160
+Authority: Route/change-control.
+
+DERIVATION DISCLOSURE
+The detailed BLOG-XX procedures, acceptance criteria and gates in this package are executable operational specifications derived from the sparse MASTER_INDEX scopes plus current governance rules.
+They are not represented as verbatim pre-existing Notion pages.

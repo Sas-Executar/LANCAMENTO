@@ -1,0 +1,48 @@
+ARTIFACT_ID: BLOG-DEV-VALIDATION
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+GLOBAL QUALITY GATES
+
+GATE CURRENT_STATE_RESOLVED
+Pass when framework/runtime/package manager and existing Blog implementation paths are known or explicitly absent.
+
+GATE PRD_APPROVED_FOR_BUILD
+Pass when every user-facing feature has functional requirements, acceptance criteria, error/empty/loading behavior and measurable outcomes.
+
+GATE UX_CONTRACT_READY
+Pass when the user journey, page states, navigation transitions, keyboard behavior and accessibility states are specified.
+
+GATE ROUTE_CONTRACT_READY
+Pass when every Blog route has path, purpose, data dependencies, metadata, loading/error/not-found behavior and canonical/redirect policy.
+
+GATE DESIGN_SYSTEM_READY
+Pass when required tokens/components have defined variants, states, responsive behavior and accessibility contract without duplicating existing primitives.
+
+GATE CMS_CONTRACT_READY
+Pass when content types, fields, required/optional rules, relationships, taxonomy, validation, lifecycle, preview and publish behavior are deterministic.
+
+GATE MAP_FEATURE_READY
+Pass when the interactive map has data model, interaction rules, fallback, responsive behavior, accessibility alternative, performance strategy and tests.
+
+GATE SKILLS_REGISTRY_READY
+Pass when each skill has trigger, permission, input schema, output schema, side effects, failure behavior, retry/idempotency rules and owner.
+
+GATE VERA_AGENT_READY
+Pass when VERA has role, allowed tools, prohibited actions, context boundaries, output schemas, escalation/failure behavior and evaluation cases.
+
+GATE INTEGRATION_GREEN
+Pass when repository-native static checks and tests for changed surfaces pass.
+If a repository lacks a test class, document the absence and run the strongest available verification.
+
+GATE RELEASE_CANDIDATE_READY
+Pass when no critical unresolved issue remains, page metadata and content publishing are validated, accessibility has no known blocking defect, and deployment remains a separately authorized action.
+
+SEVERITY
+BLOCKER: data loss, broken route, unsafe tool action, missing required schema, build failure.
+HIGH: core journey failure, inaccessible core action, publication failure.
+MEDIUM: non-core functional defect, analytics gap, degraded fallback.
+LOW: cosmetic/non-blocking issue.
+
+DONE RULE
+No workflow may report COMPLETED with an open BLOCKER or HIGH defect.

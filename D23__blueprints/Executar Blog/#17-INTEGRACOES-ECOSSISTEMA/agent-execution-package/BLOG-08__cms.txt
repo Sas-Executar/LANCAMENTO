@@ -1,0 +1,90 @@
+ARTIFACT_ID: BLOG-08
+TITLE: CMS e Modelo de Conteúdo
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D18__contratos-e-esquemas
+CANONICAL_MASTER_SCOPE: Modelo de conteúdo, campos, taxonomia, workflow e publicação
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade CMS e Modelo de Conteúdo artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: CMS e Modelo de Conteúdo owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- BLOG-18 routes
+- current CMS or content storage
+- existing article/content schema
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-08.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Content type registry
+- Field-level schema with types, requiredness and validation
+- Taxonomy/category/tag rules
+- Relationships and references
+- Draft/review/approved/published lifecycle
+- Preview/publish contract
+- Slug/SEO metadata contract
+- Migration/compatibility notes
+- Schema tests/validation
+
+EXECUTION PROCEDURE
+1. Detect the actual CMS/content source: headless CMS, database, filesystem, MD/MDX or custom service.
+2. Inventory current content model and live fields.
+3. Define the minimum canonical Article schema and only add fields supported by product requirements.
+4. Define taxonomy entities and whether categories/tags are controlled vocabulary or free-form.
+5. Define author/media/related-content relationships.
+6. Define lifecycle states and allowed transitions.
+7. Define slug generation, uniqueness, canonical URL, SEO title/description and social metadata behavior.
+8. Define preview/draft visibility and authentication requirements if current stack supports them.
+9. Implement schema changes compatibly; add migrations only when required and authorized.
+10. Validate existing content against the new contract and report incompatibilities.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] Schema has no ambiguous field type or ownership.
+- [PASS] Required fields are justified by rendering or publishing requirements.
+- [PASS] Published content can resolve a canonical route.
+- [PASS] Invalid taxonomy/slug states are rejected deterministically.
+- [PASS] Existing content is either compatible or incompatibilities are enumerated.
+- [PASS] Preview/publish behavior is defined without exposing drafts publicly.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If no CMS exists, do not select a vendor without an explicit task; define a provider-neutral schema and adapter boundary.
+- If schema change risks existing content, mark migration as separate controlled work.
+- Never delete content or fields with stored data without explicit authorization and migration evidence.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D18: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514
+- D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3

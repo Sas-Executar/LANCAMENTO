@@ -1,0 +1,13 @@
+ARTIFACT_ID: D23
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc7815a921cf482e4143281
+
+SOURCE CONTENT
+Scope: Blueprints, reusable patterns and reference architectures.
+Routing rule: Content in this domain belongs to this matrix or direct subpages. MASTER_INDEX remains at root and references the matrix.
+State: Canonical matrix structure.
+
+BLOG RELATION
+This package is treated as an EXECUTAR Blog blueprint package under D23 ownership at the conceptual level.
+A dedicated child page for Executar Blog was not found during current Notion search, so no claim is made that the child route already exists.
+Before any Notion CREATE/MOVE, resolve naming/numbering and record the mutation under D20/D22 governance.

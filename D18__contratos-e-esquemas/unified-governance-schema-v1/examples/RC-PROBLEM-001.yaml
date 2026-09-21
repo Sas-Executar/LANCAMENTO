@@ -1,0 +1,53 @@
+object_registry:
+  object_id: RC-PROBLEM-001
+  object_type: PROBLEM
+  title: Sobrecarga ao ler relatórios
+  status: PROPOSED
+  version: 1
+  epistemic_class: D_INTERNAL
+  validation_status: NOT_VALIDATED
+  owner_id: editorial
+  created_by: migration-agent
+  created_at: '2026-09-21T00:00:00Z'
+
+problem:
+  problem_id: RC-PROBLEM-001
+  statement: Leitores podem perder informação crítica ao processar relatórios extensos e densos.
+  audience: Pessoas que analisam documentos extensos em contexto de trabalho.
+  consequence: Maior custo de navegação e risco de omitir informação relevante.
+  objective_id: RC-OBJ-001
+  execution_context: Leitura e síntese de relatório extenso.
+  management_domain: information_processing
+  lifecycle_stage: analysis
+  priority: 1
+
+links:
+  knowledge_ids: [RC-KNOW-001]
+  evidence_ids: [RC-EVID-001, RC-EVID-002]
+  risk_ids: [RC-RISK-001]
+  solution_ids: [RC-SOLUTION-001]
+
+solution:
+  solution_id: RC-SOLUTION-001
+  name: Conversor de Relatório
+  family: converter
+  input_description: Relatório ou documento extenso.
+  transformation: Estruturar conteúdo por hierarquia e exposição progressiva.
+  output_description: Síntese navegável com rastreabilidade à fonte.
+  status: PROPOSED
+  epistemic_class: E_INFERRED
+
+asset:
+  asset_id: RC-PROBLEM-001-ART-01
+  solution_id: RC-SOLUTION-001
+  format: ARTICLE
+  objective: Explicar o problema e demonstrar a hipótese de solução.
+  core_message: Estrutura e exposição progressiva podem reduzir navegação desnecessária.
+  primary_cta_id: RC-CTA-001
+  status: DRAFT
+
+validation:
+  required_metric: task_completion_with_source_trace
+  required_experiment_id: RC-EXP-001
+  current_decision: KEEP_PROPOSED
+

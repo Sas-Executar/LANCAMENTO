@@ -1,0 +1,86 @@
+ARTIFACT_ID: BLOG-18
+TITLE: Arquitetura de Rotas
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D12__engenharia
+CANONICAL_MASTER_SCOPE: Arquitetura de rotas e páginas
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade Arquitetura de Rotas artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: Arquitetura de Rotas owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- BLOG-03 UX journey
+- existing framework/router
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-18.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Complete route table
+- Page contract for every route
+- Dynamic parameter and slug policy
+- Loading/error/not-found behavior
+- Canonical URL/redirect policy
+- Metadata/SEO ownership per page type
+- Data dependencies and cache/render strategy based on detected framework
+
+EXECUTION PROCEDURE
+1. Detect router/framework from repository rather than assuming Next.js or another framework.
+2. Inventory existing public, private, preview, API and internal Blog routes.
+3. Define each required route with path pattern, page purpose, data source, parameters and page states.
+4. Define slug uniqueness and normalization rules consistent with current CMS/repository behavior.
+5. Define 404/not-found behavior and redirect rules for changed slugs.
+6. Define canonical URL and metadata source for article/category/index pages.
+7. Define preview/draft routing if supported by the CMS.
+8. Implement or update routes using repository-native patterns.
+9. Test direct navigation, deep links, refresh, not-found and changed-slug behavior.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] Every required page has exactly one canonical route.
+- [PASS] No duplicate/conflicting path patterns exist.
+- [PASS] Dynamic params have validation and not-found behavior.
+- [PASS] Metadata ownership is deterministic.
+- [PASS] Direct URL navigation works for implemented routes.
+- [PASS] Route tests or equivalent verification pass.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If framework cannot be resolved, stop code creation and return BLOCKED with repository evidence.
+- If an existing route conflicts with proposed architecture, preserve the current route and surface migration as a separate decision.
+- Never mass-redirect or change published slugs without explicit migration scope.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+- D18 schemas: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514

@@ -1,6 +1,6 @@
 # BENCH-001 — EXECUTAR Blog
 
-Status: **intake estruturado / não canônico**  
+Status: **materializado em `#00`–`#22`** (task `D23-EXECUTAR-BLOG-IMPORT-001`, receipt em `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-IMPORT-001.md`). `DOC-0019 Sobre o autor.zip` foi recebido e materializado em `#12-AUTORES-BIOS` (hash do zip conferido contra este `MANIFEST.csv`). Ver `#23-MANIFEST-HANDOFF/README.md`.
 Destino: `D23__blueprints/Executar Blog/_benchmarks/BENCH-001`
 
 ## Objetivo

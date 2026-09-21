@@ -19,14 +19,15 @@ Inventário do estado atual do repositório.
 - `_governance/GOVERNANCE.md`
 - `_governance/ROUTES.json`
 - `_governance/RUNNER_INSTRUCTIONS.md`
-- `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
 - `_governance/receipts/2026-09/D11-OFICINA-DESIGN-SYSTEM-IMPORT-001.md`
+- `_governance/receipts/2026-09/D18-RC-UNIFIED-GOVERNANCE-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-OFICINA-ONBOARDING-ROUTES-PRODUCTION-001.md`
 - `_governance/receipts/2026-09/D19-OFICINA-V1-4-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
 - `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-BENCH-001.md`
+- `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-IMPORT-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -145,6 +146,15 @@ Rota: `D17__emprego-e-portfolio`
 Rota: `D18__contratos-e-esquemas`
 
 - `.gitkeep`
+- `unified-governance-schema-v1/MANIFEST.sha256`
+- `unified-governance-schema-v1/MASTER_INDEX.md`
+- `unified-governance-schema-v1/README.md`
+- `unified-governance-schema-v1/VALIDATION_REPORT.md`
+- `unified-governance-schema-v1/db/001_unified_schema.sql`
+- `unified-governance-schema-v1/examples/RC-PROBLEM-001.yaml`
+- `unified-governance-schema-v1/governance/ENTRY_EXIT_PROTOCOL.md`
+- `unified-governance-schema-v1/mapping/LEGACY_FIELD_MAP.csv`
+- `unified-governance-schema-v1/schema/UNIFIED_SCHEMA.yaml`
 
 ## D19 — Assets e CTA
 
@@ -215,5 +225,185 @@ Rota: `D22__decision-and-register-log 2`
 Rota: `D23__blueprints`
 
 - `.gitkeep`
+- `Executar Blog/#00-BRIEF/Blueprint-Executar-Blog.md`
+- `Executar Blog/#00-BRIEF/EXECUTAR-CAMPANHA-ESTRATEGICA.txt`
+- `Executar Blog/#00-BRIEF/Missao-Valores-Objetivos-Tese-APP-Executar.md`
+- `Executar Blog/#00-BRIEF/VISAO-APP-Executar.md`
+- `Executar Blog/#00-BRIEF/referencias-ecossistema/GAP.md`
+- `Executar Blog/#01-ADR/Schema-Metodologia-Evidencia-APP-Executar.md`
+- `Executar Blog/#02-UX-UI/benchmarks/documento/documento.html`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/editorial-hybrid-apple-v6-live.html`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/editorial-hybrid-natgeo-apple-v6/README.md`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/editorial-hybrid-natgeo-apple-v6/editorial-hybrid-apple-v6.html`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/editorial-hybrid-natgeo-apple-v6/tokens-hybrid.css`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/editorial-hybrid-natgeo-apple-v6/tokens-hybrid.json`
+- `Executar Blog/#02-UX-UI/benchmarks/natgeo-hybrid/handoff-editorial-hybrid-v6.md`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-128.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-2048.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-256.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/black/executar-mark-black-64.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-128.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-180.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-192.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-2048.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-256.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-32.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-48.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-64.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/primary/executar-mark-primary-96.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-128.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-2048.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-256.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/01_logo_mark/reverse/executar-mark-reverse-64.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-black-1200px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-black-2400px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-black-3600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-black-600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-white-1200px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-white-2400px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-white-3600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/02_wordmark/executar-wordmark-white-600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-dark-1200px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-dark-2400px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-dark-3600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-primary-1200px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-primary-2400px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/horizontal/executar-horizontal-primary-3600px.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-dark-1200.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-dark-2400.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-dark-600.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-primary-1200.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-primary-2400.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/03_lockups/stacked/executar-stacked-primary-600.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-hdpi-72.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-mdpi-48.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-playstore-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-xhdpi-96.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-xxhdpi-144.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/Android/executar-android-xxxhdpi-192.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-192.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-dark-192.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-dark-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-maskable-192.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/PWA/executar-pwa-maskable-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-AppStore-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Notification-40.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Notification-60.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Settings-58.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Settings-87.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Spotlight-120.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-Spotlight-80.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-iPad-152.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-iPad-167.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-iPhone-120.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/04_app_icons/iOS/executar-ios-iPhone-180.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-128.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-16.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-256.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-32.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-48.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/05_favicon/executar-favicon-64.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-og-dark-1200x630.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-og-light-1200x630.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-1080.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-dark-1024.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-dark-1080.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/06_social/executar-social-avatar-dark-512.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/07_brand_preview/EXECUTAR-brand-package-preview.png`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/README.txt`
+- `Executar Blog/#03-DESIGN-TOKENS/brand-assets/manifest.csv`
+- `Executar Blog/#03-DESIGN-TOKENS/natgeo-hybrid/tokens-hybrid.css`
+- `Executar Blog/#03-DESIGN-TOKENS/natgeo-hybrid/tokens-hybrid.json`
+- `Executar Blog/#04-LINHA-EDITORIAL/PD-CLB-20260906-F01-DOC-V01__process-doc-padrao-multiplataforma.docx`
+- `Executar Blog/#04-LINHA-EDITORIAL/Quickframes-Executar-Blog.md`
+- `Executar Blog/#05-VOZ-TOM/GAP.md`
+- `Executar Blog/#06-PILARES-TAXONOMIA/GAP.md`
+- `Executar Blog/#07-ARTIGOS-PRONTOS/GAP.md`
+- `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/DOC-0037__PMI-X-TDHA-X-Evidencias-21-08-docx.export.txt`
+- `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/PMI-X-TDHA-X-Evidencias-21-08.docx`
+- `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/TDHA-E-VERBO.txt`
+- `Executar Blog/#08-ARTIGOS-REVISAO/RC-KNW-001/RC-KNW-001__knowledge-pack-tp001-fatores-risco-cognitivo__v01.docx`
+- `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx`
+- `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/Risco_Cognitivo_Hub_Editorial_CMS_v1.0.xlsx`
+- `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/campanha_tdah_gestao_projetos_12_abas_numbers_print.xlsx`
+- `Executar Blog/#10-IMAGENS-CAPAS/GAP.md`
+- `Executar Blog/#11-IMAGENS-ARTIGOS/GAP.md`
+- `Executar Blog/#12-AUTORES-BIOS/DOC-0019__Sobre-o-autor.md`
+- `Executar Blog/#13-SEO/GAP.md`
+- `Executar Blog/#14-COPY-SITE/GAP.md`
+- `Executar Blog/#15-NAVEGACAO-IA/GAP.md`
+- `Executar Blog/#16-LEGAL-EDITORIAL/GAP.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/00_AGENT_ENTRYPOINT.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/01_MASTER_INDEX_BLOG_DEV.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/02_REPOSITORY_AND_ROUTE_MODEL.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/03_ORCHESTRATOR_WORKFLOW.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/04_RUNTIME_IO_CONTRACT.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/05_VALIDATION_AND_GATES.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/06_INTEGRATION_RUNBOOK.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/07_RELEASE_READINESS.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/08_AGENT_HANDOFF_TEMPLATE.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/09_MACHINE_INDEX.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/98_SOURCE_MAP.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/99_MANIFEST.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-03__uix-journey.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-04__usabilidade-transversal-prd.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-08__cms.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-09__mapa-interativo.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-13__skills.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-15__vera.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-17__design-system.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/BLOG-18__rotas.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D10__gestao-de-produto.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D11__experiencia-e-projeto.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D12__engenharia.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D18__contratos-e-esquemas.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D19__assets-e-cta.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D20.01.01__agent-runner-instructions.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D20.01.02__io-protocol-and-handoff.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D20.01.03__governance-registry-routes-change-control.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D20.01__agent-governance.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/agent-execution-package/D23__blueprints.txt`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/README.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/SKILL.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/SOURCES.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/catalog/domains.json`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/catalog/framework-index.csv`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/catalog/frameworks.jsonl`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/evals/evals.json`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/evals/expected-behaviors.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/examples/document-conversion.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/examples/market-analysis.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/manifest.yaml`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/onboarding.html`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/document-conversion.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/evidence-policy.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/framework-selection.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/intent-routing.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/quality-gates.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/report-standard.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/references/research-protocol.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/scripts/select_frameworks.py`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/scripts/validate_catalog.py`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/scripts/validate_report.py`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/evidence-ledger.csv`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/framework-card.md`
+- `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/framework-report.md`
+- `Executar Blog/#18-NEWSLETTER-CTA/GAP.md`
+- `Executar Blog/#19-ANALYTICS-KPI/GAP.md`
+- `Executar Blog/#20-ACESSIBILIDADE-PERFORMANCE/GAP.md`
+- `Executar Blog/#21-QA-TESTES/GAP.md`
+- `Executar Blog/#22-RELEASE-DEPLOY/GAP.md`
+- `Executar Blog/#23-MANIFEST-HANDOFF/MANIFEST.csv`
+- `Executar Blog/#23-MANIFEST-HANDOFF/README.md`
 - `Executar Blog/_benchmarks/BENCH-001/MANIFEST.csv`
 - `Executar Blog/_benchmarks/BENCH-001/README.md`

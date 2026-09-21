@@ -1,0 +1,33 @@
+ARTIFACT_ID: D20.01.01
+STATUS: CANONICAL_GOVERNANCE_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc78110ba72e12ac2bc9a8c
+
+PRE-FLIGHT
+Agent must resolve agent_id, task_id, target_route, operation, scope, authoritative sources and expected output.
+
+EXECUTION
+1. Resolve route.
+2. Read canonical artifact.
+3. Read required dependencies.
+4. Check existing content before creating.
+5. Prefer update over duplication.
+6. Preserve unrelated content.
+7. Apply smallest complete change.
+8. Validate naming, route, links and dependencies.
+9. Produce standard output envelope.
+10. Update governance records when mutations occur.
+
+WRITE AUTHORITY
+READ allowed for task context.
+CREATE only when no canonical artifact satisfies purpose.
+UPDATE preferred when artifact exists.
+RENAME only when canonical name is inaccurate/ambiguous/nonconforming.
+MOVE requires route traceability and reference updates.
+DELETE requires explicit user authorization.
+
+COLLISION
+Never create a third artifact when two candidates represent the same source of truth.
+Identify canonical candidate; merge only when authorized; record governance consequence.
+
+DONE
+Output exists; route known; naming conforms; sources/dependencies traceable; governance records accounted for; next agent can continue without hidden context.

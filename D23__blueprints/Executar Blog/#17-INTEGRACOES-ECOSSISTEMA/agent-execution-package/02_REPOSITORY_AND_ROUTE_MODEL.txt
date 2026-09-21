@@ -1,0 +1,50 @@
+ARTIFACT_ID: BLOG-DEV-ROUTES
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+CANONICAL GOVERNANCE MODEL
+The workspace is matrix-first. MASTER_INDEX stays at root. D01-D23 are the only first-level canonical matrices.
+D23__blueprints owns reusable blueprints and reference architectures.
+D12__engenharia owns engineering, technical architecture, development and infrastructure.
+D10__gestao-de-produto owns requirements, roadmap and product lifecycle.
+D11__experiencia-e-projeto owns experience/design work.
+D18__contratos-e-esquemas owns contracts, schemas, interfaces and formal structures.
+D19__assets-e-cta owns assets/resources/CTAs.
+
+BLOG PACKAGE LOGICAL HOME
+Requested project context: D23 > Executar Blog.
+This package therefore treats the Blog implementation blueprint as belonging under D23__blueprints.
+Because a dedicated child page named Executar Blog was not found in the current Notion search, the exact governed child ID must be resolved before a Notion CREATE/MOVE mutation.
+Local/package execution does not require creating that Notion child.
+
+CODE/REPOSITORY ROUTE CONVENTION
+When operating in a software repository, first detect the framework.
+Do not invent directories before inspection.
+Preferred conceptual ownership:
+- product requirements -> docs/product/blog/
+- UX contracts -> docs/ux/blog/
+- route specs -> docs/architecture/blog/
+- design system -> design-system/ or src/design-system/ if already present
+- CMS schemas -> schemas/blog/ or cms/ if already present
+- map feature -> feature-local module following repository conventions
+- agent skills -> agents/skills/ or equivalent existing path
+- VERA -> agents/vera/ or equivalent existing path
+- tests -> colocated or repository-standard test directories
+
+ROUTE RESOLUTION ALGORITHM
+1. Inspect repository root and package manager/framework files.
+2. Locate existing blog, content, CMS, design-system, routes and agents modules.
+3. Search exact artifact names and semantic equivalents.
+4. Choose existing source of truth if one exists.
+5. If none exists, choose the nearest repository-native path.
+6. Record resolved path before editing.
+7. Never create parallel duplicate structures.
+8. For Notion mutation, obey D20 change-control and register the mutation.
+
+NOTION SOURCES
+D23: https://app.notion.com/p/3e207a814fc7815a921cf482e4143281
+D10: https://app.notion.com/p/3e207a814fc781e5bc6cdd72f00898da
+D11: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72
+D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+D18: https://app.notion.com/p/3e207a814fc781b09152e470a92e2514
+D19: https://app.notion.com/p/3e207a814fc781579fc6dc37ba09c1be

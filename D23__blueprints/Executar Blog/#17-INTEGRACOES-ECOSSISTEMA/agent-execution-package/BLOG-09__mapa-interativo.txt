@@ -1,0 +1,89 @@
+ARTIFACT_ID: BLOG-09
+TITLE: Mapa Interativo
+PACKAGE_EXECUTION_STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+PRIMARY_MATRIX: D12__engenharia
+CANONICAL_MASTER_SCOPE: Mapa interativo, conteúdo, função e integração no journey
+SOURCE_OF_TRUTH_FOR_SCOPE: MASTER_INDEX — Ecossistema
+SOURCE_URL: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+DEDICATED_NOTION_PAGE_FOUND: no
+
+OBJECTIVE
+Produce an implementation-grade Mapa Interativo artifact that another AI agent or engineer can execute without reconstructing hidden context.
+
+RESPONSIBLE ROLE
+Primary: Mapa Interativo owner agent.
+Reviewer: integration/reviewer agent.
+Escalation owner: current task owner/user for scope conflicts.
+
+DEPENDENCIES
+- BLOG-04 PRD
+- BLOG-03 UX
+- BLOG-18 routes
+- BLOG-17 design system
+- BLOG-08 CMS/content model
+
+REQUIRED INPUTS
+- Current repository/project inventory.
+- Existing implementations with semantic overlap.
+- MASTER_INDEX scope for BLOG-09.
+- Upstream workflow outputs listed above.
+- Current user instructions and supplied design/content references.
+- Repository-native conventions and test/build commands.
+
+OUTPUTS
+- Map feature requirements and supported use cases
+- Data contract for map points/regions/content
+- Interaction/state model
+- Accessible non-map alternative
+- Responsive and performance strategy
+- Integration with article/content journey
+- Tests for data, interaction and fallback behavior
+
+EXECUTION PROCEDURE
+1. Determine the map's actual user purpose from available content/product context before selecting implementation detail.
+2. Define map data shape: stable id, label/title, geolocation or region locator, content link, optional category/media/summary.
+3. Define loading, empty, error, partial-data and unsupported-browser states.
+4. Define marker/region selection, keyboard interaction, focus behavior and screen-reader alternative.
+5. Provide an equivalent list/table content path so information is not map-only.
+6. Use existing map/provider dependency if present; do not add a new paid/provider dependency without task scope.
+7. Integrate map selections with canonical Blog routes rather than duplicating article content.
+8. Apply clustering/lazy loading/viewport strategies only when dataset size requires them.
+9. Test mobile gestures without making critical actions gesture-only.
+10. Verify no sensitive location data is exposed unintentionally.
+
+CHANGE RULES
+- Search before create.
+- Prefer update over duplication.
+- Preserve unrelated behavior.
+- Keep changes minimal but complete.
+- Do not rename/move/delete existing canonical artifacts without explicit authorization.
+- Do not publish or deploy unless explicitly authorized.
+- Record exact paths changed.
+- If evidence contradicts this derived spec, explicit current user instruction or canonical repository behavior takes precedence and the discrepancy must be recorded.
+
+ACCEPTANCE CRITERIA
+- [PASS] Map has a deterministic data contract.
+- [PASS] All map information is available through an accessible alternative.
+- [PASS] A data/provider failure leaves the Blog usable.
+- [PASS] Selections resolve to valid content/routes.
+- [PASS] Core interaction works without hover-only dependency.
+- [PASS] Feature does not introduce an unauthorized external provider.
+
+VALIDATION
+Run the strongest repository-native checks applicable to the modified surface: formatter, lint, typecheck, schema validation, unit tests, integration tests, e2e tests, accessibility checks and production build.
+A missing test facility is not a pass; document it as a coverage gap.
+
+FAILURE / RECOVERY
+- If map purpose is not supported by available requirements, implement only the feature contract and return PARTIAL rather than inventing business semantics.
+- If geodata is invalid, fail the affected item safely and keep the rest usable.
+- If external provider is unavailable, render the accessible list fallback.
+
+HANDOFF CONTRACT
+Return: status; resolved canonical route; artifacts read; created/updated artifacts; tests/evidence; decisions; unresolved issues; rollback notes; next actions.
+No field may be silently empty. Use "not_applicable: reason" where necessary.
+
+REFERENCES
+- MASTER_INDEX: https://app.notion.com/p/3d607a814fc78071a4b2d304443c31d3
+- D12: https://app.notion.com/p/3e207a814fc7810db055feed2718c5a3
+- D11: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72

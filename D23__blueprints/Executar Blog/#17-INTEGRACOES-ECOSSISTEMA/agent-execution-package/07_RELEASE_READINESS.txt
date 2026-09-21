@@ -1,0 +1,25 @@
+ARTIFACT_ID: BLOG-DEV-RELEASE
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+RELEASE READINESS CHECKLIST
+- Canonical Blog routes resolve.
+- 404/not-found behavior works.
+- Article content schema validates.
+- Draft content is not publicly exposed unintentionally.
+- Metadata is present for index/article/category surfaces where applicable.
+- Canonical URLs and redirects are internally consistent.
+- Images/media have failure handling and accessible text rules.
+- Heading hierarchy is semantic.
+- Keyboard focus is visible and ordered for core interactions.
+- Map has a non-map accessible alternative if map is in scope.
+- CTAs resolve to valid destinations and events.
+- VERA/skills cannot publish/deploy/send externally without required authorization.
+- Build and critical tests pass.
+- Known BLOCKER/HIGH issues: zero.
+- Rollback strategy is documented.
+- Deployment remains pending unless current user instruction explicitly authorizes it.
+
+OUTPUT
+If all applicable checks pass: RELEASE_CANDIDATE_READY.
+Otherwise: PARTIAL with exact failing checks and next action.

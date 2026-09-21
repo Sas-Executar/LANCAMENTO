@@ -1,0 +1,31 @@
+ARTIFACT_ID: D20.01
+STATUS: CANONICAL_GOVERNANCE_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc781c7bd79ee7fe174892b
+
+GOVERNANCE MODEL
+Matrix-first repository model with MASTER_INDEX at root and D01-D23 as canonical first-level domains.
+
+MANDATORY AGENT READ ORDER
+1. MASTER_INDEX.
+2. D20.01 governance.
+3. D20.01.01 runner instructions.
+4. D20.01.02 I/O and handoff.
+5. D20.01.03 routes/change-control.
+6. Resolve correct D01-D23 matrix.
+7. Read target artifact and dependencies.
+8. Execute only declared scope.
+9. Register mutation in repository change log.
+10. Record structural/taxonomic decision when applicable.
+
+NAMING
+Matrix: DNN__dominio-canonico
+Child: DNN.MM__artifact-name
+Nested: DNN.MM.PP__artifact-name
+No generic Final/Version2/New page names.
+Version belongs in metadata/changelog.
+
+REQUIRED TRACEABILITY
+canonical route; matrix owner; artifact ID; status; responsible party; source of truth; dependencies; last change; next action.
+
+GLOBAL INVARIANT
+A run is incomplete until another agent can determine what changed, where, why, sources used, dependencies affected and what happens next.

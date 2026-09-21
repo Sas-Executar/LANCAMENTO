@@ -1,0 +1,36 @@
+ARTIFACT_ID: BLOG-DEV-HANDOFF
+STATUS: READY_FOR_AGENT_EXECUTION
+SOURCE_CLASS: DERIVED_OPERATIONAL_SPEC
+
+HANDOFF FORMAT
+
+output:
+  task_id: generated_runtime_task_id
+  status: completed | partial | blocked
+  canonical_route: exact_resolved_route
+  objective: exact_task_objective
+  artifacts_read:
+    - exact paths actually read
+  artifacts_created:
+    - exact paths or "not_applicable: no new artifact required"
+  artifacts_updated:
+    - exact paths or "not_applicable: read-only task"
+  artifacts_renamed:
+    - exact paths or "not_applicable: no rename authorized"
+  artifacts_moved:
+    - exact paths or "not_applicable: no move authorized"
+  decisions:
+    - decision, rationale, impacted artifacts
+  evidence:
+    - command/check + result
+  unresolved:
+    - issue + impact + required decision
+  rollback:
+    - exact safe rollback method or "not_applicable: no mutation"
+  next_actions:
+    - ordered executable action
+  changelog_entry:
+    - ready-to-record change summary or "not_applicable: no governed mutation"
+
+HANDOFF QUALITY RULE
+Another agent must be able to continue from this handoff without relying on hidden reasoning or unstated repository knowledge.

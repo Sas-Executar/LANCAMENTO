@@ -1,0 +1,9 @@
+ARTIFACT_ID: D11
+STATUS: CANONICAL_MATRIX_SOURCE
+SOURCE_URL: https://app.notion.com/p/3e207a814fc78152a537c5f3dc8d7d72
+
+SOURCE CONTENT
+Matrix identified in Notion as D11__experiencia-e-projeto.
+BLOG RELATION
+D11 is the supporting owner for BLOG-03 UX/Journey and BLOG-17 Design System concerns.
+The agent must reuse the existing UX/design system source of truth when one is found and avoid parallel design systems.

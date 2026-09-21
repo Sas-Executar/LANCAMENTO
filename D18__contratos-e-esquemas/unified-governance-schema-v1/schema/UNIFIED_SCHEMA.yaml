@@ -1,0 +1,235 @@
+schema:
+  id: RC-UGS-001
+  name: rc_unified_governance_schema
+  version: 1.0.1
+  language: pt-BR
+  status: PROPOSED
+  type: knowledge_to_decision_operating_schema
+  primary_pivots:
+    transversal: object_id
+    operational: problem_id
+    methodological: knowledge_id
+  compatibility:
+    - SCHEMA_RC_KNOWLEDGE_TO_ASSET_V1
+    - COG-FE-001
+    - IDX-RCDB-001
+    - EXEC-RCDB-001
+
+principles:
+  - one_concept_one_canonical_id
+  - evidence_is_not_inference
+  - inference_is_not_product_result
+  - research_once_transform_many
+  - typed_entities_with_extensible_relations
+  - immutable_events_and_versioned_objects
+  - hard_constraints_before_ranking
+  - metrics_roll_up_without_overwriting_raw_events
+  - least_privilege_read_models
+
+enums:
+  epistemic_class: [A_OBSERVED, B_PRIMARY, C_PUBLISHED, D_INTERNAL, E_INFERRED]
+  lifecycle_status: [DRAFT, PROPOSED, APPROVED, IMPLEMENTED, TESTED, PUBLISHED, MEASURED, LEARNED, ARCHIVED, REJECTED, SUPERSEDED]
+  validation_status: [NOT_VALIDATED, SUPPORTED, TESTING, VALIDATED, REJECTED]
+  relation_type: [SUPPORTS, CHALLENGES, DESCRIBES, EXPLAINED_BY, EXPOSED_BY, MAY_CREATE, MODIFIED_BY, ADDRESSED_BY, IMPLEMENTED_BY, GENERATES, USES, DISTRIBUTED_AS, PRODUCES, INFORMS, UPDATES, DEPENDS_ON, ALIAS_OF, RELATED_TO, CAUSES]
+  learning_decision: [RECYCLE, UPDATE, SCALE, ARCHIVE, KEEP, REJECT]
+
+id_patterns:
+  KNOWLEDGE: '^RC-KNOW-[0-9]{3,}$'
+  CLAIM: '^RC-CLAIM-[0-9]{3,}$'
+  SOURCE: '^RC-SRC-[0-9]{3,}$'
+  EVIDENCE: '^RC-EVID-[0-9]{3,}$'
+  PROBLEM: '^RC-PROBLEM-[0-9]{3,}$'
+  MECHANISM: '^RC-MECH-[0-9]{3,}$'
+  RISK: '^RC-RISK-[0-9]{3,}$'
+  HYPOTHESIS: '^RC-HYP-[0-9]{3,}$'
+  INTERVENTION: '^RC-INT-[0-9]{3,}$'
+  SOLUTION: '^RC-SOLUTION-[0-9]{3,}$'
+  FEATURE: '^RC-FEAT-[0-9]{3,}$'
+  ASSET: '^RC-PROBLEM-[0-9]{3,}-[A-Z0-9_]+-[0-9]{2,}$'
+  CTA: '^RC-CTA-[0-9]{3,}$'
+  EVENT: '^RC-EVENT-[0-9]{3,}$'
+  ACTION: '^RC-ACTION-[0-9]{3,}$'
+  RECOMMENDATION: '^RC-REC-[0-9]{3,}$'
+  METRIC: '^RC-METRIC-[0-9]{3,}$'
+  EXPERIMENT: '^RC-EXP-[0-9]{3,}$'
+  LEARNING: '^RC-LEARN-[0-9]{3,}$'
+
+common_object_contract:
+  required: [object_id, object_type, title, status, version, epistemic_class, owner_id, created_at, created_by]
+  immutable: [object_id, object_type, created_at, created_by]
+  fields:
+    object_id: {type: string, description: Canonical immutable identifier}
+    object_type: {type: string, description: Controlled entity type}
+    title: {type: string, min_length: 1}
+    status: {enum_ref: lifecycle_status}
+    version: {type: integer, minimum: 1}
+    epistemic_class: {enum_ref: epistemic_class}
+    validation_status: {enum_ref: validation_status}
+    owner_id: {type: string}
+    canonical_uri: {type: string, nullable: true}
+    source_object_id: {type: string, nullable: true}
+    created_at: {type: timestamp}
+    created_by: {type: string}
+    updated_at: {type: timestamp}
+    metadata: {type: object, additional_properties: true}
+
+compatibility_contracts:
+  LEGACY_18:
+    status: REQUIRED
+    policy: Preserve exact field names in the compatibility read model.
+    view: v_legacy_cognition_product_18
+    fields:
+      - schema_version
+      - row_id
+      - funcoes_fundamentais_gestao_projetos
+      - funcoes_executivas_area_gestao_projetos
+      - capacidades_humanas_operacionais_exigidas
+      - funcao_deficit_tdah
+      - fonte_clinica
+      - fonte_cientifica
+      - funcao_executiva_cognitiva
+      - evidencia
+      - impacto_operacional_funcao_afetada
+      - impacto_operacional_mecanismo
+      - impacto_operacional_consequencia
+      - impacto_operacional_compensacao
+      - conclusao_produto_design
+      - classe_epistemica
+      - estado_validacao
+      - observacoes
+
+entities:
+  schema_registry:
+    key: schema_id
+    required: [schema_id, version, status, checksum]
+  object_registry:
+    implements: common_object_contract
+    key: object_id
+  object_alias:
+    key: alias_id
+    required: [alias_id, object_id, alias, language]
+  status_event:
+    key: status_event_id
+    immutable: true
+    required: [status_event_id, object_id, from_status, to_status, gate_id, occurred_at, actor_id]
+  audit_event:
+    key: audit_event_id
+    immutable: true
+    required: [audit_event_id, object_id, action, payload_hash, occurred_at, actor_id]
+  taxonomy_term:
+    key: term_id
+    required: [term_id, vocabulary, canonical_term]
+  knowledge_record:
+    key: knowledge_id
+    required: [knowledge_id, management_function, human_capacity, operational_impact]
+  claim:
+    key: claim_id
+    required: [claim_id, statement, scope, epistemic_class, validation_status]
+  source:
+    key: source_id
+    required: [source_id, source_type, title, locator]
+  evidence:
+    key: evidence_id
+    required: [evidence_id, source_id, synthesis, scope, epistemic_class]
+  evidence_claim:
+    key: [evidence_id, claim_id]
+    required: [relationship, strength, rationale]
+  problem:
+    key: problem_id
+    required: [problem_id, statement, audience, consequence, priority]
+  mechanism:
+    key: mechanism_id
+    required: [mechanism_id, description]
+  cognitive_demand:
+    key: demand_id
+    required: [demand_id, context, required_capacity]
+  risk:
+    key: risk_id
+    required: [risk_id, problem_id, objective_id, context, exposure_trigger, risk_event, impact]
+  compensation_hypothesis:
+    key: hypothesis_id
+    required: [hypothesis_id, risk_id, statement, expected_effect, metric_id]
+    defaults: {epistemic_class: E_INFERRED, validation_status: NOT_VALIDATED}
+  intervention:
+    key: intervention_id
+    required: [intervention_id, hypothesis_id, control_type, intervention_class]
+  solution:
+    key: solution_id
+    required: [solution_id, problem_id, name, family, input, transformation, output]
+  feature:
+    key: feature_id
+    required: [feature_id, solution_id, hypothesis_id, specification]
+    defaults: {epistemic_class: E_INFERRED}
+  asset:
+    key: asset_id
+    required: [asset_id, problem_id, solution_id, format, objective, core_message, primary_cta_id]
+  asset_version:
+    key: [asset_id, version]
+    immutable: true
+    required: [asset_id, version, content_uri, status, created_at]
+  cta:
+    key: cta_id
+    required: [cta_id, label, destination, funnel_stage, success_metric]
+  distribution_event:
+    key: event_id
+    immutable: true
+    required: [event_id, asset_id, asset_version, channel, occurred_at, url]
+  execution_context:
+    key: context_id
+    immutable: true
+    required: [context_id, current_state, available_time_minutes, capacity, wip_state, captured_at]
+  action:
+    key: action_id
+    required: [action_id, objective_id, title, estimated_duration_minutes, completion_evidence]
+  action_dependency:
+    key: [action_id, depends_on_action_id]
+    invariant: directed_acyclic_graph
+  recommendation:
+    key: recommendation_id
+    immutable: true
+    required: [recommendation_id, context_id, action_id, eligibility_snapshot, ranking_snapshot, rationale, created_at]
+  metric_event:
+    key: metric_event_id
+    immutable: true
+    required: [metric_event_id, subject_id, metric_name, value, unit, window_start, window_end, source, observed_at]
+  experiment:
+    key: experiment_id
+    required: [experiment_id, hypothesis_id, protocol, success_criterion, status]
+  learning:
+    key: learning_id
+    immutable: true
+    required: [learning_id, subject_id, decision, rationale, based_on_metric_ids, decided_at, next_review_at]
+  relation_edge:
+    key: relation_id
+    required: [relation_id, from_object_id, relation_type, to_object_id, epistemic_class, created_at]
+
+invariants:
+  - id: INV-001
+    rule: Every specialized entity must exist in object_registry.
+  - id: INV-002
+    rule: Evidence must reference one deduplicated source.
+  - id: INV-003
+    rule: A product feature derived from literature starts as E_INFERRED until own validation exists.
+  - id: INV-004
+    rule: An asset must reference problem, solution and one primary CTA.
+  - id: INV-005
+    rule: Metric values are append-only events with unit, time window and source.
+  - id: INV-006
+    rule: CAUSES requires causal evidence, explicit rationale and human approval.
+  - id: INV-007
+    rule: Dispatcher eligibility applies dependencies, hard constraints, capacity and WIP before ranking.
+  - id: INV-008
+    rule: Learning updates by new version or event and never destroys prior evidence.
+  - id: INV-009
+    rule: Raw evidence text is not duplicated into assets; references are inherited.
+  - id: INV-010
+    rule: PROPOSED is not APPROVED, IMPLEMENTED, TESTED or PUBLISHED.
+
+read_models:
+  - v_master_index
+  - v_legacy_cognition_product_18
+  - v_problem_knowledge_pack
+  - v_evidence_trace
+  - v_solution_asset_pipeline
+  - v_dispatcher_candidates
+  - v_metric_rollup
