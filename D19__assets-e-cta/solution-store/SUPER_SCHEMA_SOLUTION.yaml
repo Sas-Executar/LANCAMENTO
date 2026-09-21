@@ -550,6 +550,8 @@ internal_profile:
 store_submission:
   submission_id: null
   schema_ref: "STORE_SUBMISSION_SCHEMA.yaml"
+  product_type: null
+  release_id: null
   readiness:
     schema_complete: false
     evidence_complete: false
@@ -567,15 +569,23 @@ store_submission:
     task_types: []
     artifact_types: []
     search_tags: []
+    node_keys: []
   media:
+    card_ref: null
     hero_image: null
     demo_video: null
+    video_loop: null
+    gif_fallback: null
+    vertical_carousel: null
     screenshots: []
+    onboarding_html: null
+    download_package: null
   publication:
     cta_url: null
     privacy_review: null
     claims_review: null
     final_approval: null
+    blockers: []
 
 production_handoff:
   handoff_id: null
