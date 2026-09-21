@@ -7,7 +7,7 @@
 - **classification:** update + create
 - **source:** solicitação explícita do mantenedor + 10 screenshots de referência UIX fornecidos na conversa.
 - **objective:** elevar o sistema da Oficina para Super Schema v1.4, formalizar o runbook de produção, tokenizar wireframes estruturais, registrar ADRs UX/React e migrar Obsidian Editorial como golden reference do pipeline completo.
-- **status:** partial
+- **status:** completed
 
 ## Decisões
 
@@ -92,11 +92,14 @@
 
 ## Validação
 
-- `REPOSITORY_MAP.md`: pendente de sincronização.
-- `python scripts/sync_indexes.py --check`: pendente do workflow do PR.
-- `python scripts/validate_governance.py`: pendente do workflow do PR.
-- PR/merge: pendente de workflow verde.
+- `REPOSITORY_MAP.md`: sincronizado.
+- `python scripts/sync_indexes.py --check`: **PASS** — Repository Governance run #17.
+- `python scripts/validate_governance.py`: **PASS** — Repository Governance run #17.
+- PR: `#5`.
+- Merge: autorizado pelo mantenedor após workflow verde.
 
 ## Handoff
 
 Branch: `feat/oficina-v1-4-runbook-uix-react`.
+PR: `#5`.
+Workflow inicial: `Repository Governance #17 — SUCCESS`.
