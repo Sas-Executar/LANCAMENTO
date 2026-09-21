@@ -6,7 +6,7 @@
 - **classification:** create + update
 - **request:** consolidar 3PN3, 5W2H invisível, matriz de 18 campos, controle interno de 24 campos, ficha interna, evidências e exemplo prático em um Super Schema YAML padrão para a loja.
 - **source:** solicitação do mantenedor em conversa.
-- **status:** partial
+- **status:** completed
 
 ## Arquivos criados
 
@@ -42,12 +42,12 @@
 ## Validação
 
 - Revisão estrutural: executada durante a criação.
-- `python scripts/sync_indexes.py`: não executável pelo conector GitHub; será verificado pelo workflow do Pull Request.
-- `python scripts/validate_governance.py`: não executável pelo conector GitHub; será verificado pelo workflow do Pull Request.
-- Índices gerados não foram editados manualmente.
+- `python scripts/validate_governance.py`: **PASS** no workflow Repository Governance run #7.
+- `python scripts/sync_indexes.py --check`: **PASS** no workflow Repository Governance run #7 após sincronização de `REPOSITORY_MAP.md`.
+- Índices gerados foram sincronizados conforme o gerador; não houve edição arbitrária do conteúdo canônico.
 
 ## Handoff
 
 Branch: `feat/d19-solution-super-schema`
 
-A conclusão passa para `completed` somente após a validação do workflow de governança.
+Validação de governança concluída com sucesso. PR autorizado pelo mantenedor para merge.
