@@ -1,0 +1,248 @@
+schema_version: "1.0"
+production_id: "VID-OBS-EDITORIAL-001"
+solution_ref: "SOL-OBS-EDITORIAL-001"
+status: "READY_FOR_BUILD_BLOCKED_FOR_PUBLISH"
+
+output_decision:
+  primary: "video"
+  note: >-
+    A peça será construída como animação determinística em HTML/CSS/JS e exportada
+    para MP4 por renderização de quadros. A versão web pode reutilizar a mesma timeline,
+    mas não é tratada como equivalente automático do vídeo.
+
+projeto:
+  nome: "Obsidian Editorial — Briefing disperso para base operacional"
+  produto: "Obsidian Editorial"
+  objetivo: "demonstrar"
+  publico: "Usuários de Obsidian, profissionais de conhecimento e pessoas que organizam projetos complexos."
+  canal: "Instagram Reels, YouTube Shorts e landing page"
+  idioma: "pt-BR"
+
+mensagem:
+  problema_do_publico: >-
+    Notas, decisões, tarefas e referências podem existir no mesmo projeto sem formar
+    uma estrutura que seja fácil de navegar, retomar e continuar atualizando.
+  promessa_principal: >-
+    Transformar conteúdo bruto em documentação Markdown estruturada e navegável para Obsidian.
+  diferencial: >-
+    A demonstração mostra a transformação do material original em uma arquitetura
+    documental persistente, em vez de apenas reescrever ou resumir o texto.
+  evidencias:
+    - claim: "A solução organiza conteúdo bruto em Markdown estruturado e documentação navegável."
+      source_ref: "solution.yaml#capability_contract"
+      evidence_class: "PRODUCT_CAPABILITY"
+    - claim: "O caso principal demonstrado é briefing disperso convertido em base operacional."
+      source_ref: "solution.yaml#usage_fit.best_use_cases[0]"
+      evidence_class: "DOCUMENTED_USE_CASE"
+    - claim: "Não são usadas métricas quantitativas de ganho sem medição."
+      source_ref: "solution.yaml#evidence_based_scoring.principles"
+      evidence_class: "CLAIM_CONTROL"
+  chamada_para_acao: "Transforme um briefing seu em uma base operacional."
+  destino_cta: "PENDING_PUBLIC_TOOL_URL"
+
+entrega:
+  tipo: "video"
+  duracao_segundos: 20
+  proporcao: "9:16"
+  resolucao_px: [1080, 1920]
+  fps: 30
+  formato: "mp4"
+  variantes:
+    - "16:9"
+    - "1:1"
+    - "9:16_sem_audio"
+  limite_arquivo_mb: null
+
+marca:
+  identidade_status: "direcao_criativa_provisoria"
+  logo: null
+  cores:
+    fundo: "#F7F7F8"
+    texto: "#17171A"
+    destaque: "#7C5CFC"
+  fontes:
+    - "system-ui"
+  referencias_visuais:
+    - "Interface editorial limpa"
+    - "Markdown e árvore de arquivos como elementos visuais centrais"
+    - "Animação de interface com profundidade mínima e foco em legibilidade"
+  evitar:
+    - "Métricas inventadas"
+    - "Excesso de partículas ou efeitos decorativos"
+    - "Movimentos rápidos que prejudiquem leitura"
+    - "Logotipos ou assets não autorizados"
+    - "Simular funcionalidades não documentadas"
+
+direcao:
+  estilo: "demonstracao_de_interface"
+  tom: "sofisticado, didático e preciso"
+  ritmo: "moderado com aceleração na transformação"
+  enquadramento: "interface inteira no contexto e detalhes durante a transformação"
+  movimento:
+    entrada: "fade + deslocamento"
+    transicao: "match-cut entre conteúdo bruto e estrutura organizada"
+    intensidade: "moderada"
+  area_segura_px:
+    topo: 120
+    direita: 96
+    inferior: 180
+    esquerda: 96
+
+cenas:
+  - id: "C01"
+    inicio_s: 0
+    duracao_s: 3.5
+    funcao: "gancho"
+    mensagem: "O problema não é falta de informação. É falta de estrutura."
+    texto_na_tela: "Seu projeto está todo aqui. Mas está utilizável?"
+    locucao: "Você já tem as informações. O problema é conseguir operar com elas."
+    elementos:
+      - "nota longa"
+      - "tarefas misturadas"
+      - "decisões"
+      - "referências"
+    estado_inicial: "Tela limpa com título do produto em tipografia."
+    acao_visual: "Uma nota extensa entra e se expande; trechos conflitantes recebem realce discreto."
+    estado_final: "Nota ocupa o centro com vários tipos de informação misturados."
+    sincronizacao_audio: "Primeira frase encerra no realce final da nota."
+    assets:
+      - "dados_ficticios_lancamento_produto_x"
+
+  - id: "C02"
+    inicio_s: 3.5
+    duracao_s: 4
+    funcao: "problema"
+    mensagem: "Organizar manualmente exige separar contexto, tarefas, decisões e referências."
+    texto_na_tela: "Contexto + decisões + tarefas + pesquisa"
+    locucao: "Separar tudo manualmente custa atenção e decisões repetidas de organização."
+    elementos:
+      - "chips de categorias"
+      - "cursor"
+      - "blocos de texto"
+    estado_inicial: "Nota bruta da cena anterior."
+    acao_visual: "Cursor tenta classificar blocos; categorias aparecem e acumulam complexidade visual."
+    estado_final: "A organização manual congela antes de concluir."
+    sincronizacao_audio: "Pequenos efeitos de interface acompanham cada tentativa de classificação."
+    assets: []
+
+  - id: "C03"
+    inicio_s: 7.5
+    duracao_s: 5
+    funcao: "demonstracao"
+    mensagem: "Descreva o resultado e transforme o material em arquitetura documental."
+    texto_na_tela: "“Transforme este material em uma base operacional para Obsidian.”"
+    locucao: "Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada."
+    elementos:
+      - "campo de comando"
+      - "cursor"
+      - "árvore de arquivos"
+      - "cards Markdown"
+    estado_inicial: "Material bruto à esquerda e comando vazio à direita."
+    acao_visual: >-
+      O comando é inserido; os blocos do material se reorganizam em uma árvore de arquivos
+      com INDEX, CONTEXT, OBJECTIVES, DECISIONS, TASKS, RESEARCH e REFERENCES.
+    estado_final: "Arquitetura documental completa e navegável."
+    sincronizacao_audio: "Transformação principal coincide com a palavra 'organizada'."
+    assets:
+      - "estrutura_exemplo_lancamento_produto_x"
+
+  - id: "C04"
+    inicio_s: 12.5
+    duracao_s: 3.5
+    funcao: "prova"
+    mensagem: "O conteúdo permanece conectado a uma estrutura que pode continuar crescendo."
+    texto_na_tela: "Conteúdo bruto → estrutura → documentação navegável"
+    locucao: "O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando."
+    elementos:
+      - "árvore de arquivos"
+      - "links"
+      - "documento Markdown"
+    estado_inicial: "Árvore de arquivos completa."
+    acao_visual: "Alternância suave entre INDEX, TASKS e REFERENCES; links conectam os documentos."
+    estado_final: "Visão geral limpa da base organizada."
+    sincronizacao_audio: "Último documento fecha junto da palavra 'atualizando'."
+    assets: []
+
+  - id: "C05"
+    inicio_s: 16
+    duracao_s: 4
+    funcao: "CTA"
+    mensagem: "Comece com o conteúdo que você já tem."
+    texto_na_tela: "Transforme um briefing seu."
+    locucao: "Comece com o conteúdo que você já tem. Transforme um briefing seu."
+    elementos:
+      - "nome Obsidian Editorial"
+      - "CTA"
+      - "miniatura da estrutura final"
+    estado_inicial: "Estrutura documental reduzida ao centro."
+    acao_visual: "Interface recua, CTA entra com deslocamento curto e permanece estável para leitura."
+    estado_final: "CTA em tela por pelo menos dois segundos."
+    sincronizacao_audio: "Trilha resolve no último quadro; nenhum corte abrupto."
+    assets: []
+
+audio:
+  locucao: >-
+    Você já tem as informações. O problema é conseguir operar com elas.
+    Separar tudo manualmente custa atenção e decisões repetidas de organização.
+    Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada.
+    O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando.
+    Comece com o conteúdo que você já tem. Transforme um briefing seu.
+  trilha: "PENDING_LICENSED_TRACK"
+  efeitos:
+    - "interface_click_soft"
+    - "transition_soft"
+  licencas_confirmadas: false
+  legendas: true
+
+execucao:
+  tecnica: "HTML_CSS_JS"
+  dados: "ficticios_identificados"
+  tempo_controlado_por: "timeline"
+  frame_time_rule: "t = frame / fps"
+  renderer: "browser_frames + ffmpeg_or_equivalent_encoder"
+  deterministic_render_required: true
+  prohibit_set_interval_for_render: true
+  prohibit_scroll_dependency_for_render: true
+  render_video:
+    tempo_deterministico: true
+    fontes_carregadas: true
+    assets_carregados: true
+    audio_sincronizado_por_timeline: true
+    total_frames: 600
+  web:
+    replay: true
+    movimento_reduzido: true
+
+validacao:
+  responsavel_aprovacao: "Owner D19 / responsável pela publicação"
+  criterios:
+    - "Mensagem compreensível sem áudio"
+    - "Texto legível no celular"
+    - "Sem cortes, sobreposições ou overflow"
+    - "Sem dados pessoais ou alegações sem evidência"
+    - "Áudio sincronizado e sem distorção"
+    - "CTA legível e com tempo de leitura"
+    - "Cada quadro é derivado de tempo explícito: t = frame / fps"
+    - "Render não depende de setInterval, scroll ou relógio de parede"
+    - "Assets e fontes estão carregados antes da captura do primeiro quadro"
+  publication_gate:
+    claims_supported: true
+    destino_cta_confirmado: false
+    assets_autorizados: true
+    licencas_audio_confirmadas: false
+    status: "BLOCKED"
+    blockers:
+      - "Substituir PENDING_PUBLIC_TOOL_URL por URL pública aprovada."
+      - "Selecionar trilha/efeitos e confirmar licenças."
+
+creative_quality:
+  principle: >-
+    A aparência profissional deve vir primeiro de roteiro, tipografia, composição,
+    ritmo e áudio; efeitos adicionais só entram quando melhoram a compreensão.
+  priority_order:
+    - "roteiro"
+    - "tipografia"
+    - "composicao"
+    - "ritmo"
+    - "audio"
+    - "efeitos"
