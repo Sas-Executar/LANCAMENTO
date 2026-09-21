@@ -21,6 +21,7 @@ Inventário do estado atual do repositório.
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
+- `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -141,13 +142,22 @@ Rota: `D18__contratos-e-esquemas`
 Rota: `D19__assets-e-cta`
 
 - `.gitkeep`
+- `solution-store/PRODUCTION_HANDOFF_SCHEMA.yaml`
 - `solution-store/README.md`
 - `solution-store/SCORING_METHODOLOGY.md`
+- `solution-store/STORE_SUBMISSION_SCHEMA.yaml`
 - `solution-store/SUPER_SCHEMA_SOLUTION.yaml`
+- `solution-store/instructions/PRODUCTION_HANDOFF_INSTRUCTIONS.md`
 - `solution-store/obsidian-editorial/EVIDENCIAS.md`
 - `solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
 - `solution-store/obsidian-editorial/VIDEO_PRODUCTION.yaml`
+- `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE.yaml`
 - `solution-store/obsidian-editorial/solution.yaml`
+- `solution-store/taxonomy/AREAS.yaml`
+- `solution-store/taxonomy/ARTIFACT_TYPES.yaml`
+- `solution-store/taxonomy/PROFESSIONS.yaml`
+- `solution-store/taxonomy/TAGGING_RULES.yaml`
+- `solution-store/taxonomy/TASK_TYPES.yaml`
 
 ## D20 — Plataformas e repositórios
 

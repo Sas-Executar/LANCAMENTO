@@ -1,0 +1,47 @@
+schema_version: "1.0"
+schema_id: "STORE_SUBMISSION"
+status: "canonical"
+
+submission:
+  submission_id: null
+  solution_id: null
+  solution_version: null
+  taxonomy_version: null
+
+readiness:
+  schema_complete: false
+  evidence_complete: false
+  tutorial_complete: false
+  production_handoff_complete: false
+  assets_complete: false
+  publication_ready: false
+
+listing:
+  title: null
+  short_description: null
+  long_description: null
+  primary_area: null
+  secondary_areas: []
+  professions: []
+  task_types: []
+  artifact_types: []
+  search_tags: []
+
+media:
+  hero_image: null
+  demo_video: null
+  screenshots: []
+
+publication:
+  cta_url: null
+  privacy_review: null
+  claims_review: null
+  final_approval: null
+  blockers: []
+
+validation:
+  primary_area_must_exist_in: "taxonomy/AREAS.yaml"
+  profession_ids_must_exist_in: "taxonomy/PROFESSIONS.yaml"
+  task_ids_must_exist_in: "taxonomy/TASK_TYPES.yaml"
+  artifact_ids_must_exist_in: "taxonomy/ARTIFACT_TYPES.yaml"
+  unsupported_claims_forbidden: true

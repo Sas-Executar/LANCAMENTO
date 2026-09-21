@@ -1,0 +1,29 @@
+schema_version: "1.0"
+registry_id: "SOLUTION_ARTIFACT_TYPES"
+status: "canonical"
+
+artifact_types:
+  - {id: "document", label: "Documento"}
+  - {id: "markdown_document", label: "Documento Markdown"}
+  - {id: "report", label: "Relatório"}
+  - {id: "briefing", label: "Briefing"}
+  - {id: "project_documentation", label: "Documentação de projeto"}
+  - {id: "knowledge_base", label: "Base de conhecimento"}
+  - {id: "presentation", label: "Apresentação"}
+  - {id: "spreadsheet", label: "Planilha"}
+  - {id: "database_record", label: "Registro de banco de dados"}
+  - {id: "email", label: "E-mail"}
+  - {id: "code", label: "Código"}
+  - {id: "image", label: "Imagem"}
+  - {id: "video", label: "Vídeo"}
+  - {id: "audio", label: "Áudio"}
+  - {id: "form", label: "Formulário"}
+  - {id: "checklist", label: "Checklist"}
+  - {id: "template", label: "Template"}
+  - {id: "contract", label: "Contrato"}
+  - {id: "website", label: "Website"}
+
+rules:
+  allow_multiple: true
+  use_canonical_ids: true
+  freeform_artifact_types_allowed: false

@@ -1,0 +1,34 @@
+schema_version: "1.0"
+registry_id: "SOLUTION_TAGGING_RULES"
+status: "canonical"
+
+typed_dimensions:
+  - "area"
+  - "profession"
+  - "task"
+  - "artifact"
+  - "context"
+  - "technology"
+
+node_key_format: "<dimension>:<canonical_id>"
+tag_format: "lowercase_snake_case"
+
+rules:
+  preserve_original_categories: true
+  use_normalized_primary_area: true
+  allow_multiple_areas: true
+  allow_multiple_professions: true
+  profession_links_require_use_case_or_rationale: true
+  do_not_use_freeform_tags_when_canonical_id_exists: true
+  freeform_semantic_tags_allowed: true
+  freeform_tags_must_not_replace_typed_dimensions: true
+  trace_every_release_bundle_to_solution_id: true
+  trace_every_store_submission_to_solution_id: true
+
+examples:
+  - "area:legal"
+  - "profession:lawyer"
+  - "task:document"
+  - "artifact:contract"
+  - "profession:student"
+  - "artifact:report"
