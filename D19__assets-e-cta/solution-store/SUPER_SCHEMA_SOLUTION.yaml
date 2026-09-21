@@ -1,4 +1,4 @@
-super_schema_version: "1.3"
+super_schema_version: "1.4"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -7,6 +7,8 @@ identity:
   solution_name: null
   slug: null
   solution_type: null
+  product_type: null
+  product_subtype: null
   category: null
   version: null
   source_file_ref: null
@@ -15,6 +17,7 @@ identity:
 classification:
   taxonomy_version: "1.1"
   registries:
+    product_types: "taxonomy/PRODUCT_TYPES.yaml"
     areas: "taxonomy/AREAS.yaml"
     professions: "taxonomy/PROFESSIONS.yaml"
     task_types: "taxonomy/TASK_TYPES.yaml"
@@ -31,6 +34,85 @@ classification:
   artifact_types: []
   semantic_tags: []
   node_keys: []
+
+
+oficina:
+  runbook_ref: "OFICINA_PRODUCTION_RUNBOOK.yaml"
+  product:
+    product_type: null
+    product_subtype: null
+    delivery_mode: null
+    downloadable: null
+    interactive: null
+  storefront_experience:
+    architecture_decisions:
+      information_architecture: "../../D22__decision-and-register-log 2/oficina/ADR-UX-001_STORE_INFORMATION_ARCHITECTURE.md"
+      discovery_filter_sort: "../../D22__decision-and-register-log 2/oficina/ADR-UX-002_DISCOVERY_FILTER_SORT.md"
+      solution_detail: "../../D22__decision-and-register-log 2/oficina/ADR-UX-003_SOLUTION_DETAIL.md"
+      learn_onboarding: "../../D22__decision-and-register-log 2/oficina/ADR-UX-004_LEARN_ONBOARDING.md"
+      react_architecture: "../../D22__decision-and-register-log 2/oficina/ADR-REACT-001_COMPONENT_ARCHITECTURE.md"
+    wireframe_tokens_ref: "../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    react_component_contract_ref: "../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+    discovery:
+      searchable: true
+      filterable: true
+      sortable: true
+      category_counts_supported: true
+    card:
+      schema_ref: "STORE_CARD_SCHEMA.yaml"
+      required: true
+      video_loop_supported: true
+      gif_fallback_supported: true
+    detail:
+      tabs:
+        overview: true
+        contents: true
+        examples: true
+        dependencies: true
+    actions:
+      start:
+        enabled: true
+      download:
+        enabled: null
+    learning:
+      enabled: true
+      browse_by_profession: true
+    interaction:
+      vertical_carousel: true
+      video_loop: true
+      onboarding_html: true
+  publication_assets:
+    schema_ref: "PUBLICATION_ASSET_SCHEMA.yaml"
+    manifest_ref: null
+    required: []
+    generated: []
+    pending: []
+  release:
+    manifest_schema_ref: "RELEASE_MANIFEST_SCHEMA.yaml"
+    manifest_ref: null
+  lifecycle:
+    current_state: "INGESTED"
+    allowed_states:
+      - "INGESTED"
+      - "CLASSIFIED"
+      - "SCHEMA_IN_PROGRESS"
+      - "SCHEMA_COMPLETE"
+      - "BUNDLE_READY"
+      - "IN_EDITORIAL_PRODUCTION"
+      - "ASSETS_READY"
+      - "QA_READY"
+      - "STORE_READY"
+      - "PUBLISHED"
+      - "DEPRECATED"
+    next_state: null
+    blockers: []
+  definition_of_done:
+    G1_SCHEMA_COMPLETE: false
+    G2_BUNDLE_COMPLETE: false
+    G3_EDITORIAL_ASSETS_COMPLETE: false
+    G4_QA_COMPLETE: false
+    G5_STORE_SUBMISSION_COMPLETE: false
+    G6_PUBLISHED: false
 
 public_layer:
   problem_statement: null
@@ -499,7 +581,7 @@ production_handoff:
   schema_ref: "PRODUCTION_HANDOFF_SCHEMA.yaml"
   required_when: "READY_FOR_PRODUCTION"
   bundle_path: null
-  bundle_schema_version: "1.1"
+  bundle_schema_version: "1.2"
   immutable_snapshot: true
   generation_status: null
   includes:
@@ -513,6 +595,8 @@ production_handoff:
     implementation_contract: true
     qa_acceptance: true
     publication_gate: true
+    publication_asset_manifest: true
+    release_manifest: true
 
 governance:
   owner: null
@@ -544,3 +628,8 @@ traceability:
   handoff_id: null
   submission_id: null
   bundle_ref: null
+  product_types_registry_ref: null
+  asset_manifest_ref: null
+  release_manifest_ref: null
+  wireframe_tokens_ref: null
+  react_component_contract_ref: null
