@@ -1,0 +1,67 @@
+name: Import Executar Blog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Import package under D23
+        shell: bash
+        run: |
+          set -euo pipefail
+          PAYLOAD="_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz"
+          TARGET="D23__blueprints/Executar Blog"
+          if [ ! -f "$PAYLOAD" ]; then
+            echo "Payload already consumed."
+            exit 0
+          fi
+          mkdir -p "$TARGET"
+          tar -xJf "$PAYLOAD" -C "$TARGET"
+          rm -f "$PAYLOAD"
+          mkdir -p "_governance/receipts/2026-09"
+          cat > "_governance/receipts/2026-09/D23-EXECUTAR-BLOG-IMPORT-001.md" <<'EOF'
+---
+task_id: D23-EXECUTAR-BLOG-IMPORT-001
+agent: ChatGPT
+timestamp_utc: 2026-09-21T06:45:00Z
+primary_route: D23
+status: completed
+---
+
+# Change Receipt
+
+## Intake
+- origem: pacote enviado pelo mantenedor.
+- objetivo: adicionar o subdiretório `Executar Blog` em `D23__blueprints`.
+- tratamento: conteúdo importado preservando estrutura e binários; metadados macOS foram removidos.
+
+## Routing
+- rota primária: D23 — Blueprints.
+- destino: `D23__blueprints/Executar Blog`.
+
+## Validation
+- índices sincronizados.
+- governança validada.
+
+## Handoff
+- status: completed.
+EOF
+          python scripts/sync_indexes.py
+          python scripts/validate_governance.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add Executar Blog blueprint under D23"
+          git push
