@@ -1,4 +1,4 @@
-schema_version: "1.1"
+schema_version: "1.2"
 schema_id: "SOLUTION_RELEASE_HANDOFF_BUNDLE"
 status: "canonical"
 purpose: >-
@@ -38,6 +38,12 @@ bundle_structure:
   document_05:
     id: "store_submission_snapshot"
     required: true
+  document_06:
+    id: "publication_asset_manifest_snapshot"
+    required: true
+  document_07:
+    id: "release_manifest_snapshot"
+    required: true
 
 required_traceability:
   - "solution_id"
@@ -48,6 +54,8 @@ required_traceability:
   - "taxonomy_version"
   - "production_id_when_applicable"
   - "source_commit_or_ref"
+  - "product_type"
+  - "release_id"
 
 pre_generation_gate:
   schema_required_fields_complete: true
@@ -59,6 +67,9 @@ pre_generation_gate:
   evidence_layer_present: true
   claims_reviewed: true
   store_listing_draft_complete: true
+  product_type_assigned: true
+  lifecycle_state_at_least: "SCHEMA_COMPLETE"
+  asset_manifest_initialized: true
 
 status_rules:
   build_ready: "Pode iniciar implementação/produção."
@@ -76,3 +87,6 @@ validation:
   missing_measurements_remain_null: true
   taxonomy_ids_must_exist_in_registry: true
   professional_links_need_rationale_or_use_case: true
+  product_type_must_exist_in_registry: true
+  asset_manifest_must_exist: true
+  release_manifest_must_exist: true
