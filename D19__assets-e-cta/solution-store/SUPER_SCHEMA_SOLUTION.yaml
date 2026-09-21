@@ -650,9 +650,4 @@ traceability:
   release_manifest_ref: null
   wireframe_tokens_ref: null
   react_component_contract_ref: null
-  product_types_registry_ref: null
-  asset_manifest_ref: null
-  release_manifest_ref: null
-  wireframe_tokens_ref: null
-  react_component_contract_ref: null
   design_system_binding_ref: null
