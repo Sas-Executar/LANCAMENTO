@@ -64,12 +64,21 @@ SUPER_SCHEMA_SOLUTION
 - `SUPER_SCHEMA_SOLUTION.yaml` — contrato canônico reutilizável.
 - `PRODUCTION_HANDOFF_SCHEMA.yaml` — contrato do bundle oficial de release.
 - `STORE_SUBMISSION_SCHEMA.yaml` — contrato de submissão/listing da loja.
+- `OFICINA_PRODUCTION_RUNBOOK.yaml` — pipeline canônico da Oficina e Definition of Done.
+- `PUBLICATION_ASSET_SCHEMA.yaml` — contrato do manifesto de assets editoriais.
+- `STORE_CARD_SCHEMA.yaml` — família estrutural de cards para soluções/artigos/conteúdo.
+- `RELEASE_MANIFEST_SCHEMA.yaml` — lifecycle, gates e referências de release.
+- `taxonomy/PRODUCT_TYPES.yaml` — Templates, Skills/Workflows, Ebooks, Artigos, Prompts, Plugins e Photo-prompts.
 - `taxonomy/AREAS.yaml` — 15 áreas principais normalizadas e categorias originais.
 - `taxonomy/PROFESSIONS.yaml` — registry de profissões/roles.
 - `taxonomy/TASK_TYPES.yaml` — tipos canônicos de tarefa.
 - `taxonomy/ARTIFACT_TYPES.yaml` — tipos canônicos de artefato.
 - `taxonomy/TAGGING_RULES.yaml` — regras de tags e node keys.
 - `instructions/PRODUCTION_HANDOFF_INSTRUCTIONS.md` — instrução de geração e gates.
+- `instructions/INGEST_INSTRUCTIONS.md` — entrada rastreável no pipeline.
+- `instructions/CLASSIFICATION_INSTRUCTIONS.md` — classificação canônica.
+- `instructions/EDITORIAL_PRODUCTION_INSTRUCTIONS.md` — produção e derivação editorial.
+- `instructions/STORE_PUBLICATION_INSTRUCTIONS.md` — gate final de publicação.
 - `obsidian-editorial/solution.yaml` — primeira instância preenchida.
 - `obsidian-editorial/TUTORIAL_PUBLICO.md` — camada visível ao usuário.
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
