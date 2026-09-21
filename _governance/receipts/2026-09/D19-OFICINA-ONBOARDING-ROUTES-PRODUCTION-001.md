@@ -7,7 +7,7 @@
 - **classification:** create + update
 - **source:** solicitação explícita do mantenedor.
 - **objective:** criar onboarding canônico para resolução de rotas, handoffs entre áreas e produção ponta a ponta da Oficina.
-- **status:** partial
+- **status:** completed
 
 ## Entregas
 
@@ -36,10 +36,11 @@ Roteamento usa `primary-purpose`. Handoffs usam referências; não copiar fontes
 
 ## Validação
 
-- índices: pendente de sincronização
-- governance workflow: pendente do PR
+- índices: **PASS** — REPOSITORY_MAP sincronizado
+- governance workflow: **PASS** — Repository Governance run #23
 - merge: autorizado previamente pelo mantenedor após workflow verde
 
 ## Handoff
 
 Branch: `feat/oficina-onboarding-routes-production`.
+PR: `#7`.
