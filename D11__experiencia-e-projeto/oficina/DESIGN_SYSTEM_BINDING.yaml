@@ -1,0 +1,53 @@
+schema_version: "1.0"
+binding_id: "OFICINA_EXECUTAR_DESIGN_SYSTEM"
+status: "canonical"
+
+source:
+  repository: "Sas-Executar/Desyng-System-ecossitema."
+  repository_url: "https://github.com/Sas-Executar/Desyng-System-ecossitema."
+  branch: "claude/design-handoff-specs-ulc1r1"
+  commit: "3784189e789a5b16fc2bdaaa6854a4bdc1bcad77"
+  import_mode: "git_submodule_pinned"
+  local_path: "design-system-source"
+  imported_roots:
+    - "design-system/"
+    - "references/"
+
+source_of_truth:
+  overview: "design-system-source/design-system/README.md"
+  design_spec: "design-system-source/design-system/DESIGN-SPEC.md"
+  component_spec: "design-system-source/design-system/COMPONENT-SPEC.md"
+  responsive_spec: "design-system-source/design-system/RESPONSIVE-SPEC.md"
+  accessibility: "design-system-source/design-system/ACCESSIBILITY.md"
+  motion_spec: "design-system-source/design-system/MOTION-SPEC.md"
+  implementation_plan: "design-system-source/design-system/IMPLEMENTATION_PLAN.md"
+  design_to_code_map: "design-system-source/design-system/DESIGN_TO_CODE_MAP.md"
+  canonical_tokens: "design-system-source/design-system/tokens/design-tokens.json"
+  token_yaml: "design-system-source/design-system/tokens/design-tokens.yaml"
+  token_css: "design-system-source/design-system/tokens/variables.css"
+  theme_css: "design-system-source/design-system/tokens/theme.css"
+  native_tokens: "design-system-source/design-system/tokens/tokens.native.ts"
+  traceability: "design-system-source/design-system/00_GOVERNANCE/TRACEABILITY.md"
+  sot_resolution: "design-system-source/design-system/00_GOVERNANCE/SOT_RESOLUTION.md"
+  assets_manifest: "design-system-source/design-system/assets/assets-manifest.json"
+  layout_archetypes: "design-system-source/design-system/layouts/layout-archetypes.md"
+
+visual_contract:
+  identity_status: "BOUND_CANONICAL"
+  brand_green: "#00BF63"
+  information_azure: "#1F93FF"
+  canvas: "#F6F6F6"
+  surface: "#FFFFFF"
+  text_primary: "#4B4A4A"
+  font_sans: "IBM Plex Sans"
+  font_mono: "IBM Plex Mono"
+  raw_hex_consumption_forbidden_when_token_exists: true
+  semantic_tokens_required: true
+  third_party_reference_colors_forbidden: true
+
+governance:
+  pin_exact_commit: true
+  imported_source_is_read_only: true
+  update_strategy: "advance submodule commit only through reviewed PR"
+  local_overrides_allowed: false
+  visual_changes_require_source_or_explicit_local_ADR: true
