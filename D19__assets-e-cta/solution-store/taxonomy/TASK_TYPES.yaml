@@ -1,0 +1,27 @@
+schema_version: "1.0"
+registry_id: "SOLUTION_TASK_TYPES"
+status: "canonical"
+
+task_types:
+  - {id: "organize", label: "Organizar"}
+  - {id: "structure", label: "Estruturar"}
+  - {id: "document", label: "Documentar"}
+  - {id: "transform", label: "Transformar"}
+  - {id: "summarize", label: "Resumir"}
+  - {id: "edit", label: "Editar"}
+  - {id: "format", label: "Formatar"}
+  - {id: "analyze", label: "Analisar"}
+  - {id: "research", label: "Pesquisar"}
+  - {id: "extract", label: "Extrair"}
+  - {id: "compare", label: "Comparar"}
+  - {id: "validate", label: "Validar"}
+  - {id: "automate", label: "Automatizar"}
+  - {id: "plan", label: "Planejar"}
+  - {id: "present", label: "Apresentar"}
+  - {id: "publish", label: "Publicar"}
+  - {id: "knowledge_management", label: "Gerenciar conhecimento"}
+
+rules:
+  allow_multiple: true
+  use_canonical_ids: true
+  freeform_task_tags_allowed: false
