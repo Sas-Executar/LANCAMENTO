@@ -1,0 +1,167 @@
+schema_version: "1.1"
+registry_id: "SOLUTION_AREAS"
+status: "canonical"
+
+escopo:
+  incluir:
+    - "imagem_categorias_01"
+    - "imagem_categorias_02"
+  excluir:
+    - "imagem_clerk"
+
+taxonomia:
+  produtividade:
+    id: "productivity"
+    label: "Productivity"
+    aliases:
+      - "Pipelines & jobs"
+      - "Tickets & tasks"
+      - "Files & documents"
+      - "Reference docs"
+  product_management:
+    id: "product_management"
+    label: "Product Management"
+    aliases:
+      - "Product management"
+      - "Product"
+  sales:
+    id: "sales"
+    label: "Sales"
+    aliases:
+      - "Sales and marketing"
+      - "Contacts & leads"
+      - "Commerce and shopping"
+  legal:
+    id: "legal"
+    label: "Legal"
+    aliases: []
+  operacoes:
+    id: "operations"
+    label: "Operations"
+    aliases:
+      - "Pipelines & jobs"
+      - "Tickets & tasks"
+  small_business:
+    id: "small_business"
+    label: "Small Business"
+    aliases:
+      - "Commerce and shopping"
+  customer_support:
+    id: "customer_support"
+    label: "Customer Support"
+    aliases:
+      - "Tickets & tasks"
+      - "Communication"
+      - "Email & messages"
+  produto:
+    id: "product"
+    label: "Product"
+    aliases:
+      - "Product Management"
+  design:
+    id: "design"
+    label: "Design"
+    aliases:
+      - "Designs & media"
+      - "Media and entertainment"
+  human_resources:
+    id: "human_resources"
+    label: "Human Resources"
+    aliases:
+      - "HR"
+  marketing:
+    id: "marketing"
+    label: "Marketing"
+    aliases:
+      - "Sales and marketing"
+  financeiro:
+    id: "finance"
+    label: "Finance"
+    aliases:
+      - "Financial services"
+  research:
+    id: "research"
+    label: "Research"
+    aliases:
+      - "Reference docs"
+  data:
+    id: "data"
+    label: "Data"
+    aliases:
+      - "Databases"
+      - "Logs & errors"
+  engineering:
+    id: "engineering"
+    label: "Engineering"
+    aliases:
+      - "Code"
+      - "APIs"
+      - "Servers & cloud"
+
+categorias_originais_imagens:
+  imagem_01:
+    - "Code"
+    - "Commerce and shopping"
+    - "Communication"
+    - "Data"
+    - "Design"
+    - "Education"
+    - "Financial services"
+    - "Health"
+    - "Legal"
+    - "Life sciences"
+    - "Media and entertainment"
+    - "Nonprofit"
+    - "Other"
+    - "Productivity"
+    - "Sales and marketing"
+    - "Travel"
+  imagem_02:
+    - "APIs"
+    - "Engineering"
+    - "Code"
+    - "Contacts & leads"
+    - "Files & documents"
+    - "Pipelines & jobs"
+    - "Finance"
+    - "Databases"
+    - "Tickets & tasks"
+    - "Financial services"
+    - "Designs & media"
+    - "Reference docs"
+    - "Sales"
+    - "Logs & errors"
+    - "Websites"
+    - "Email & messages"
+    - "Servers & cloud"
+    - "AI models & agents"
+    - "Marketing"
+    - "Data"
+
+areas_principais_normalizadas:
+  - "Productivity"
+  - "Product Management"
+  - "Sales"
+  - "Legal"
+  - "Operations"
+  - "Small Business"
+  - "Customer Support"
+  - "Product"
+  - "Design"
+  - "Human Resources"
+  - "Marketing"
+  - "Finance"
+  - "Research"
+  - "Data"
+  - "Engineering"
+
+normalizacao:
+  duplicatas_removidas:
+    - "Sales"
+    - "Legal"
+    - "Operations"
+  regra:
+    preservar_categoria_original: true
+    permitir_multiplas_areas: true
+    usar_area_principal_normalizada: true
+    usar_ids_estaveis_em_solucoes: true
