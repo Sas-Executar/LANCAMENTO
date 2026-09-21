@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "repository": "Sas-Executar/LANCAMENTO",
+  "routing_policy": "primary-purpose",
+  "fallback": "_governance/triage",
+  "routes": [
+    {
+      "code": "D01",
+      "path": "D01__gestao-empresarial",
+      "title": "Gestão empresarial",
+      "scope": "Estratégia, governança empresarial, planejamento executivo, organização e gestão do negócio.",
+      "status": "active"
+    },
+    {
+      "code": "D02",
+      "path": "D02__juridico-riscos-e-conformidade",
+      "title": "Jurídico, riscos e conformidade",
+      "scope": "Contratos jurídicos, riscos, compliance, políticas regulatórias e controles de conformidade.",
+      "status": "active"
+    },
+    {
+      "code": "D03",
+      "path": "D03__financas",
+      "title": "Finanças",
+      "scope": "Planejamento financeiro, orçamento, fluxo de caixa, custos, receitas, métricas e controles financeiros.",
+      "status": "active"
+    },
+    {
+      "code": "D04",
+      "path": "D04__pessoas-e-recursos-humanos",
+      "title": "Pessoas e recursos humanos",
+      "scope": "Pessoas, recrutamento, desempenho, cultura, políticas de RH e desenvolvimento organizacional.",
+      "status": "active"
+    },
+    {
+      "code": "D05",
+      "path": "D05__dados",
+      "title": "Dados",
+      "scope": "Modelos de dados, analytics, métricas, pipelines, qualidade, governança e documentação de dados.",
+      "status": "active"
+    },
+    {
+      "code": "D06",
+      "path": "D06__conhecimento-e-busca-corporativa",
+      "title": "Conhecimento e busca corporativa",
+      "scope": "Bases de conhecimento, taxonomias, recuperação de informação, pesquisa interna e gestão do conhecimento.",
+      "status": "active"
+    },
+    {
+      "code": "D07",
+      "path": "D07__produtividade-e-execucao",
+      "title": "Produtividade e execução",
+      "scope": "Métodos de execução, rotinas, produtividade, acompanhamento de trabalho e sistemas operacionais de entrega.",
+      "status": "active"
+    },
+    {
+      "code": "D08",
+      "path": "D08__operacoes",
+      "title": "Operações",
+      "scope": "Processos operacionais, SOPs, capacidade, qualidade, logística interna e continuidade operacional.",
+      "status": "active"
+    },
+    {
+      "code": "D09",
+      "path": "D09__pesquisa-e-inovacao",
+      "title": "Pesquisa e inovação",
+      "scope": "Pesquisa exploratória, experimentos, inovação, hipóteses, estudos e descoberta de novas oportunidades.",
+      "status": "active"
+    },
+    {
+      "code": "D10",
+      "path": "D10__gestao-de-produto",
+      "title": "Gestão de produto",
+      "scope": "Estratégia de produto, roadmap, requisitos, discovery, priorização, métricas e decisões de produto.",
+      "status": "active"
+    },
+    {
+      "code": "D11",
+      "path": "D11__experiencia-e-projeto",
+      "title": "Experiência e projeto",
+      "scope": "Experiência do usuário, design, pesquisa UX, arquitetura de experiência e documentação de projeto.",
+      "status": "active"
+    },
+    {
+      "code": "D12",
+      "path": "D12__engenharia",
+      "title": "Engenharia",
+      "scope": "Arquitetura técnica, software, infraestrutura, automação, integrações, qualidade e documentação de engenharia.",
+      "status": "active"
+    },
+    {
+      "code": "D13",
+      "path": "D13__mercado-e-geracao-de-demanda",
+      "title": "Mercado e geração de demanda",
+      "scope": "Mercado, posicionamento, ICP, campanhas, aquisição, growth e geração de demanda.",
+      "status": "active"
+    },
+    {
+      "code": "D14",
+      "path": "D14__vendas",
+      "title": "Vendas",
+      "scope": "Processos comerciais, pipeline, propostas, playbooks, previsões e enablement de vendas.",
+      "status": "active"
+    },
+    {
+      "code": "D15",
+      "path": "D15__atendimento-e-sucesso-do-cliente",
+      "title": "Atendimento e sucesso do cliente",
+      "scope": "Suporte, onboarding, customer success, retenção, feedback e experiência pós-venda.",
+      "status": "active"
+    },
+    {
+      "code": "D16",
+      "path": "D16__midias-sociais-e-comunicacao-digital",
+      "title": "Mídias sociais e comunicação digital",
+      "scope": "Conteúdo digital, social media, calendário editorial, canais, distribuição e comunicação digital.",
+      "status": "active"
+    },
+    {
+      "code": "D17",
+      "path": "D17__emprego-e-portfolio",
+      "title": "Emprego e portfólio",
+      "scope": "Carreira, oportunidades, currículo, portfólio profissional, candidaturas e materiais de apresentação.",
+      "status": "active"
+    },
+    {
+      "code": "D18",
+      "path": "D18__contratos-e-esquemas",
+      "title": "Contratos e esquemas",
+      "scope": "Contratos de dados, schemas, interfaces, especificações estruturadas e acordos entre sistemas.",
+      "status": "active"
+    },
+    {
+      "code": "D19",
+      "path": "D19__assets-e-cta",
+      "title": "Assets e CTA",
+      "scope": "Ativos reutilizáveis, materiais de campanha, componentes de conteúdo e calls-to-action.",
+      "status": "active"
+    },
+    {
+      "code": "D20",
+      "path": "D20__plataformas-e-repositorios",
+      "title": "Plataformas e repositórios",
+      "scope": "Plataformas, repositórios, integrações de workspace, configuração e inventário de sistemas.",
+      "status": "active"
+    },
+    {
+      "code": "D21",
+      "path": "D21__workbook",
+      "title": "Workbook",
+      "scope": "Materiais de trabalho, modelos operacionais, planilhas, exercícios e artefatos de apoio não canônicos.",
+      "status": "active"
+    },
+    {
+      "code": "D22",
+      "path": "D22__decision-and-register-log 2",
+      "title": "Decision and register log",
+      "scope": "Registros de decisão, logs de mudança, ADRs, atas de decisão e trilha histórica formal.",
+      "status": "active"
+    },
+    {
+      "code": "D23",
+      "path": "D23__blueprints",
+      "title": "Blueprints",
+      "scope": "Blueprints, arquiteturas de referência, padrões reutilizáveis e modelos de implementação.",
+      "status": "active"
+    }
+  ]
+}
