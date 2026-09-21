@@ -3,6 +3,7 @@ schema_id: "OFICINA_STORE_CARD"
 status: "canonical"
 
 card:
+  variant: null # solution | article | tutorial | course
   solution_id: null
   release_id: null
   content:
