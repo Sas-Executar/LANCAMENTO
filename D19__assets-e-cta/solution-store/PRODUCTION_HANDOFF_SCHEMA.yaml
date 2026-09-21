@@ -1,0 +1,78 @@
+schema_version: "1.1"
+schema_id: "SOLUTION_RELEASE_HANDOFF_BUNDLE"
+status: "canonical"
+purpose: >-
+  Formato oficial de saída quando uma solução conclui seu preenchimento e precisa
+  seguir para produção de assets, divulgação e submissão na loja de ferramentas.
+
+generation_trigger:
+  required_state: "READY_FOR_PRODUCTION"
+  source_of_truth: "solution.yaml"
+  immutable_snapshot: true
+  regenerate_on_material_change: true
+
+bundle_structure:
+  document_01:
+    id: "release_handoff"
+    required: true
+    contains:
+      - "bundle metadata"
+      - "build/render/publish status"
+      - "asset manifest"
+      - "claim control"
+      - "timeline contract"
+      - "implementation contract"
+      - "creative contract"
+      - "build sequence"
+      - "QA acceptance"
+      - "publication blockers"
+  document_02:
+    id: "super_schema_snapshot"
+    required: true
+  document_03:
+    id: "solution_snapshot"
+    required: true
+  document_04:
+    id: "commercial_production_snapshot"
+    required_when: "commercial_production.enabled == true"
+  document_05:
+    id: "store_submission_snapshot"
+    required: true
+
+required_traceability:
+  - "solution_id"
+  - "solution_version"
+  - "super_schema_version"
+  - "handoff_id"
+  - "submission_id"
+  - "taxonomy_version"
+  - "production_id_when_applicable"
+  - "source_commit_or_ref"
+
+pre_generation_gate:
+  schema_required_fields_complete: true
+  three_p_n_three_complete: true
+  best_use_cases_complete: true
+  risks_complete: true
+  taxonomy_assigned: true
+  professions_reviewed: true
+  evidence_layer_present: true
+  claims_reviewed: true
+  store_listing_draft_complete: true
+
+status_rules:
+  build_ready: "Pode iniciar implementação/produção."
+  render_ready: "Pode gerar artefatos finais quando aplicável."
+  publish_ready: "Só true após todos os publication gates."
+  blocked_fields_must_be_explicit: true
+
+output_naming:
+  pattern: "<SOLUTION_SLUG>_PRODUCTION_HANDOFF_BUNDLE.yaml"
+
+validation:
+  yaml_documents_must_parse: true
+  no_secrets: true
+  no_unsupported_claims: true
+  missing_measurements_remain_null: true
+  taxonomy_ids_must_exist_in_registry: true
+  professional_links_need_rationale_or_use_case: true
