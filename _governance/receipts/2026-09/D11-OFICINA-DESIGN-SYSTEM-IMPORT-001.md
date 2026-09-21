@@ -7,7 +7,7 @@
 - **classification:** import + update
 - **source:** solicitação explícita do mantenedor.
 - **objective:** importar o Design System EXECUTAR confirmado pelo mantenedor, preservando o repositório-fonte completo e vinculando a Oficina aos tokens/specs canônicos.
-- **status:** partial
+- **status:** completed
 
 ## Fonte confirmada
 
@@ -64,9 +64,11 @@
 ## Validação
 
 - Submodule: importado e pinado.
-- Índices: pendente de sincronização.
-- Governance workflow: pendente do PR.
+- Índices: **PASS** — `REPOSITORY_MAP.md` sincronizado.
+- Governance: **PASS** — Repository Governance run #20.
 
 ## Handoff
 
 Branch: `feat/import-executar-design-system`.
+PR: `#6`.
+Autorização de merge: concedida previamente pelo mantenedor; merge permitido após o workflow verde.
