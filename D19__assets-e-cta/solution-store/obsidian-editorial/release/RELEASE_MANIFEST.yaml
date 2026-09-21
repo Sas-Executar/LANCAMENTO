@@ -1,0 +1,40 @@
+schema_version: "1.0"
+release:
+  release_id: "REL-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_version: "1.4.0"
+  product_type: "skill_workflow"
+  handoff_id: "HANDOFF-OBS-EDITORIAL-001"
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  asset_manifest_id: "ASSET-OBS-EDITORIAL-001"
+
+lifecycle:
+  current_state: "BUNDLE_READY"
+  previous_state: "SCHEMA_COMPLETE"
+  next_state: "IN_EDITORIAL_PRODUCTION"
+  blockers:
+    - "Tokens visuais finais ainda não fornecidos."
+    - "URL pública/CTA ainda não confirmada."
+    - "Áudio final/licenças ainda não confirmados."
+
+gates:
+  G1_SCHEMA_COMPLETE: true
+  G2_BUNDLE_COMPLETE: true
+  G3_EDITORIAL_ASSETS_COMPLETE: false
+  G4_QA_COMPLETE: false
+  G5_STORE_SUBMISSION_COMPLETE: false
+  G6_PUBLISHED: false
+
+refs:
+  solution: "../solution.yaml"
+  bundle: "../production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  asset_manifest: "../production/ASSET_MANIFEST.yaml"
+  store_submission: "../store_submission.yaml"
+  card: "../store/STORE_CARD.yaml"
+  carousel: "../store/VERTICAL_CAROUSEL.yaml"
+  onboarding: "../store/ONBOARDING.yaml"
+
+publication:
+  url: null
+  published_at: null
+  final_approval: "PENDING"

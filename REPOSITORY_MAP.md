@@ -20,6 +20,7 @@ Inventário do estado atual do repositório.
 - `_governance/RUNNER_INSTRUCTIONS.md`
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
+- `_governance/receipts/2026-09/D19-OFICINA-V1-4-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
@@ -94,12 +95,14 @@ Rota: `D10__gestao-de-produto`
 Rota: `D11__experiencia-e-projeto`
 
 - `.gitkeep`
+- `oficina/WIREFRAME_TOKENS.yaml`
 
 ## D12 — Engenharia
 
 Rota: `D12__engenharia`
 
 - `.gitkeep`
+- `oficina/REACT_COMPONENT_CONTRACT.yaml`
 
 ## D13 — Mercado e geração de demanda
 
@@ -142,19 +145,35 @@ Rota: `D18__contratos-e-esquemas`
 Rota: `D19__assets-e-cta`
 
 - `.gitkeep`
+- `solution-store/OFICINA_PRODUCTION_RUNBOOK.yaml`
 - `solution-store/PRODUCTION_HANDOFF_SCHEMA.yaml`
+- `solution-store/PUBLICATION_ASSET_SCHEMA.yaml`
 - `solution-store/README.md`
+- `solution-store/RELEASE_MANIFEST_SCHEMA.yaml`
 - `solution-store/SCORING_METHODOLOGY.md`
+- `solution-store/STORE_CARD_SCHEMA.yaml`
 - `solution-store/STORE_SUBMISSION_SCHEMA.yaml`
 - `solution-store/SUPER_SCHEMA_SOLUTION.yaml`
+- `solution-store/instructions/CLASSIFICATION_INSTRUCTIONS.md`
+- `solution-store/instructions/EDITORIAL_PRODUCTION_INSTRUCTIONS.md`
+- `solution-store/instructions/INGEST_INSTRUCTIONS.md`
 - `solution-store/instructions/PRODUCTION_HANDOFF_INSTRUCTIONS.md`
+- `solution-store/instructions/STORE_PUBLICATION_INSTRUCTIONS.md`
 - `solution-store/obsidian-editorial/EVIDENCIAS.md`
 - `solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
 - `solution-store/obsidian-editorial/VIDEO_PRODUCTION.yaml`
+- `solution-store/obsidian-editorial/production/ASSET_MANIFEST.yaml`
 - `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE.yaml`
+- `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml`
+- `solution-store/obsidian-editorial/release/RELEASE_MANIFEST.yaml`
 - `solution-store/obsidian-editorial/solution.yaml`
+- `solution-store/obsidian-editorial/store/ONBOARDING.yaml`
+- `solution-store/obsidian-editorial/store/STORE_CARD.yaml`
+- `solution-store/obsidian-editorial/store/VERTICAL_CAROUSEL.yaml`
+- `solution-store/obsidian-editorial/store_submission.yaml`
 - `solution-store/taxonomy/AREAS.yaml`
 - `solution-store/taxonomy/ARTIFACT_TYPES.yaml`
+- `solution-store/taxonomy/PRODUCT_TYPES.yaml`
 - `solution-store/taxonomy/PROFESSIONS.yaml`
 - `solution-store/taxonomy/TAGGING_RULES.yaml`
 - `solution-store/taxonomy/TASK_TYPES.yaml`
@@ -176,6 +195,11 @@ Rota: `D21__workbook`
 Rota: `D22__decision-and-register-log 2`
 
 - `.gitkeep`
+- `oficina/ADR-REACT-001_COMPONENT_ARCHITECTURE.md`
+- `oficina/ADR-UX-001_STORE_INFORMATION_ARCHITECTURE.md`
+- `oficina/ADR-UX-002_DISCOVERY_FILTER_SORT.md`
+- `oficina/ADR-UX-003_SOLUTION_DETAIL.md`
+- `oficina/ADR-UX-004_LEARN_ONBOARDING.md`
 
 ## D23 — Blueprints
 

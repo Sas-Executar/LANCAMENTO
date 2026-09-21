@@ -1,4 +1,4 @@
-super_schema_version: "1.3"
+super_schema_version: "1.4"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -7,14 +7,17 @@ identity:
   solution_name: "Obsidian Editorial"
   slug: "obsidian-editorial"
   solution_type: "AI_SKILL"
+  product_type: "skill_workflow"
+  product_subtype: "skill"
   category: "Knowledge Management"
-  version: "1.3.0"
+  version: "1.4.0"
   source_file_ref: "obsidian-editorial.skill"
 
 
 classification:
   taxonomy_version: "1.1"
   registries:
+    product_types: "../taxonomy/PRODUCT_TYPES.yaml"
     areas: "../taxonomy/AREAS.yaml"
     professions: "../taxonomy/PROFESSIONS.yaml"
     task_types: "../taxonomy/TASK_TYPES.yaml"
@@ -86,6 +89,89 @@ classification:
     - "task:structure"
     - "artifact:markdown_document"
     - "artifact:knowledge_base"
+
+
+oficina:
+  runbook_ref: "../OFICINA_PRODUCTION_RUNBOOK.yaml"
+  product:
+    product_type: "skill_workflow"
+    product_subtype: "skill"
+    delivery_mode: "skill_package"
+    downloadable: true
+    interactive: true
+  storefront_experience:
+    architecture_decisions:
+      information_architecture: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-001_STORE_INFORMATION_ARCHITECTURE.md"
+      discovery_filter_sort: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-002_DISCOVERY_FILTER_SORT.md"
+      solution_detail: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-003_SOLUTION_DETAIL.md"
+      learn_onboarding: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-004_LEARN_ONBOARDING.md"
+      react_architecture: "../../../D22__decision-and-register-log 2/oficina/ADR-REACT-001_COMPONENT_ARCHITECTURE.md"
+    wireframe_tokens_ref: "../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    react_component_contract_ref: "../../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+    discovery:
+      searchable: true
+      filterable: true
+      sortable: true
+      category_counts_supported: true
+    card:
+      schema_ref: "../STORE_CARD_SCHEMA.yaml"
+      instance_ref: "store/STORE_CARD.yaml"
+      required: true
+      video_loop_supported: true
+      gif_fallback_supported: true
+    detail:
+      tabs:
+        overview: true
+        contents: true
+        examples: true
+        dependencies: true
+    actions:
+      start: {enabled: true}
+      download: {enabled: true}
+    learning:
+      enabled: true
+      browse_by_profession: true
+    interaction:
+      vertical_carousel: true
+      video_loop: true
+      onboarding_html: true
+  publication_assets:
+    schema_ref: "../PUBLICATION_ASSET_SCHEMA.yaml"
+    manifest_ref: "production/ASSET_MANIFEST.yaml"
+    required:
+      - "store_card"
+      - "poster"
+      - "video_master"
+      - "video_variants"
+      - "video_loop"
+      - "gif_fallback"
+      - "vertical_carousel"
+      - "onboarding_html"
+      - "download_package"
+      - "store_listing"
+    generated: []
+    pending:
+      - "visual_tokens"
+      - "rendered_media"
+      - "licensed_audio"
+      - "public_urls"
+  release:
+    manifest_schema_ref: "../RELEASE_MANIFEST_SCHEMA.yaml"
+    manifest_ref: "release/RELEASE_MANIFEST.yaml"
+  lifecycle:
+    current_state: "BUNDLE_READY"
+    next_state: "IN_EDITORIAL_PRODUCTION"
+    blockers:
+      - "Tokens visuais finais ainda não fornecidos."
+      - "URL pública/CTA ainda não confirmada."
+      - "Áudio final/licenças ainda não confirmados."
+  definition_of_done:
+    G1_SCHEMA_COMPLETE: true
+    G2_BUNDLE_COMPLETE: true
+    G3_EDITORIAL_ASSETS_COMPLETE: false
+    G4_QA_COMPLETE: false
+    G5_STORE_SUBMISSION_COMPLETE: false
+    G6_PUBLISHED: false
 
 public_layer:
   problem_statement: >-
@@ -462,8 +548,8 @@ internal_control_24:
   source_file_ref: "obsidian-editorial.skill"
   lifecycle_status: "ACTIVE"
   validation_status: "REVIEW"
-  version: "1.3.0"
-  observations: "Inclui taxonomia normalizada, profissões, indexação semântica, submissão à loja e handoff de release."
+  version: "1.4.0"
+  observations: "Golden reference da Oficina v1.4: product type, storefront UX, lifecycle, asset manifest e release manifest."
 
 internal_profile:
   classification:
@@ -527,6 +613,9 @@ internal_profile:
 store_submission:
   submission_id: "STORE-OBS-EDITORIAL-001"
   schema_ref: "../STORE_SUBMISSION_SCHEMA.yaml"
+  instance_ref: "store_submission.yaml"
+  product_type: "skill_workflow"
+  release_id: "REL-OBS-EDITORIAL-001"
   readiness:
     schema_complete: true
     evidence_complete: true
@@ -571,10 +660,21 @@ store_submission:
       - "projetos"
       - "pesquisa"
       - "knowledge-management"
+    node_keys:
+      - "area:productivity"
+      - "profession:project_manager"
+      - "task:document"
+      - "artifact:markdown_document"
   media:
+    card_ref: "store/STORE_CARD.yaml"
     hero_image: null
     demo_video: null
+    video_loop: null
+    gif_fallback: null
+    vertical_carousel: "store/VERTICAL_CAROUSEL.yaml"
     screenshots: []
+    onboarding_html: "store/ONBOARDING.yaml"
+    download_package: null
   publication:
     cta_url: null
     privacy_review: "PASS_NO_PERSONAL_DATA_REQUIRED"
@@ -588,8 +688,8 @@ production_handoff:
   handoff_id: "HANDOFF-OBS-EDITORIAL-001"
   schema_ref: "../PRODUCTION_HANDOFF_SCHEMA.yaml"
   required_when: "READY_FOR_PRODUCTION"
-  bundle_path: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE.yaml"
-  bundle_schema_version: "1.1"
+  bundle_path: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  bundle_schema_version: "1.2"
   immutable_snapshot: true
   generation_status: "GENERATED"
   includes:
@@ -603,6 +703,8 @@ production_handoff:
     implementation_contract: true
     qa_acceptance: true
     publication_gate: true
+    publication_asset_manifest: true
+    release_manifest: true
 
 governance:
   owner: "D19 / Solution Store"
@@ -625,6 +727,9 @@ governance:
     - version: "1.3.0"
       date: "2026-09-21"
       change: "Adicionadas taxonomias de áreas/profissões/tarefas/artefatos, store submission e contrato oficial de production handoff."
+    - version: "1.4.0"
+      date: "2026-09-21"
+      change: "Migrado para o runbook completo da Oficina com product type, wireframe/React contracts, assets, lifecycle e release manifest."
 
 testing:
   test_case_id: "TC-OBS-001"
@@ -644,10 +749,15 @@ traceability:
   tutorial_ref: "TUTORIAL_PUBLICO.md"
   example_ref: "TUTORIAL_PUBLICO.md#exemplo-prático"
   previous_version: null
-  current_version: "1.3.0"
+  current_version: "1.4.0"
   taxonomy_version: "1.1"
   area_registry_ref: "../taxonomy/AREAS.yaml"
   profession_registry_ref: "../taxonomy/PROFESSIONS.yaml"
   handoff_id: "HANDOFF-OBS-EDITORIAL-001"
   submission_id: "STORE-OBS-EDITORIAL-001"
-  bundle_ref: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE.yaml"
+  bundle_ref: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  product_types_registry_ref: "../taxonomy/PRODUCT_TYPES.yaml"
+  asset_manifest_ref: "production/ASSET_MANIFEST.yaml"
+  release_manifest_ref: "release/RELEASE_MANIFEST.yaml"
+  wireframe_tokens_ref: "../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+  react_component_contract_ref: "../../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"

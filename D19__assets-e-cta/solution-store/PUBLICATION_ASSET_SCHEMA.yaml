@@ -1,0 +1,41 @@
+schema_version: "1.0"
+schema_id: "OFICINA_PUBLICATION_ASSET_MANIFEST"
+status: "canonical"
+
+manifest:
+  asset_manifest_id: null
+  solution_id: null
+  release_id: null
+  product_type: null
+  visual_tokens_version: null
+
+status_enum:
+  - "NOT_REQUIRED"
+  - "PENDING"
+  - "STRUCTURE_READY"
+  - "VISUAL_TOKENS_PENDING"
+  - "BRIEF_READY"
+  - "IN_PRODUCTION"
+  - "READY_FOR_QA"
+  - "APPROVED"
+  - "PUBLISHED"
+  - "BLOCKED"
+
+assets:
+  store_card: {required: true, schema_ref: "STORE_CARD_SCHEMA.yaml", status: "PENDING", output_ref: null}
+  poster: {required: true, status: "PENDING", output_ref: null}
+  video_master: {required: null, status: "PENDING", output_ref: null}
+  video_variants: {required: null, status: "PENDING", outputs: []}
+  video_loop: {required: true, status: "PENDING", output_ref: null}
+  gif_fallback: {required: true, status: "PENDING", output_ref: null}
+  vertical_carousel: {required: true, status: "PENDING", output_ref: null}
+  screenshots: {required: null, status: "PENDING", outputs: []}
+  onboarding_html: {required: null, status: "PENDING", output_ref: null}
+  download_package: {required: null, status: "PENDING", output_ref: null}
+  store_listing: {required: true, status: "PENDING", output_ref: null}
+
+validation:
+  every_required_asset_has_status: true
+  published_assets_require_qa: true
+  no_asset_can_invent_claims: true
+  visual_assets_must_reference_visual_tokens_when_available: true

@@ -50,7 +50,7 @@ SUPER_SCHEMA_SOLUTION
 - **18 campos** formam a matriz epistemológica/operacional associada.
 - **24 campos** formam o controle interno mínimo da solução.
 - O **Super Schema** é o contrato padrão; cada ferramenta é uma instância preenchida.
-- A classificação usa registries canônicos para **áreas, profissões, tarefas e artefatos**, permitindo cruzamentos por nodes tipados.
+- A classificação usa registries canônicos para **product type, áreas, profissões, tarefas e artefatos**, permitindo cruzamentos por nodes tipados.
 - O vínculo com profissão deve ter caso de uso ou justificativa; não é inferido apenas pela categoria da solução.
 - O **Production Handoff Bundle** é a saída oficial quando a solução está pronta para produção, divulgação e submissão na loja.
 - Cada solução deve registrar **3 melhores casos de uso** e **3 riscos/anti-use cases**.
@@ -64,14 +64,30 @@ SUPER_SCHEMA_SOLUTION
 - `SUPER_SCHEMA_SOLUTION.yaml` — contrato canônico reutilizável.
 - `PRODUCTION_HANDOFF_SCHEMA.yaml` — contrato do bundle oficial de release.
 - `STORE_SUBMISSION_SCHEMA.yaml` — contrato de submissão/listing da loja.
+- `OFICINA_PRODUCTION_RUNBOOK.yaml` — pipeline canônico da Oficina e Definition of Done.
+- `PUBLICATION_ASSET_SCHEMA.yaml` — contrato do manifesto de assets editoriais.
+- `STORE_CARD_SCHEMA.yaml` — família estrutural de cards para soluções/artigos/conteúdo.
+- `RELEASE_MANIFEST_SCHEMA.yaml` — lifecycle, gates e referências de release.
+- `taxonomy/PRODUCT_TYPES.yaml` — Templates, Skills/Workflows, Ebooks, Artigos, Prompts, Plugins e Photo-prompts.
 - `taxonomy/AREAS.yaml` — 15 áreas principais normalizadas e categorias originais.
 - `taxonomy/PROFESSIONS.yaml` — registry de profissões/roles.
 - `taxonomy/TASK_TYPES.yaml` — tipos canônicos de tarefa.
 - `taxonomy/ARTIFACT_TYPES.yaml` — tipos canônicos de artefato.
 - `taxonomy/TAGGING_RULES.yaml` — regras de tags e node keys.
 - `instructions/PRODUCTION_HANDOFF_INSTRUCTIONS.md` — instrução de geração e gates.
+- `instructions/INGEST_INSTRUCTIONS.md` — entrada rastreável no pipeline.
+- `instructions/CLASSIFICATION_INSTRUCTIONS.md` — classificação canônica.
+- `instructions/EDITORIAL_PRODUCTION_INSTRUCTIONS.md` — produção e derivação editorial.
+- `instructions/STORE_PUBLICATION_INSTRUCTIONS.md` — gate final de publicação.
 - `obsidian-editorial/solution.yaml` — primeira instância preenchida.
 - `obsidian-editorial/TUTORIAL_PUBLICO.md` — camada visível ao usuário.
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
 - `obsidian-editorial/VIDEO_PRODUCTION.yaml` — briefing comercial preenchido para produção do vídeo da solução.
 - `SCORING_METHODOLOGY.md` — regras de medição, normalização, confiança e agregação do score.
+
+
+## Oficina v1.4
+
+Pipeline: INGEST → CLASSIFY → SCHEMA → BUNDLE → EDITORIAL PRODUCTION → DERIVE → QA → STORE SUBMISSION → PUBLISH.
+
+Wireframes e React são contratos separados da identidade visual. As referências de UI definem arquitetura, hierarquia e interação; cores, tipografia, sombras, radius, spacing final e motion tokens permanecem pendentes de input oficial.

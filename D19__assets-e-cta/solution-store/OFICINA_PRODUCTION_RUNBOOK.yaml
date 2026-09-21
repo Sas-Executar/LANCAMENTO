@@ -1,0 +1,45 @@
+schema_version: "1.0"
+runbook_id: "OFICINA_PRODUCTION_RUNBOOK"
+status: "canonical"
+context: >-
+  A Oficina é uma loja de ferramentas multiformatos. Todas as soluções e assets do
+  ecossistema entram por classificação, enriquecimento de schema, geração de bundle,
+  produção editorial visual, QA, submissão e publicação.
+
+pipeline:
+  - {id: "S01", state: "INGESTED", name: "Ingest", output: "registro de entrada rastreável"}
+  - {id: "S02", state: "CLASSIFIED", name: "Classificação", output: "product_type + áreas + profissões + tarefas + artefatos + tags/nodes"}
+  - {id: "S03", state: "SCHEMA_COMPLETE", name: "Schema / Enrichment", output: "SUPER_SCHEMA_SOLUTION preenchido e validado"}
+  - {id: "S04", state: "BUNDLE_READY", name: "Bundle Package", output: "production handoff bundle imutável"}
+  - {id: "S05", state: "IN_EDITORIAL_PRODUCTION", name: "Produção editorial visual", output: "vídeos + cards + loops/GIF + carousel + screenshots + onboarding"}
+  - {id: "S06", state: "ASSETS_READY", name: "Derivação de assets", output: "variantes por canal/formato"}
+  - {id: "S07", state: "QA_READY", name: "QA", output: "claims, links, formatos, acessibilidade e mídia validados"}
+  - {id: "S08", state: "STORE_READY", name: "Store Submission", output: "listing e pacote de submissão"}
+  - {id: "S09", state: "PUBLISHED", name: "Publicação", output: "solução publicada e rastreável na Oficina"}
+
+definition_of_done:
+  G1_SCHEMA_COMPLETE: "schema produzido e validado"
+  G2_BUNDLE_COMPLETE: "production handoff bundle gerado"
+  G3_EDITORIAL_ASSETS_COMPLETE: "assets requeridos pelo product_type produzidos"
+  G4_QA_COMPLETE: "QA técnico/editorial/publicação aprovado"
+  G5_STORE_SUBMISSION_COMPLETE: "listing, media, CTA/download e metadados prontos"
+  G6_PUBLISHED: "publicado na Oficina e indexado"
+
+storefront:
+  primary_discovery_unit: "card"
+  card_family_shared_with_blog_articles: true
+  vertical_carousel: true
+  start_and_download_are_distinct_actions: true
+  video_loop_with_gif_fallback: true
+  onboarding_html_supported: true
+
+canonical_assets:
+  common: ["store_card", "poster", "video_loop", "gif_fallback", "vertical_carousel", "store_listing"]
+  conditional: ["video_master", "video_variants", "screenshots", "onboarding_html", "download_package"]
+
+rules:
+  source_to_schema_before_production: true
+  bundle_is_production_contract: true
+  product_type_controls_required_assets: true
+  visual_tokens_are_external_to_wireframe_contract: true
+  build_ready_does_not_imply_publish_ready: true

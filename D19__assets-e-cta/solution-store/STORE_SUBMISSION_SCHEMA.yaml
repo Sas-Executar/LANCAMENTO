@@ -1,4 +1,4 @@
-schema_version: "1.0"
+schema_version: "1.1"
 schema_id: "STORE_SUBMISSION"
 status: "canonical"
 
@@ -7,6 +7,8 @@ submission:
   solution_id: null
   solution_version: null
   taxonomy_version: null
+  product_type: null
+  release_id: null
 
 readiness:
   schema_complete: false
@@ -26,11 +28,18 @@ listing:
   task_types: []
   artifact_types: []
   search_tags: []
+  node_keys: []
 
 media:
+  card_ref: null
   hero_image: null
   demo_video: null
+  video_loop: null
+  gif_fallback: null
+  vertical_carousel: null
   screenshots: []
+  onboarding_html: null
+  download_package: null
 
 publication:
   cta_url: null
@@ -44,4 +53,7 @@ validation:
   profession_ids_must_exist_in: "taxonomy/PROFESSIONS.yaml"
   task_ids_must_exist_in: "taxonomy/TASK_TYPES.yaml"
   artifact_ids_must_exist_in: "taxonomy/ARTIFACT_TYPES.yaml"
+  product_type_must_exist_in: "taxonomy/PRODUCT_TYPES.yaml"
+  card_must_validate_against: "STORE_CARD_SCHEMA.yaml"
+  asset_manifest_must_validate_against: "PUBLICATION_ASSET_SCHEMA.yaml"
   unsupported_claims_forbidden: true

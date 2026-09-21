@@ -1,0 +1,1877 @@
+---
+# Documento 1/7 — Release handoff
+bundle:
+  bundle_schema_version: "1.2"
+  bundle_revision: "1.4"
+  bundle_id: "BUNDLE-OBS-EDITORIAL-RELEASE-004"
+  handoff_id: "HANDOFF-OBS-EDITORIAL-001"
+  release_id: "REL-OBS-EDITORIAL-001"
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  asset_manifest_id: "ASSET-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_version: "1.4.0"
+  super_schema_version: "1.4"
+  taxonomy_version: "1.1"
+  product_type: "skill_workflow"
+  source_repository: "Sas-Executar/LANCAMENTO"
+  source_branch: "feat/oficina-v1-4-runbook-uix-react"
+  source_commit: "ef9b191920cdddb0e1d20630887d0ec43633b166"
+  immutable_snapshot: true
+
+handoff:
+  status:
+    schema_complete: true
+    bundle_complete: true
+    build_ready: true
+    editorial_assets_complete: false
+    qa_complete: false
+    store_submission_complete: false
+    publish_ready: false
+    lifecycle: "BUNDLE_READY"
+  next_stage: "IN_EDITORIAL_PRODUCTION"
+  source_contracts:
+    runbook: "D19__assets-e-cta/solution-store/OFICINA_PRODUCTION_RUNBOOK.yaml"
+    handoff_schema: "D19__assets-e-cta/solution-store/PRODUCTION_HANDOFF_SCHEMA.yaml"
+    asset_schema: "D19__assets-e-cta/solution-store/PUBLICATION_ASSET_SCHEMA.yaml"
+    card_schema: "D19__assets-e-cta/solution-store/STORE_CARD_SCHEMA.yaml"
+    release_schema: "D19__assets-e-cta/solution-store/RELEASE_MANIFEST_SCHEMA.yaml"
+    wireframe_tokens: "D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    react_contract: "D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+  blockers:
+    - "Tokens visuais finais ainda não fornecidos."
+    - "Render e derivados ainda não produzidos."
+    - "URL pública/CTA ainda não confirmada."
+    - "Áudio final/licenças ainda não confirmados."
+
+---
+# Documento 2/7 — Super Schema v1.4
+super_schema_version: "1.4"
+schema_id: "SUPER_SCHEMA_SOLUTION"
+schema_status: "canonical"
+
+identity:
+  solution_id: null
+  solution_name: null
+  slug: null
+  solution_type: null
+  product_type: null
+  product_subtype: null
+  category: null
+  version: null
+  source_file_ref: null
+
+
+classification:
+  taxonomy_version: "1.1"
+  registries:
+    product_types: "taxonomy/PRODUCT_TYPES.yaml"
+    areas: "taxonomy/AREAS.yaml"
+    professions: "taxonomy/PROFESSIONS.yaml"
+    task_types: "taxonomy/TASK_TYPES.yaml"
+    artifact_types: "taxonomy/ARTIFACT_TYPES.yaml"
+    tagging_rules: "taxonomy/TAGGING_RULES.yaml"
+  areas:
+    primary: null
+    secondary: []
+    original_categories: []
+  professions:
+    primary: []
+    related: []
+  task_types: []
+  artifact_types: []
+  semantic_tags: []
+  node_keys: []
+
+
+oficina:
+  runbook_ref: "OFICINA_PRODUCTION_RUNBOOK.yaml"
+  product:
+    product_type: null
+    product_subtype: null
+    delivery_mode: null
+    downloadable: null
+    interactive: null
+  storefront_experience:
+    architecture_decisions:
+      information_architecture: "../../D22__decision-and-register-log 2/oficina/ADR-UX-001_STORE_INFORMATION_ARCHITECTURE.md"
+      discovery_filter_sort: "../../D22__decision-and-register-log 2/oficina/ADR-UX-002_DISCOVERY_FILTER_SORT.md"
+      solution_detail: "../../D22__decision-and-register-log 2/oficina/ADR-UX-003_SOLUTION_DETAIL.md"
+      learn_onboarding: "../../D22__decision-and-register-log 2/oficina/ADR-UX-004_LEARN_ONBOARDING.md"
+      react_architecture: "../../D22__decision-and-register-log 2/oficina/ADR-REACT-001_COMPONENT_ARCHITECTURE.md"
+    wireframe_tokens_ref: "../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    react_component_contract_ref: "../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+    discovery:
+      searchable: true
+      filterable: true
+      sortable: true
+      category_counts_supported: true
+    card:
+      schema_ref: "STORE_CARD_SCHEMA.yaml"
+      required: true
+      video_loop_supported: true
+      gif_fallback_supported: true
+    detail:
+      tabs:
+        overview: true
+        contents: true
+        examples: true
+        dependencies: true
+    actions:
+      start:
+        enabled: true
+      download:
+        enabled: null
+    learning:
+      enabled: true
+      browse_by_profession: true
+    interaction:
+      vertical_carousel: true
+      video_loop: true
+      onboarding_html: true
+  publication_assets:
+    schema_ref: "PUBLICATION_ASSET_SCHEMA.yaml"
+    manifest_ref: null
+    required: []
+    generated: []
+    pending: []
+  release:
+    manifest_schema_ref: "RELEASE_MANIFEST_SCHEMA.yaml"
+    manifest_ref: null
+  lifecycle:
+    current_state: "INGESTED"
+    allowed_states:
+      - "INGESTED"
+      - "CLASSIFIED"
+      - "SCHEMA_IN_PROGRESS"
+      - "SCHEMA_COMPLETE"
+      - "BUNDLE_READY"
+      - "IN_EDITORIAL_PRODUCTION"
+      - "ASSETS_READY"
+      - "QA_READY"
+      - "STORE_READY"
+      - "PUBLISHED"
+      - "DEPRECATED"
+    next_state: null
+    blockers: []
+  definition_of_done:
+    G1_SCHEMA_COMPLETE: false
+    G2_BUNDLE_COMPLETE: false
+    G3_EDITORIAL_ASSETS_COMPLETE: false
+    G4_QA_COMPLETE: false
+    G5_STORE_SUBMISSION_COMPLETE: false
+    G6_PUBLISHED: false
+
+
+public_layer:
+  problem_statement: null
+  target_user: null
+  three_p_n_three:
+    problema_que_resolve: null
+    processo_aplicado: null
+    progresso_pretendido: null
+    next:
+      "01": null
+      "02": null
+      "03": null
+  tutorial:
+    title: null
+    introduction: null
+    instructions: []
+    expected_result: null
+  practical_example:
+    title: null
+    scenario: null
+    input_example: null
+    transformation: null
+    output_example: null
+    before_state: null
+    after_state: null
+    why_it_shines: null
+
+capability_contract:
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: []
+  output_generated: []
+  dependencies: []
+  limitations: []
+
+instruction_quality_5w2h_invisible:
+  validation: null
+  what_defined: false
+  why_defined: false
+  who_defined: false
+  where_defined: false
+  when_defined: false
+  how_defined: false
+  how_much_defined: false
+
+
+usage_fit:
+  best_use_cases:
+    - id: "BUC-01"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-02"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-03"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+  risk_of_use:
+    - id: "RISK-01"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-02"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-03"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+
+
+commercial_production:
+  enabled: false
+  brief_schema_version: "1.0"
+  production_id: null
+  output_decision:
+    primary: null # video | web_interativa | ambos
+    rule: >-
+      HTML/CSS/JS interativo não se torna automaticamente MP4. Para vídeo,
+      renderizar quadros determinísticos e sincronizar áudio explicitamente.
+  projeto:
+    nome: null
+    produto: null
+    objetivo: null # apresentar | demonstrar | converter
+    publico: null
+    canal: null # site | Instagram | YouTube | anúncio
+    idioma: "pt-BR"
+  mensagem:
+    problema_do_publico: null
+    promessa_principal: null
+    diferencial: null
+    evidencias: []
+    chamada_para_acao: null
+    destino_cta: null
+  entrega:
+    tipo: "video" # video | web_interativa | ambos
+    duracao_segundos: 20
+    proporcao: "9:16"
+    resolucao_px: [1080, 1920]
+    fps: 30
+    formato: "mp4"
+    variantes: []
+    limite_arquivo_mb: null
+  marca:
+    identidade_status: null # oficial | direcao_criativa_provisoria
+    logo: null
+    cores:
+      fundo: null
+      texto: null
+      destaque: null
+    fontes: []
+    referencias_visuais: []
+    evitar: []
+  direcao:
+    estilo: "demonstracao_de_interface"
+    tom: null
+    ritmo: null
+    enquadramento: null
+    movimento:
+      entrada: "fade + deslocamento"
+      transicao: null
+      intensidade: "moderada"
+    area_segura_px:
+      topo: null
+      direita: null
+      inferior: null
+      esquerda: null
+  cenas:
+    - id: "C01"
+      inicio_s: 0
+      duracao_s: 4
+      funcao: "gancho" # problema | demonstracao | prova | CTA
+      mensagem: null
+      texto_na_tela: null
+      locucao: null
+      elementos: []
+      estado_inicial: null
+      acao_visual: null
+      estado_final: null
+      sincronizacao_audio: null
+      assets: []
+  audio:
+    locucao: null
+    trilha: null
+    efeitos: []
+    licencas_confirmadas: false
+    legendas: true
+  execucao:
+    tecnica: "HTML_CSS_JS"
+    dados: "ficticios_identificados"
+    tempo_controlado_por: "timeline"
+    frame_time_rule: "t = frame / fps"
+    deterministic_render_required: true
+    prohibit_set_interval_for_render: true
+    prohibit_scroll_dependency_for_render: true
+    render_video:
+      pipeline: "browser_frames + encoder"
+      tempo_deterministico: true
+      fontes_carregadas: true
+      assets_carregados: true
+      audio_sincronizado_por_timeline: true
+    web:
+      replay: true
+      movimento_reduzido: true
+  validacao:
+    responsavel_aprovacao: null
+    criterios:
+      - "Mensagem compreensível sem áudio"
+      - "Texto legível no celular"
+      - "Sem cortes, sobreposições ou overflow"
+      - "Sem dados pessoais ou alegações sem evidência"
+      - "Áudio sincronizado e sem distorção"
+      - "CTA legível e com tempo de leitura"
+    publication_gate:
+      claims_supported: null
+      destino_cta_confirmado: null
+      assets_autorizados: null
+      licencas_audio_confirmadas: null
+      status: null
+  creative_quality:
+    priority_order:
+      - "roteiro_claro"
+      - "tipografia"
+      - "composicao"
+      - "ritmo"
+      - "audio"
+      - "efeitos"
+    effects_policy: "Efeitos servem à mensagem; quantidade de efeitos não é métrica de qualidade."
+
+evidence_based_scoring:
+  methodology_id: "SEUS-v0.1"
+  methodology_name: "Solution Evidence Utility Score"
+  scale:
+    min: 0
+    max: 10
+  status: "CALIBRATION_REQUIRED"
+  principles:
+    no_estimated_scores: true
+    missing_evidence_value: null
+    separate_utility_and_confidence: true
+    benchmark_required_for_relative_dimensions: true
+    context_specific_score: true
+  benchmark_context:
+    population: null
+    geography: null
+    language: null
+    observation_window: null
+    comparison_set: null
+  fit_gate:
+    target_use_case_id: null
+    eligible_for_scoring: null
+    exclusion_reason: null
+  dimensions:
+    public_pain:
+      score: null
+      raw_metrics:
+        search_interest: null
+        problem_mentions: null
+        workaround_incidence: null
+        survey_prevalence: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; no score from unsupported impression."
+    steps_reduction:
+      baseline_steps: null
+      solution_steps: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    time_reduction:
+      baseline_minutes: null
+      solution_minutes: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    dependency_burden:
+      dependency_count: null
+      setup_minutes: null
+      paid_dependencies: null
+      specialist_dependencies: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; lower burden must map to higher score."
+    cognitive_load_reduction:
+      measurement_method: "NASA_TLX_or_equivalent_validated_measure"
+      baseline_value: null
+      solution_value: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "When comparable validated measures exist: score = clamp(0,10,10 * reduction_pct / 100)."
+    executive_function_relief:
+      functions:
+        working_memory:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        inhibitory_control:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        cognitive_flexibility:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        planning_organization:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+      score: null
+      confidence: null
+      scoring_rule: "No universal 0-10 conversion assumed; score requires an approved task-demand rubric or validated measurement."
+    reliability:
+      total_runs: null
+      successful_runs: null
+      success_rate_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = 10 * success_rate_pct / 100"
+    reuse_frequency:
+      observed_uses_per_user_period: null
+      period: null
+      benchmark_ref: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires cohort benchmark calibration."
+    overkill_risk:
+      unnecessary_complexity_rate_pct: null
+      abandonment_due_to_complexity_pct: null
+      simpler_alternative_success_rate_pct: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Risk dimension; calibration required before inclusion in an aggregate utility score."
+  overall:
+    utility_score: null
+    confidence_index: null
+    evidence_adjusted_score: null
+    weights: null
+    score_status: "NOT_COMPUTED"
+    aggregation_policy: >-
+      Do not publish an overall score until weights, benchmark population and minimum
+      evidence thresholds are approved and versioned. Missing dimensions remain null,
+      never zero.
+
+evidence_matrix_18:
+  schema_version: null
+  row_id: null
+  funcoes_fundamentais_gestao_projetos: null
+  funcoes_executivas_area_gestao_projetos: null
+  capacidades_humanas_operacionais_exigidas: null
+  funcao_deficit_tdah: null
+  fonte_clinica: null
+  fonte_cientifica: null
+  funcao_executiva_cognitiva: null
+  evidencia: null
+  impacto_operacional_funcao_afetada: null
+  impacto_operacional_mecanismo: null
+  impacto_operacional_consequencia: null
+  impacto_operacional_compensacao: null
+  conclusao_produto_design: null
+  classe_epistemica: null
+  estado_validacao: null
+  observacoes: null
+
+internal_control_24:
+  schema_version: null
+  solution_id: null
+  solution_name: null
+  problem_statement: null
+  target_user: null
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: null
+  output_generated: null
+  next_01: null
+  next_02: null
+  next_03: null
+  five_w_two_h_validation: null
+  dependencies: null
+  limitations: null
+  test_status: null
+  evidence_ref: null
+  public_tutorial_ref: null
+  source_file_ref: null
+  lifecycle_status: null
+  validation_status: null
+  version: null
+  observations: null
+
+internal_profile:
+  classification:
+    public_status: null
+    lifecycle_status: null
+    maturity: null
+    audience: []
+  problem:
+    statement: null
+    triggers: []
+  process:
+    summary: null
+  progress:
+    intended_state: null
+    success_conditions: []
+  next:
+    "01": null
+    "02": null
+    "03": null
+  hero_use_case:
+    problem: null
+    input: null
+    transformation: null
+    output: null
+    why_it_shines: null
+  contract:
+    inputs: []
+    outputs: []
+    dependencies: []
+    limitations: []
+  evidence:
+    test_case_id: null
+    expected_output_defined: false
+    tested: false
+  quality:
+    content_preservation: null
+    structural_consistency: null
+    usability_validation: null
+
+
+store_submission:
+  submission_id: null
+  schema_ref: "STORE_SUBMISSION_SCHEMA.yaml"
+  product_type: null
+  release_id: null
+  readiness:
+    schema_complete: false
+    evidence_complete: false
+    tutorial_complete: false
+    production_handoff_complete: false
+    assets_complete: false
+    publication_ready: false
+  listing:
+    title: null
+    short_description: null
+    long_description: null
+    primary_area: null
+    secondary_areas: []
+    professions: []
+    task_types: []
+    artifact_types: []
+    search_tags: []
+    node_keys: []
+  media:
+    card_ref: null
+    hero_image: null
+    demo_video: null
+    video_loop: null
+    gif_fallback: null
+    vertical_carousel: null
+    screenshots: []
+    onboarding_html: null
+    download_package: null
+  publication:
+    cta_url: null
+    privacy_review: null
+    claims_review: null
+    final_approval: null
+    blockers: []
+
+production_handoff:
+  handoff_id: null
+  schema_ref: "PRODUCTION_HANDOFF_SCHEMA.yaml"
+  required_when: "READY_FOR_PRODUCTION"
+  bundle_path: null
+  bundle_schema_version: "1.2"
+  immutable_snapshot: true
+  generation_status: null
+  includes:
+    solution_snapshot: true
+    super_schema_snapshot: true
+    commercial_production_snapshot: true
+    store_submission_snapshot: true
+    evidence_refs: true
+    asset_manifest: true
+    timeline: true
+    implementation_contract: true
+    qa_acceptance: true
+    publication_gate: true
+    publication_asset_manifest: true
+    release_manifest: true
+
+governance:
+  owner: null
+  source_of_truth: null
+  created_at: null
+  updated_at: null
+  review_cycle: null
+  validation_status: null
+  supersedes: null
+  changelog: []
+
+testing:
+  test_case_id: null
+  test_status: null
+  expected_output_defined: false
+  evidence_ref: null
+
+traceability:
+  source: null
+  evidence_sources: []
+  related_rows: []
+  tutorial_ref: null
+  example_ref: null
+  previous_version: null
+  current_version: null
+  taxonomy_version: null
+  area_registry_ref: null
+  profession_registry_ref: null
+  handoff_id: null
+  submission_id: null
+  bundle_ref: null
+  product_types_registry_ref: null
+  asset_manifest_ref: null
+  release_manifest_ref: null
+  wireframe_tokens_ref: null
+  react_component_contract_ref: null
+  product_types_registry_ref: null
+  asset_manifest_ref: null
+  release_manifest_ref: null
+  wireframe_tokens_ref: null
+  react_component_contract_ref: null
+
+---
+# Documento 3/7 — Solução preenchida v1.4
+super_schema_version: "1.4"
+schema_id: "SUPER_SCHEMA_SOLUTION"
+schema_status: "canonical"
+
+identity:
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_name: "Obsidian Editorial"
+  slug: "obsidian-editorial"
+  solution_type: "AI_SKILL"
+  product_type: "skill_workflow"
+  product_subtype: "skill"
+  category: "Knowledge Management"
+  version: "1.4.0"
+  source_file_ref: "obsidian-editorial.skill"
+
+
+classification:
+  taxonomy_version: "1.1"
+  registries:
+    product_types: "../taxonomy/PRODUCT_TYPES.yaml"
+    areas: "../taxonomy/AREAS.yaml"
+    professions: "../taxonomy/PROFESSIONS.yaml"
+    task_types: "../taxonomy/TASK_TYPES.yaml"
+    artifact_types: "../taxonomy/ARTIFACT_TYPES.yaml"
+    tagging_rules: "../taxonomy/TAGGING_RULES.yaml"
+  areas:
+    primary: "productivity"
+    secondary:
+      - "research"
+      - "operations"
+    original_categories:
+      - "Files & documents"
+      - "Reference docs"
+      - "Productivity"
+  professions:
+    primary:
+      - profession_id: "project_manager"
+        relevance: "high"
+        use_case_refs: ["BUC-01", "BUC-03"]
+      - profession_id: "researcher"
+        relevance: "high"
+        use_case_refs: ["BUC-02"]
+      - profession_id: "student"
+        relevance: "high"
+        use_case_refs: ["BUC-02"]
+      - profession_id: "teacher"
+        relevance: "medium"
+        use_case_refs: ["BUC-02", "BUC-03"]
+    related:
+      - profession_id: "lawyer"
+        relevance: "medium"
+        rationale: "Fluxos documentais extensos podem se beneficiar da estruturação, sem substituir revisão jurídica."
+      - profession_id: "accountant"
+        relevance: "medium"
+        rationale: "Documentação recorrente e referências podem ser estruturadas, sem substituir validação contábil."
+      - profession_id: "product_manager"
+        relevance: "medium"
+        rationale: "Briefings, decisões e documentação de produto são casos compatíveis."
+      - profession_id: "software_developer"
+        relevance: "medium"
+        rationale: "Documentação técnica e bases de conhecimento podem usar a mesma estrutura."
+    evidence_status: "USE_FIT_INFERRED_FROM_DOCUMENTED_CAPABILITIES"
+  task_types:
+    - "organize"
+    - "structure"
+    - "document"
+    - "transform"
+    - "knowledge_management"
+  artifact_types:
+    - "markdown_document"
+    - "project_documentation"
+    - "knowledge_base"
+    - "briefing"
+  semantic_tags:
+    - "obsidian"
+    - "markdown"
+    - "document_structure"
+    - "project_documentation"
+    - "knowledge_management"
+  node_keys:
+    - "area:productivity"
+    - "area:research"
+    - "area:operations"
+    - "profession:project_manager"
+    - "profession:researcher"
+    - "profession:student"
+    - "profession:teacher"
+    - "task:organize"
+    - "task:structure"
+    - "artifact:markdown_document"
+    - "artifact:knowledge_base"
+
+
+oficina:
+  runbook_ref: "../OFICINA_PRODUCTION_RUNBOOK.yaml"
+  product:
+    product_type: "skill_workflow"
+    product_subtype: "skill"
+    delivery_mode: "skill_package"
+    downloadable: true
+    interactive: true
+  storefront_experience:
+    architecture_decisions:
+      information_architecture: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-001_STORE_INFORMATION_ARCHITECTURE.md"
+      discovery_filter_sort: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-002_DISCOVERY_FILTER_SORT.md"
+      solution_detail: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-003_SOLUTION_DETAIL.md"
+      learn_onboarding: "../../../D22__decision-and-register-log 2/oficina/ADR-UX-004_LEARN_ONBOARDING.md"
+      react_architecture: "../../../D22__decision-and-register-log 2/oficina/ADR-REACT-001_COMPONENT_ARCHITECTURE.md"
+    wireframe_tokens_ref: "../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    react_component_contract_ref: "../../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+    discovery:
+      searchable: true
+      filterable: true
+      sortable: true
+      category_counts_supported: true
+    card:
+      schema_ref: "../STORE_CARD_SCHEMA.yaml"
+      instance_ref: "store/STORE_CARD.yaml"
+      required: true
+      video_loop_supported: true
+      gif_fallback_supported: true
+    detail:
+      tabs:
+        overview: true
+        contents: true
+        examples: true
+        dependencies: true
+    actions:
+      start: {enabled: true}
+      download: {enabled: true}
+    learning:
+      enabled: true
+      browse_by_profession: true
+    interaction:
+      vertical_carousel: true
+      video_loop: true
+      onboarding_html: true
+  publication_assets:
+    schema_ref: "../PUBLICATION_ASSET_SCHEMA.yaml"
+    manifest_ref: "production/ASSET_MANIFEST.yaml"
+    required:
+      - "store_card"
+      - "poster"
+      - "video_master"
+      - "video_variants"
+      - "video_loop"
+      - "gif_fallback"
+      - "vertical_carousel"
+      - "onboarding_html"
+      - "download_package"
+      - "store_listing"
+    generated: []
+    pending:
+      - "visual_tokens"
+      - "rendered_media"
+      - "licensed_audio"
+      - "public_urls"
+  release:
+    manifest_schema_ref: "../RELEASE_MANIFEST_SCHEMA.yaml"
+    manifest_ref: "release/RELEASE_MANIFEST.yaml"
+  lifecycle:
+    current_state: "BUNDLE_READY"
+    next_state: "IN_EDITORIAL_PRODUCTION"
+    blockers:
+      - "Tokens visuais finais ainda não fornecidos."
+      - "URL pública/CTA ainda não confirmada."
+      - "Áudio final/licenças ainda não confirmados."
+  definition_of_done:
+    G1_SCHEMA_COMPLETE: true
+    G2_BUNDLE_COMPLETE: true
+    G3_EDITORIAL_ASSETS_COMPLETE: false
+    G4_QA_COMPLETE: false
+    G5_STORE_SUBMISSION_COMPLETE: false
+    G6_PUBLISHED: false
+
+public_layer:
+  problem_statement: >-
+    Informações brutas e dispersas exigem esforço manual para virar documentação
+    consistente, navegável e reutilizável no Obsidian.
+  target_user: "Usuários de Obsidian que organizam conhecimento, projetos e documentação."
+  three_p_n_three:
+    problema_que_resolve: >-
+      Reduz o trabalho de transformar notas, briefings, decisões, tarefas e referências
+      dispersas em documentação estruturada.
+    processo_aplicado: >-
+      Recebe conteúdo, interpreta o objetivo, aplica uma estrutura editorial,
+      organiza a saída em Markdown e valida consistência estrutural.
+    progresso_pretendido: >-
+      Converter informação não estruturada em uma base navegável, persistente e
+      reutilizável no Obsidian.
+    next:
+      "01": "Fornecer o conteúdo bruto."
+      "02": "Definir o resultado ou formato desejado."
+      "03": "Executar a transformação e validar a saída."
+  tutorial:
+    title: "Obsidian Editorial — de conteúdo bruto para documentação estruturada"
+    introduction: >-
+      Use a ferramenta quando você tiver conteúdo útil, mas ainda sem arquitetura
+      clara para utilização contínua no Obsidian.
+    instructions:
+      - "Cole ou anexe o conteúdo que deseja organizar."
+      - "Descreva o resultado desejado ou selecione o perfil de saída."
+      - "Execute a transformação e incorpore a estrutura validada ao vault."
+    expected_result: "Markdown estruturado, navegável e pronto para continuidade."
+  practical_example:
+    title: "De briefing caótico para documentação operacional"
+    scenario: >-
+      Um projeto de lançamento possui prazo, tarefas, responsáveis, concorrentes,
+      reuniões e referências misturados em uma única nota.
+    input_example: |-
+      Projeto: Lançamento Produto X
+      - lançamento previsto para novembro
+      - definir landing page
+      - João cuida do design
+      - falta confirmar orçamento
+      - concorrentes: A, B e C
+      - reunião sexta
+      - pesquisar estratégia de SEO
+      - campanha precisa estar pronta antes do dia 15
+      - referência: campanha anterior
+    transformation: >-
+      Separar contexto, objetivos, decisões, tarefas, pesquisa e referências em uma
+      arquitetura documental coerente.
+    output_example: |-
+      LANCAMENTO-PRODUTO-X/
+      ├── 00_INDEX.md
+      ├── 01_CONTEXT.md
+      ├── 02_OBJECTIVES.md
+      ├── 03_DECISIONS.md
+      ├── 04_TASKS.md
+      ├── 05_RESEARCH.md
+      └── 06_REFERENCES.md
+    before_state: "Informação dispersa e difícil de reutilizar."
+    after_state: "Base operacional navegável e atualizável."
+    why_it_shines: >-
+      A ferramenta demonstra maior valor quando precisa converter conteúdo heterogêneo
+      e desestruturado em uma arquitetura persistente sem exigir organização manual prévia.
+
+capability_contract:
+  process_applied: "Análise do conteúdo → estrutura editorial → Markdown → validação."
+  intended_progress: "Base Markdown organizada e reutilizável."
+  hero_use_case: "Briefing disperso → sistema documental operacional no Obsidian."
+  input_required:
+    - "texto"
+    - "markdown"
+    - "documentos"
+    - "notas"
+  output_generated:
+    - "markdown estruturado"
+    - "documentação navegável"
+  dependencies:
+    - "Obsidian para uso final da estrutura"
+  limitations:
+    - "Não valida automaticamente a veracidade factual do conteúdo-fonte."
+    - "Não constitui intervenção clínica, diagnóstico ou tratamento."
+
+instruction_quality_5w2h_invisible:
+  validation: "PASS"
+  what_defined: true
+  why_defined: true
+  who_defined: true
+  where_defined: true
+  when_defined: true
+  how_defined: true
+  how_much_defined: true
+
+
+usage_fit:
+  best_use_cases:
+    - id: "BUC-01"
+      title: "Briefing disperso para base operacional"
+      problem: "Contexto, decisões, tarefas e referências estão misturados e difíceis de retomar."
+      scenario: "Projeto com múltiplas notas, responsáveis, prazos e referências ainda sem arquitetura documental."
+      why_this_tool: "Converte conteúdo heterogêneo em estrutura persistente e navegável."
+      expected_gain: "Menos organização manual e menor perda de contexto entre sessões."
+      fit_conditions:
+        - "Há volume suficiente de informação para justificar estrutura."
+        - "O conteúdo será reutilizado ou atualizado."
+      evidence_refs:
+        - "TC-OBS-001"
+    - id: "BUC-02"
+      title: "Pesquisa extensa para base de conhecimento"
+      problem: "Fontes, achados e notas de pesquisa acumulam-se sem navegação consistente."
+      scenario: "Pesquisa com múltiplos documentos que precisa virar notas conectadas, sínteses e referências."
+      why_this_tool: "Ajuda a separar tipos de informação e manter uma arquitetura editorial estável."
+      expected_gain: "Melhor recuperabilidade e continuidade da pesquisa."
+      fit_conditions:
+        - "Existem várias fontes ou blocos de conteúdo."
+        - "O usuário precisa continuar adicionando material."
+      evidence_refs: []
+    - id: "BUC-03"
+      title: "Processo recorrente para documentação reutilizável"
+      problem: "Um fluxo recorrente é documentado de formas diferentes a cada execução."
+      scenario: "SOP, checklist, template ou pacote operacional que precisa manter padrão entre ciclos."
+      why_this_tool: "Padroniza a saída e reduz decisões repetidas de estrutura e formatação."
+      expected_gain: "Maior consistência documental e menor retrabalho editorial."
+      fit_conditions:
+        - "A tarefa se repete."
+        - "Existe valor em padronização entre execuções."
+      evidence_refs: []
+  risk_of_use:
+    - id: "RISK-01"
+      scenario: "Nota curta, descartável ou de uso único."
+      failure_mode: "A estrutura gerada adiciona mais etapas do que a tarefa exige."
+      overkill_reason: "O custo de organizar supera o benefício de reutilização."
+      better_alternative: "Criar ou editar diretamente uma nota simples."
+      severity: "LOW"
+      likelihood: "MEDIUM"
+      mitigation: "Aplicar fit gate e recomendar fluxo simples quando não houver necessidade de estrutura persistente."
+      evidence_refs: []
+    - id: "RISK-02"
+      scenario: "Conteúdo factual ainda não verificado usado em contexto de alta consequência."
+      failure_mode: "A boa apresentação estrutural pode criar falsa sensação de confiabilidade."
+      overkill_reason: "Estrutura editorial não substitui verificação factual, revisão especializada ou controles de domínio."
+      better_alternative: "Validar fontes e conteúdo antes da transformação editorial."
+      severity: "HIGH"
+      likelihood: "CONTEXT_DEPENDENT"
+      mitigation: "Separar validação factual de estruturação e exigir evidência quando o domínio for sensível."
+      evidence_refs:
+        - "EVIDENCIAS.md"
+    - id: "RISK-03"
+      scenario: "Projeto muito dinâmico em que a taxonomia muda mais rápido que o conteúdo pode ser mantido."
+      failure_mode: "Manutenção da arquitetura passa a consumir tempo e gera dívida organizacional."
+      overkill_reason: "Estrutura excessivamente rígida pode aumentar custo de atualização."
+      better_alternative: "Usar estrutura mínima temporária e promover para arquitetura completa apenas após estabilização."
+      severity: "MEDIUM"
+      likelihood: "MEDIUM"
+      mitigation: "Começar com estrutura mínima e ampliar somente quando o padrão de uso estiver claro."
+      evidence_refs: []
+
+
+commercial_production:
+  enabled: true
+  production_id: "VID-OBS-EDITORIAL-001"
+  primary_output: "video"
+  production_template_ref: "VIDEO_PRODUCTION.yaml"
+  concept: "Briefing disperso → estrutura operacional no Obsidian"
+  publication_status: "READY_FOR_BUILD_BLOCKED_FOR_PUBLISH"
+  publication_blockers:
+    - "Confirmar URL pública do CTA."
+    - "Selecionar e confirmar licença da trilha/efeitos antes da publicação."
+  claims_policy:
+    no_unsupported_metrics: true
+    source_refs:
+      - "solution.yaml#public_layer"
+      - "solution.yaml#usage_fit"
+      - "EVIDENCIAS.md"
+
+evidence_based_scoring:
+  methodology_id: "SEUS-v0.1"
+  methodology_name: "Solution Evidence Utility Score"
+  scale:
+    min: 0
+    max: 10
+  status: "MEASUREMENT_PENDING"
+  principles:
+    no_estimated_scores: true
+    missing_evidence_value: null
+    separate_utility_and_confidence: true
+    benchmark_required_for_relative_dimensions: true
+    context_specific_score: true
+  benchmark_context:
+    population: null
+    geography: null
+    language: null
+    observation_window: null
+    comparison_set: null
+  fit_gate:
+    target_use_case_id: "BUC-01"
+    eligible_for_scoring: true
+    exclusion_reason: null
+  dimensions:
+    public_pain:
+      score: null
+      raw_metrics:
+        search_interest: null
+        problem_mentions: null
+        workaround_incidence: null
+        survey_prevalence: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; no score from unsupported impression."
+    steps_reduction:
+      baseline_steps: null
+      solution_steps: null
+      reduction_pct: null
+      score: null
+      evidence_refs:
+        - "TC-OBS-001"
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    time_reduction:
+      baseline_minutes: null
+      solution_minutes: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    dependency_burden:
+      dependency_count: 1
+      setup_minutes: null
+      paid_dependencies: null
+      specialist_dependencies: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; lower burden must map to higher score."
+    cognitive_load_reduction:
+      measurement_method: "NASA_TLX_or_equivalent_validated_measure"
+      baseline_value: null
+      solution_value: null
+      reduction_pct: null
+      score: null
+      evidence_refs:
+        - "https://www.nasa.gov/human-systems-integration-division/nasa-task-load-index-tlx/"
+      confidence: null
+      scoring_rule: "When comparable validated measures exist: score = clamp(0,10,10 * reduction_pct / 100)."
+    executive_function_relief:
+      functions:
+        working_memory:
+          burden_before: null
+          burden_after: null
+          evidence_refs:
+            - "OBS-EDITORIAL-TDAH-PM-001"
+        inhibitory_control:
+          burden_before: null
+          burden_after: null
+          evidence_refs:
+            - "OBS-EDITORIAL-TDAH-PM-001"
+        cognitive_flexibility:
+          burden_before: null
+          burden_after: null
+          evidence_refs:
+            - "OBS-EDITORIAL-TDAH-PM-001"
+        planning_organization:
+          burden_before: null
+          burden_after: null
+          evidence_refs:
+            - "OBS-EDITORIAL-TDAH-PM-001"
+      score: null
+      confidence: null
+      scoring_rule: "No universal 0-10 conversion assumed; score requires an approved task-demand rubric or validated measurement."
+    reliability:
+      total_runs: null
+      successful_runs: null
+      success_rate_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = 10 * success_rate_pct / 100"
+    reuse_frequency:
+      observed_uses_per_user_period: null
+      period: null
+      benchmark_ref: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires cohort benchmark calibration."
+    overkill_risk:
+      unnecessary_complexity_rate_pct: null
+      abandonment_due_to_complexity_pct: null
+      simpler_alternative_success_rate_pct: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Risk dimension; calibration required before inclusion in an aggregate utility score."
+  overall:
+    utility_score: null
+    confidence_index: null
+    evidence_adjusted_score: null
+    weights: null
+    score_status: "NOT_COMPUTED"
+    aggregation_policy: >-
+      No overall score is published until weights, benchmark population and minimum
+      evidence thresholds are approved and versioned. Missing dimensions remain null,
+      never zero.
+
+evidence_matrix_18:
+  schema_version: "1.0"
+  row_id: "OBS-EDITORIAL-TDAH-PM-001"
+  funcoes_fundamentais_gestao_projetos: >-
+    Planejar, organizar, executar, monitorar e controlar entregas, escopo,
+    comunicação e trabalho associado ao projeto.
+  funcoes_executivas_area_gestao_projetos: >-
+    Priorizar, decompor trabalho, sequenciar ações, manter contexto,
+    acompanhar estado e concluir tarefas.
+  capacidades_humanas_operacionais_exigidas: >-
+    Atenção sustentada, memória de trabalho, planejamento, organização,
+    controle inibitório, gestão do tempo e retomada de contexto.
+  funcao_deficit_tdah: >-
+    Vulnerabilidades possíveis em memória de trabalho, inibição, vigilância,
+    planejamento e organização; não presentes de forma idêntica em todas as pessoas.
+  fonte_clinica:
+    title: "NIMH — Attention-Deficit/Hyperactivity Disorder: What You Need to Know"
+    url: "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+  fonte_cientifica:
+    title: "Willcutt et al. — Validity of the executive function theory of ADHD: a meta-analytic review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/15950006/"
+  funcao_executiva_cognitiva: >-
+    Planejamento/organização, memória de trabalho, inibição e atenção sustentada.
+  evidencia: >-
+    A literatura identifica diferenças médias em funções executivas associadas ao TDAH
+    e evidência de benefício para estratégias estruturadas de organização e planejamento.
+  impacto_operacional_funcao_afetada: >-
+    Planejamento, priorização, acompanhamento, retomada e conclusão de projetos.
+  impacto_operacional_mecanismo: >-
+    Alta dependência de memória interna e autorregulação pode aumentar perda de contexto,
+    esquecimento e dificuldade de sequenciamento.
+  impacto_operacional_consequencia: >-
+    Pode contribuir para procrastinação, tarefas esquecidas, fragmentação do projeto,
+    dificuldade de retomada e de finalização.
+  impacto_operacional_compensacao: >-
+    Externalizar contexto, estado, próxima ação, estrutura, evidência e critérios de
+    conclusão em documentação persistente.
+  conclusao_produto_design: >-
+    O design da ferramenta deve reduzir carga operacional ao converter conteúdo em
+    estrutura navegável, passos limitados, checkpoints e informação persistente.
+  classe_epistemica: "EVIDENCIA_CLINICA_INDIRETA + INFERENCIA_DE_DESIGN"
+  estado_validacao: "VALIDADO_PARCIALMENTE"
+  observacoes: >-
+    A associação entre TDAH e funções executivas possui suporte científico, porém a
+    eficácia clínica específica do Obsidian Editorial não foi testada.
+
+internal_control_24:
+  schema_version: "1.0"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_name: "Obsidian Editorial"
+  problem_statement: "Conteúdo disperso sem estrutura operacional persistente."
+  target_user: "Usuários de Obsidian e trabalhadores do conhecimento."
+  process_applied: "Estruturação editorial automatizada em Markdown."
+  intended_progress: "Base navegável, consistente e reutilizável."
+  hero_use_case: "Briefing desorganizado transformado em documentação operacional."
+  input_required: "Texto, Markdown, notas ou documentos."
+  output_generated: "Markdown estruturado e documentação navegável."
+  next_01: "Fornecer conteúdo."
+  next_02: "Definir ou selecionar o resultado."
+  next_03: "Executar e validar a transformação."
+  five_w_two_h_validation: "PASS"
+  dependencies: "Obsidian para uso final."
+  limitations: "Sem validação factual automática; não é ferramenta clínica."
+  test_status: "DEFINED"
+  evidence_ref: "OBS-EDITORIAL-TDAH-PM-001"
+  public_tutorial_ref: "TUTORIAL_PUBLICO.md"
+  source_file_ref: "obsidian-editorial.skill"
+  lifecycle_status: "ACTIVE"
+  validation_status: "REVIEW"
+  version: "1.4.0"
+  observations: "Golden reference da Oficina v1.4: product type, storefront UX, lifecycle, asset manifest e release manifest."
+
+internal_profile:
+  classification:
+    public_status: "PUBLISHED_READY"
+    lifecycle_status: "ACTIVE"
+    maturity: "STABLE_DRAFT"
+    audience:
+      - "knowledge_workers"
+      - "researchers"
+      - "project_managers"
+      - "obsidian_users"
+  problem:
+    statement: "Converter conteúdo bruto em documentação estruturada sem organização manual extensa."
+    triggers:
+      - "notas_desorganizadas"
+      - "briefing_bruto"
+      - "documentos_sem_estrutura"
+      - "projeto_com_contexto_fragmentado"
+  process:
+    summary: "Entrada → interpretação → estruturação → Markdown → validação."
+  progress:
+    intended_state: "Documentação navegável, persistente e pronta para continuidade."
+    success_conditions:
+      - "estrutura_criada"
+      - "conteudo_preservado"
+      - "markdown_valido"
+      - "navegacao_funcional"
+  next:
+    "01": "Fornecer conteúdo."
+    "02": "Escolher o resultado."
+    "03": "Executar a transformação."
+  hero_use_case:
+    problem: "Briefing de projeto disperso."
+    input: "Notas, decisões, tarefas e referências misturadas."
+    transformation: "Arquitetura documental operacional."
+    output: "Base organizada no Obsidian."
+    why_it_shines: "Elimina organização manual prévia e preserva continuidade do projeto."
+  contract:
+    inputs:
+      - "text"
+      - "markdown"
+      - "documents"
+    outputs:
+      - "markdown"
+      - "structured_documentation"
+    dependencies:
+      - "Obsidian"
+    limitations:
+      - "Não substitui validação factual."
+      - "Não substitui avaliação clínica."
+  evidence:
+    test_case_id: "TC-OBS-001"
+    expected_output_defined: true
+    tested: false
+  quality:
+    content_preservation: "REQUIRED"
+    structural_consistency: "REQUIRED"
+    usability_validation: "REQUIRED"
+
+
+store_submission:
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  schema_ref: "../STORE_SUBMISSION_SCHEMA.yaml"
+  instance_ref: "store_submission.yaml"
+  product_type: "skill_workflow"
+  release_id: "REL-OBS-EDITORIAL-001"
+  readiness:
+    schema_complete: true
+    evidence_complete: true
+    tutorial_complete: true
+    production_handoff_complete: true
+    assets_complete: false
+    publication_ready: false
+  listing:
+    title: "Obsidian Editorial"
+    short_description: "Transforme notas e briefings dispersos em documentação Markdown estruturada para Obsidian."
+    long_description: >-
+      Solução para organizar conteúdo bruto em uma arquitetura documental navegável,
+      persistente e reutilizável. Indicada para projetos, pesquisa, documentação
+      recorrente e bases de conhecimento.
+    primary_area: "productivity"
+    secondary_areas:
+      - "research"
+      - "operations"
+    professions:
+      - "project_manager"
+      - "researcher"
+      - "student"
+      - "teacher"
+      - "lawyer"
+      - "accountant"
+    task_types:
+      - "organize"
+      - "structure"
+      - "document"
+      - "transform"
+      - "knowledge_management"
+    artifact_types:
+      - "markdown_document"
+      - "project_documentation"
+      - "knowledge_base"
+      - "briefing"
+    search_tags:
+      - "obsidian"
+      - "markdown"
+      - "documentos"
+      - "organização"
+      - "projetos"
+      - "pesquisa"
+      - "knowledge-management"
+    node_keys:
+      - "area:productivity"
+      - "profession:project_manager"
+      - "task:document"
+      - "artifact:markdown_document"
+  media:
+    card_ref: "store/STORE_CARD.yaml"
+    hero_image: null
+    demo_video: null
+    video_loop: null
+    gif_fallback: null
+    vertical_carousel: "store/VERTICAL_CAROUSEL.yaml"
+    screenshots: []
+    onboarding_html: "store/ONBOARDING.yaml"
+    download_package: null
+  publication:
+    cta_url: null
+    privacy_review: "PASS_NO_PERSONAL_DATA_REQUIRED"
+    claims_review: "PASS_WITH_DOCUMENTED_LIMITATIONS"
+    final_approval: "PENDING"
+    blockers:
+      - "Confirmar URL pública da ferramenta."
+      - "Concluir e licenciar os assets finais de divulgação."
+
+production_handoff:
+  handoff_id: "HANDOFF-OBS-EDITORIAL-001"
+  schema_ref: "../PRODUCTION_HANDOFF_SCHEMA.yaml"
+  required_when: "READY_FOR_PRODUCTION"
+  bundle_path: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  bundle_schema_version: "1.2"
+  immutable_snapshot: true
+  generation_status: "GENERATED"
+  includes:
+    solution_snapshot: true
+    super_schema_snapshot: true
+    commercial_production_snapshot: true
+    store_submission_snapshot: true
+    evidence_refs: true
+    asset_manifest: true
+    timeline: true
+    implementation_contract: true
+    qa_acceptance: true
+    publication_gate: true
+    publication_asset_manifest: true
+    release_manifest: true
+
+governance:
+  owner: "D19 / Solution Store"
+  source_of_truth: "D19__assets-e-cta/solution-store/obsidian-editorial/solution.yaml"
+  created_at: "2026-09-21"
+  updated_at: "2026-09-21"
+  review_cycle: "90D"
+  validation_status: "REVIEW"
+  supersedes: null
+  changelog:
+    - version: "1.0.0"
+      date: "2026-09-21"
+      change: "Criação da primeira instância do Super Schema Solution."
+    - version: "1.1.0"
+      date: "2026-09-21"
+      change: "Adicionados 3 best-use cases, riscos de uso/overkill e metodologia SEUS de scoring baseada em evidência."
+    - version: "1.2.0"
+      date: "2026-09-21"
+      change: "Adicionada camada de briefing de animação comercial e referência ao template preenchido de produção de vídeo."
+    - version: "1.3.0"
+      date: "2026-09-21"
+      change: "Adicionadas taxonomias de áreas/profissões/tarefas/artefatos, store submission e contrato oficial de production handoff."
+    - version: "1.4.0"
+      date: "2026-09-21"
+      change: "Migrado para o runbook completo da Oficina com product type, wireframe/React contracts, assets, lifecycle e release manifest."
+
+testing:
+  test_case_id: "TC-OBS-001"
+  test_status: "DEFINED_NOT_EXECUTED"
+  expected_output_defined: true
+  evidence_ref: "EVIDENCIAS.md"
+
+traceability:
+  source: "Conversation design + obsidian-editorial.skill reference"
+  evidence_sources:
+    - "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+    - "https://pubmed.ncbi.nlm.nih.gov/15950006/"
+    - "https://www.pmi.org/about/what-is-project-management"
+    - "https://help.obsidian.md/properties"
+  related_rows:
+    - "OBS-EDITORIAL-TDAH-PM-001"
+  tutorial_ref: "TUTORIAL_PUBLICO.md"
+  example_ref: "TUTORIAL_PUBLICO.md#exemplo-prático"
+  previous_version: null
+  current_version: "1.4.0"
+  taxonomy_version: "1.1"
+  area_registry_ref: "../taxonomy/AREAS.yaml"
+  profession_registry_ref: "../taxonomy/PROFESSIONS.yaml"
+  handoff_id: "HANDOFF-OBS-EDITORIAL-001"
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  bundle_ref: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  product_types_registry_ref: "../taxonomy/PRODUCT_TYPES.yaml"
+  asset_manifest_ref: "production/ASSET_MANIFEST.yaml"
+  release_manifest_ref: "release/RELEASE_MANIFEST.yaml"
+  wireframe_tokens_ref: "../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+  react_component_contract_ref: "../../../D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+
+---
+# Documento 4/7 — Produção comercial
+schema_version: "1.0"
+production_id: "VID-OBS-EDITORIAL-001"
+solution_ref: "SOL-OBS-EDITORIAL-001"
+status: "READY_FOR_BUILD_BLOCKED_FOR_PUBLISH"
+
+output_decision:
+  primary: "video"
+  note: >-
+    A peça será construída como animação determinística em HTML/CSS/JS e exportada
+    para MP4 por renderização de quadros. A versão web pode reutilizar a mesma timeline,
+    mas não é tratada como equivalente automático do vídeo.
+
+projeto:
+  nome: "Obsidian Editorial — Briefing disperso para base operacional"
+  produto: "Obsidian Editorial"
+  objetivo: "demonstrar"
+  publico: "Usuários de Obsidian, profissionais de conhecimento e pessoas que organizam projetos complexos."
+  canal: "Instagram Reels, YouTube Shorts e landing page"
+  idioma: "pt-BR"
+
+mensagem:
+  problema_do_publico: >-
+    Notas, decisões, tarefas e referências podem existir no mesmo projeto sem formar
+    uma estrutura que seja fácil de navegar, retomar e continuar atualizando.
+  promessa_principal: >-
+    Transformar conteúdo bruto em documentação Markdown estruturada e navegável para Obsidian.
+  diferencial: >-
+    A demonstração mostra a transformação do material original em uma arquitetura
+    documental persistente, em vez de apenas reescrever ou resumir o texto.
+  evidencias:
+    - claim: "A solução organiza conteúdo bruto em Markdown estruturado e documentação navegável."
+      source_ref: "solution.yaml#capability_contract"
+      evidence_class: "PRODUCT_CAPABILITY"
+    - claim: "O caso principal demonstrado é briefing disperso convertido em base operacional."
+      source_ref: "solution.yaml#usage_fit.best_use_cases[0]"
+      evidence_class: "DOCUMENTED_USE_CASE"
+    - claim: "Não são usadas métricas quantitativas de ganho sem medição."
+      source_ref: "solution.yaml#evidence_based_scoring.principles"
+      evidence_class: "CLAIM_CONTROL"
+  chamada_para_acao: "Transforme um briefing seu em uma base operacional."
+  destino_cta: "PENDING_PUBLIC_TOOL_URL"
+
+entrega:
+  tipo: "video"
+  duracao_segundos: 20
+  proporcao: "9:16"
+  resolucao_px: [1080, 1920]
+  fps: 30
+  formato: "mp4"
+  variantes:
+    - "16:9"
+    - "1:1"
+    - "9:16_sem_audio"
+  limite_arquivo_mb: null
+
+marca:
+  identidade_status: "direcao_criativa_provisoria"
+  logo: null
+  cores:
+    fundo: "#F7F7F8"
+    texto: "#17171A"
+    destaque: "#7C5CFC"
+  fontes:
+    - "system-ui"
+  referencias_visuais:
+    - "Interface editorial limpa"
+    - "Markdown e árvore de arquivos como elementos visuais centrais"
+    - "Animação de interface com profundidade mínima e foco em legibilidade"
+  evitar:
+    - "Métricas inventadas"
+    - "Excesso de partículas ou efeitos decorativos"
+    - "Movimentos rápidos que prejudiquem leitura"
+    - "Logotipos ou assets não autorizados"
+    - "Simular funcionalidades não documentadas"
+
+direcao:
+  estilo: "demonstracao_de_interface"
+  tom: "sofisticado, didático e preciso"
+  ritmo: "moderado com aceleração na transformação"
+  enquadramento: "interface inteira no contexto e detalhes durante a transformação"
+  movimento:
+    entrada: "fade + deslocamento"
+    transicao: "match-cut entre conteúdo bruto e estrutura organizada"
+    intensidade: "moderada"
+  area_segura_px:
+    topo: 120
+    direita: 96
+    inferior: 180
+    esquerda: 96
+
+cenas:
+  - id: "C01"
+    inicio_s: 0
+    duracao_s: 3.5
+    funcao: "gancho"
+    mensagem: "O problema não é falta de informação. É falta de estrutura."
+    texto_na_tela: "Seu projeto está todo aqui. Mas está utilizável?"
+    locucao: "Você já tem as informações. O problema é conseguir operar com elas."
+    elementos:
+      - "nota longa"
+      - "tarefas misturadas"
+      - "decisões"
+      - "referências"
+    estado_inicial: "Tela limpa com título do produto em tipografia."
+    acao_visual: "Uma nota extensa entra e se expande; trechos conflitantes recebem realce discreto."
+    estado_final: "Nota ocupa o centro com vários tipos de informação misturados."
+    sincronizacao_audio: "Primeira frase encerra no realce final da nota."
+    assets:
+      - "dados_ficticios_lancamento_produto_x"
+
+  - id: "C02"
+    inicio_s: 3.5
+    duracao_s: 4
+    funcao: "problema"
+    mensagem: "Organizar manualmente exige separar contexto, tarefas, decisões e referências."
+    texto_na_tela: "Contexto + decisões + tarefas + pesquisa"
+    locucao: "Separar tudo manualmente custa atenção e decisões repetidas de organização."
+    elementos:
+      - "chips de categorias"
+      - "cursor"
+      - "blocos de texto"
+    estado_inicial: "Nota bruta da cena anterior."
+    acao_visual: "Cursor tenta classificar blocos; categorias aparecem e acumulam complexidade visual."
+    estado_final: "A organização manual congela antes de concluir."
+    sincronizacao_audio: "Pequenos efeitos de interface acompanham cada tentativa de classificação."
+    assets: []
+
+  - id: "C03"
+    inicio_s: 7.5
+    duracao_s: 5
+    funcao: "demonstracao"
+    mensagem: "Descreva o resultado e transforme o material em arquitetura documental."
+    texto_na_tela: "“Transforme este material em uma base operacional para Obsidian.”"
+    locucao: "Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada."
+    elementos:
+      - "campo de comando"
+      - "cursor"
+      - "árvore de arquivos"
+      - "cards Markdown"
+    estado_inicial: "Material bruto à esquerda e comando vazio à direita."
+    acao_visual: >-
+      O comando é inserido; os blocos do material se reorganizam em uma árvore de arquivos
+      com INDEX, CONTEXT, OBJECTIVES, DECISIONS, TASKS, RESEARCH e REFERENCES.
+    estado_final: "Arquitetura documental completa e navegável."
+    sincronizacao_audio: "Transformação principal coincide com a palavra 'organizada'."
+    assets:
+      - "estrutura_exemplo_lancamento_produto_x"
+
+  - id: "C04"
+    inicio_s: 12.5
+    duracao_s: 3.5
+    funcao: "prova"
+    mensagem: "O conteúdo permanece conectado a uma estrutura que pode continuar crescendo."
+    texto_na_tela: "Conteúdo bruto → estrutura → documentação navegável"
+    locucao: "O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando."
+    elementos:
+      - "árvore de arquivos"
+      - "links"
+      - "documento Markdown"
+    estado_inicial: "Árvore de arquivos completa."
+    acao_visual: "Alternância suave entre INDEX, TASKS e REFERENCES; links conectam os documentos."
+    estado_final: "Visão geral limpa da base organizada."
+    sincronizacao_audio: "Último documento fecha junto da palavra 'atualizando'."
+    assets: []
+
+  - id: "C05"
+    inicio_s: 16
+    duracao_s: 4
+    funcao: "CTA"
+    mensagem: "Comece com o conteúdo que você já tem."
+    texto_na_tela: "Transforme um briefing seu."
+    locucao: "Comece com o conteúdo que você já tem. Transforme um briefing seu."
+    elementos:
+      - "nome Obsidian Editorial"
+      - "CTA"
+      - "miniatura da estrutura final"
+    estado_inicial: "Estrutura documental reduzida ao centro."
+    acao_visual: "Interface recua, CTA entra com deslocamento curto e permanece estável para leitura."
+    estado_final: "CTA em tela por pelo menos dois segundos."
+    sincronizacao_audio: "Trilha resolve no último quadro; nenhum corte abrupto."
+    assets: []
+
+audio:
+  locucao: >-
+    Você já tem as informações. O problema é conseguir operar com elas.
+    Separar tudo manualmente custa atenção e decisões repetidas de organização.
+    Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada.
+    O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando.
+    Comece com o conteúdo que você já tem. Transforme um briefing seu.
+  trilha: "PENDING_LICENSED_TRACK"
+  efeitos:
+    - "interface_click_soft"
+    - "transition_soft"
+  licencas_confirmadas: false
+  legendas: true
+
+execucao:
+  tecnica: "HTML_CSS_JS"
+  dados: "ficticios_identificados"
+  tempo_controlado_por: "timeline"
+  frame_time_rule: "t = frame / fps"
+  renderer: "browser_frames + ffmpeg_or_equivalent_encoder"
+  deterministic_render_required: true
+  prohibit_set_interval_for_render: true
+  prohibit_scroll_dependency_for_render: true
+  render_video:
+    tempo_deterministico: true
+    fontes_carregadas: true
+    assets_carregados: true
+    audio_sincronizado_por_timeline: true
+    total_frames: 600
+  web:
+    replay: true
+    movimento_reduzido: true
+
+validacao:
+  responsavel_aprovacao: "Owner D19 / responsável pela publicação"
+  criterios:
+    - "Mensagem compreensível sem áudio"
+    - "Texto legível no celular"
+    - "Sem cortes, sobreposições ou overflow"
+    - "Sem dados pessoais ou alegações sem evidência"
+    - "Áudio sincronizado e sem distorção"
+    - "CTA legível e com tempo de leitura"
+    - "Cada quadro é derivado de tempo explícito: t = frame / fps"
+    - "Render não depende de setInterval, scroll ou relógio de parede"
+    - "Assets e fontes estão carregados antes da captura do primeiro quadro"
+  publication_gate:
+    claims_supported: true
+    destino_cta_confirmado: false
+    assets_autorizados: true
+    licencas_audio_confirmadas: false
+    status: "BLOCKED"
+    blockers:
+      - "Substituir PENDING_PUBLIC_TOOL_URL por URL pública aprovada."
+      - "Selecionar trilha/efeitos e confirmar licenças."
+
+creative_quality:
+  principle: >-
+    A aparência profissional deve vir primeiro de roteiro, tipografia, composição,
+    ritmo e áudio; efeitos adicionais só entram quando melhoram a compreensão.
+  priority_order:
+    - "roteiro"
+    - "tipografia"
+    - "composicao"
+    - "ritmo"
+    - "audio"
+    - "efeitos"
+
+---
+# Documento 5/7 — Store submission
+schema_version: "1.1"
+submission:
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_version: "1.4.0"
+  taxonomy_version: "1.1"
+  product_type: "skill_workflow"
+  release_id: "REL-OBS-EDITORIAL-001"
+
+readiness:
+  schema_complete: true
+  evidence_complete: true
+  tutorial_complete: true
+  production_handoff_complete: true
+  assets_complete: false
+  publication_ready: false
+
+listing:
+  title: "Obsidian Editorial"
+  short_description: "Transforme notas e briefings dispersos em documentação Markdown estruturada para Obsidian."
+  long_description: >-
+    Solução para organizar conteúdo bruto em uma arquitetura documental navegável,
+    persistente e reutilizável para projetos, pesquisa, documentação recorrente e bases de conhecimento.
+  primary_area: "productivity"
+  secondary_areas: ["research", "operations"]
+  professions: ["project_manager", "researcher", "student", "teacher", "lawyer", "accountant"]
+  task_types: ["organize", "structure", "document", "transform", "knowledge_management"]
+  artifact_types: ["markdown_document", "project_documentation", "knowledge_base", "briefing"]
+  search_tags: ["obsidian", "markdown", "documentos", "organização", "projetos", "pesquisa", "knowledge-management"]
+  node_keys:
+    - "area:productivity"
+    - "profession:project_manager"
+    - "task:document"
+    - "artifact:markdown_document"
+
+media:
+  card_ref: "store/STORE_CARD.yaml"
+  hero_image: null
+  demo_video: null
+  video_loop: null
+  gif_fallback: null
+  vertical_carousel: "store/VERTICAL_CAROUSEL.yaml"
+  screenshots: []
+  onboarding_html: "store/ONBOARDING.yaml"
+  download_package: null
+
+publication:
+  cta_url: null
+  privacy_review: "PASS_NO_PERSONAL_DATA_REQUIRED"
+  claims_review: "PASS_WITH_DOCUMENTED_LIMITATIONS"
+  final_approval: "PENDING"
+  blockers:
+    - "Tokens visuais finais pendentes."
+    - "URL pública da ferramenta pendente."
+    - "Assets finais e licenças de áudio pendentes."
+
+---
+# Documento 6/7 — Publication asset manifest
+schema_version: "1.0"
+manifest:
+  asset_manifest_id: "ASSET-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  release_id: "REL-OBS-EDITORIAL-001"
+  product_type: "skill_workflow"
+  visual_tokens_version: null
+
+assets:
+  store_card:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "../store/STORE_CARD.yaml"
+  poster:
+    required: true
+    status: "VISUAL_TOKENS_PENDING"
+    output_ref: null
+  video_master:
+    required: true
+    status: "BRIEF_READY"
+    output_ref: "../VIDEO_PRODUCTION.yaml"
+  video_variants:
+    required: true
+    status: "PENDING"
+    outputs: []
+  video_loop:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  gif_fallback:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  vertical_carousel:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "../store/VERTICAL_CAROUSEL.yaml"
+  screenshots:
+    required: true
+    status: "PENDING"
+    outputs: []
+  onboarding_html:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "../store/ONBOARDING.yaml"
+  download_package:
+    required: true
+    status: "PENDING"
+    output_ref: null
+  store_listing:
+    required: true
+    status: "STRUCTURE_READY"
+    output_ref: "../store_submission.yaml"
+
+blockers:
+  - "VISUAL_TOKENS não fornecidos."
+  - "Render e derivados ainda não produzidos."
+  - "Pacote final de download e URLs públicas ainda não definidos."
+
+---
+# Documento 7/7 — Release manifest
+schema_version: "1.0"
+release:
+  release_id: "REL-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_version: "1.4.0"
+  product_type: "skill_workflow"
+  handoff_id: "HANDOFF-OBS-EDITORIAL-001"
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  asset_manifest_id: "ASSET-OBS-EDITORIAL-001"
+
+lifecycle:
+  current_state: "BUNDLE_READY"
+  previous_state: "SCHEMA_COMPLETE"
+  next_state: "IN_EDITORIAL_PRODUCTION"
+  blockers:
+    - "Tokens visuais finais ainda não fornecidos."
+    - "URL pública/CTA ainda não confirmada."
+    - "Áudio final/licenças ainda não confirmados."
+
+gates:
+  G1_SCHEMA_COMPLETE: true
+  G2_BUNDLE_COMPLETE: true
+  G3_EDITORIAL_ASSETS_COMPLETE: false
+  G4_QA_COMPLETE: false
+  G5_STORE_SUBMISSION_COMPLETE: false
+  G6_PUBLISHED: false
+
+refs:
+  solution: "../solution.yaml"
+  bundle: "../production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
+  asset_manifest: "../production/ASSET_MANIFEST.yaml"
+  store_submission: "../store_submission.yaml"
+  card: "../store/STORE_CARD.yaml"
+  carousel: "../store/VERTICAL_CAROUSEL.yaml"
+  onboarding: "../store/ONBOARDING.yaml"
+
+publication:
+  url: null
+  published_at: null
+  final_approval: "PENDING"

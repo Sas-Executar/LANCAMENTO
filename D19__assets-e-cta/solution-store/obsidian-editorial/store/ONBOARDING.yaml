@@ -1,0 +1,25 @@
+schema_version: "1.0"
+onboarding_id: "ONBOARDING-OBS-EDITORIAL-001"
+solution_id: "SOL-OBS-EDITORIAL-001"
+status: "STRUCTURE_READY_VISUAL_TOKENS_PENDING"
+entry_action: "Start"
+
+steps:
+  - {id: "O01", role: "what_this_is", title: "O que é", body: "Uma skill para transformar conteúdo bruto em documentação estruturada para Obsidian."}
+  - {id: "O02", role: "what_you_need", title: "O que você precisa", body: "Notas, briefing, decisões, referências ou outro conteúdo que precise de estrutura."}
+  - {id: "O03", role: "how_to_start", title: "Como começar", body: "Forneça o conteúdo e descreva o resultado desejado."}
+  - {id: "O04", role: "example", title: "Exemplo", body: "Transforme este material em uma base operacional de projeto para Obsidian."}
+  - {id: "O05", role: "next_action", title: "Próxima ação", body: "Use a saída como base e continue atualizando a mesma arquitetura."}
+
+requirements:
+  responsive: true
+  accessible: true
+  keyboard_navigation: true
+  reduced_motion: true
+
+outputs:
+  index_html: null
+  assets_directory: null
+  downloadable_package: null
+
+visual_tokens_ref: null

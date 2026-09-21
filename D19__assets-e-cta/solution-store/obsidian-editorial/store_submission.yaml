@@ -1,0 +1,55 @@
+schema_version: "1.1"
+submission:
+  submission_id: "STORE-OBS-EDITORIAL-001"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_version: "1.4.0"
+  taxonomy_version: "1.1"
+  product_type: "skill_workflow"
+  release_id: "REL-OBS-EDITORIAL-001"
+
+readiness:
+  schema_complete: true
+  evidence_complete: true
+  tutorial_complete: true
+  production_handoff_complete: true
+  assets_complete: false
+  publication_ready: false
+
+listing:
+  title: "Obsidian Editorial"
+  short_description: "Transforme notas e briefings dispersos em documentação Markdown estruturada para Obsidian."
+  long_description: >-
+    Solução para organizar conteúdo bruto em uma arquitetura documental navegável,
+    persistente e reutilizável para projetos, pesquisa, documentação recorrente e bases de conhecimento.
+  primary_area: "productivity"
+  secondary_areas: ["research", "operations"]
+  professions: ["project_manager", "researcher", "student", "teacher", "lawyer", "accountant"]
+  task_types: ["organize", "structure", "document", "transform", "knowledge_management"]
+  artifact_types: ["markdown_document", "project_documentation", "knowledge_base", "briefing"]
+  search_tags: ["obsidian", "markdown", "documentos", "organização", "projetos", "pesquisa", "knowledge-management"]
+  node_keys:
+    - "area:productivity"
+    - "profession:project_manager"
+    - "task:document"
+    - "artifact:markdown_document"
+
+media:
+  card_ref: "store/STORE_CARD.yaml"
+  hero_image: null
+  demo_video: null
+  video_loop: null
+  gif_fallback: null
+  vertical_carousel: "store/VERTICAL_CAROUSEL.yaml"
+  screenshots: []
+  onboarding_html: "store/ONBOARDING.yaml"
+  download_package: null
+
+publication:
+  cta_url: null
+  privacy_review: "PASS_NO_PERSONAL_DATA_REQUIRED"
+  claims_review: "PASS_WITH_DOCUMENTED_LIMITATIONS"
+  final_approval: "PENDING"
+  blockers:
+    - "Tokens visuais finais pendentes."
+    - "URL pública da ferramenta pendente."
+    - "Assets finais e licenças de áudio pendentes."

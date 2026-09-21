@@ -1,0 +1,53 @@
+schema_version: "1.0"
+registry_id: "OFICINA_PRODUCT_TYPES"
+status: "canonical"
+
+product_types:
+  - id: "template"
+    label: "Templates"
+    description: "Artefatos reutilizáveis como tabelas, estruturas, modelos e documentos."
+    examples: ["tabela", "planilha", "documento", "estrutura", "template"]
+    default_downloadable: true
+    default_interactive: false
+  - id: "skill_workflow"
+    label: "Skills & Workflows"
+    description: "Skills, workflows e pacotes operacionais executáveis ou instaláveis."
+    examples: ["skill", "workflow", "agent workflow"]
+    default_downloadable: true
+    default_interactive: true
+  - id: "ebook"
+    label: "Ebooks"
+    description: "Publicações long-form distribuídas como leitura ou download."
+    examples: ["ebook", "guide"]
+    default_downloadable: true
+    default_interactive: false
+  - id: "article"
+    label: "Artigos"
+    description: "Conteúdo editorial publicado na Oficina ou no blog."
+    examples: ["article", "tutorial", "editorial"]
+    default_downloadable: false
+    default_interactive: false
+  - id: "prompt"
+    label: "Prompts"
+    description: "Prompts reutilizáveis para execução direta ou cópia."
+    examples: ["prompt", "prompt pack"]
+    default_downloadable: true
+    default_interactive: true
+  - id: "plugin"
+    label: "Plugins"
+    description: "Integrações instaláveis que expõem capacidades, conectores, tools ou prompts."
+    examples: ["plugin", "connector package"]
+    default_downloadable: false
+    default_interactive: true
+  - id: "photo_prompt"
+    label: "Photo-prompts"
+    description: "Prompts orientados à criação ou transformação visual."
+    examples: ["photo prompt", "image prompt"]
+    default_downloadable: true
+    default_interactive: true
+
+rules:
+  exactly_one_primary_product_type: true
+  product_subtype_allowed: true
+  use_stable_ids: true
+  product_type_is_not_artifact_type: true

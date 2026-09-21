@@ -1,0 +1,62 @@
+schema_version: "1.0"
+contract_id: "OFICINA_REACT_COMPONENT_CONTRACT"
+status: "canonical"
+purpose: "Separar dados do Super Schema e regras de storefront da camada de renderização React."
+
+routes:
+  store: "/tools"
+  solution_detail: "/tools/:slug"
+  learn: "/learn"
+  role: "/learn/role/:profession_id"
+
+components:
+  AppShell:
+    consumes: ["navigation", "route"]
+  StorePage:
+    children: ["StoreSearch", "CategoryFilter", "SortMenu", "CollectionSection"]
+  StoreSearch:
+    consumes: ["query"]
+    emits: ["search_change"]
+  CategoryFilter:
+    consumes: ["areas", "counts", "selected_area"]
+    emits: ["filter_change"]
+  SortMenu:
+    consumes: ["sort_options", "selected_sort"]
+    emits: ["sort_change"]
+  CollectionSection:
+    children: ["ContentCard"]
+  ContentCard:
+    consumes: ["card_variant", "content", "media", "actions"]
+    emits: ["open_detail", "primary_action", "secondary_action"]
+  SolutionCard:
+    schema_ref: "../../D19__assets-e-cta/solution-store/STORE_CARD_SCHEMA.yaml"
+    consumes: ["solution_card"]
+    emits: ["start", "download", "open_detail"]
+  SolutionDetail:
+    children: ["SolutionHeader", "SolutionTabs", "TryItList", "CapabilityList", "DependencyPanel", "StartDownloadActions"]
+  CapabilityList:
+    consumes: ["tools", "prompts", "connectors"]
+  LearnPage:
+    children: ["FeaturedCard", "TutorialCard", "RoleCardGrid"]
+  RoleCardGrid:
+    consumes: ["professions"]
+    emits: ["role_select"]
+  VerticalCarousel:
+    consumes: ["slides"]
+  VideoLoop:
+    consumes: ["mp4_loop", "webm_loop", "gif_fallback", "poster"]
+  OnboardingFlow:
+    consumes: ["steps", "start_target", "download_target"]
+
+data_contract:
+  source: "SUPER_SCHEMA_SOLUTION + store_submission + asset manifests"
+  components_must_not_embed_editorial_rules: true
+  components_must_not_infer_professions: true
+  components_must_not_infer_claims: true
+  components_must_not_infer_visual_tokens: true
+
+rendering:
+  SSR_compatible: true
+  responsive: true
+  keyboard_accessible: true
+  reduced_motion_supported: true

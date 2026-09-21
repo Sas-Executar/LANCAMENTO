@@ -1,0 +1,89 @@
+schema_version: "1.0"
+schema_id: "OFICINA_WIREFRAME_TOKENS"
+status: "canonical"
+scope: "estrutura, hierarquia, comportamento e responsividade; não identidade visual"
+source_reference: "screenshots fornecidos pelo mantenedor em 2026-09-21"
+source_images:
+  - "IMG_3191(2).jpeg"
+  - "IMG_3194.jpeg"
+  - "IMG_3192(2).jpeg"
+  - "IMG_3193.jpeg"
+  - "IMG_3195.png"
+  - "IMG_3196.png"
+  - "IMG_3198.png"
+  - "IMG_3199.jpeg"
+  - "IMG_3203.png"
+  - "IMG_3201.png"
+
+visual_tokens:
+  status: "EXTERNAL_PENDING"
+  forbidden_to_infer:
+    - "font_family"
+    - "font_size"
+    - "font_weight"
+    - "colors"
+    - "border_radius"
+    - "shadows"
+    - "final_spacing"
+    - "final_iconography"
+    - "motion_easing"
+    - "motion_duration"
+
+shell:
+  sidebar: {enabled: true, collapsible: true}
+  content: {centered: true, max_width: null}
+
+discovery_page:
+  header: {title: true, search: true, filter: true, sort: true}
+  collections:
+    supported: ["for_you", "trending", "new", "categories"]
+  grid:
+    desktop_columns: 2
+    tablet_columns: 2
+    mobile_columns: 1
+
+category_filter:
+  control: "dropdown"
+  supports_all: true
+  supports_counts: true
+  single_select_primary: true
+  multiple_taxonomy_membership_in_data: true
+
+card_family:
+  variants: ["solution", "article", "tutorial", "course"]
+  shared_behavior: ["open_detail", "keyboard_focus", "media_preview"]
+
+solution_card:
+  slots:
+    - "icon_or_poster"
+    - "title"
+    - "short_description"
+    - "metadata"
+    - "category"
+    - "media_preview"
+    - "primary_action"
+    - "secondary_action"
+  behavior:
+    video_loop_supported: true
+    gif_fallback_supported: true
+    keyboard_focus: true
+
+solution_detail:
+  header_slots: ["icon", "title", "publisher", "version", "status", "primary_action"]
+  tabs: ["overview", "contents", "examples", "dependencies"]
+  example_pattern: "try_it"
+  dependency_panel: true
+  conditional_capability_sections:
+    - "tools"
+    - "prompts"
+    - "connectors"
+
+learn_page:
+  sections: ["featured", "getting_started", "browse_by_role"]
+  role_browser_source: "PROFESSIONS.yaml"
+  tutorial_cards: true
+
+onboarding:
+  entry_action: "start"
+  steps: ["what_this_is", "what_you_need", "how_to_start", "example", "next_action"]
+  download_action_separate_from_start: true
