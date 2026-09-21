@@ -1,0 +1,1 @@
+{"name":"obsidian-editorial-motion","version":"1.0.0","private":true,"type":"module","scripts":{"render":"node render.mjs","test":"node test-timeline.cjs","qa:visual":"node render.mjs --qa-only"},"devDependencies":{"playwright":"1.51.1","jsdom":"26.0.0"}}

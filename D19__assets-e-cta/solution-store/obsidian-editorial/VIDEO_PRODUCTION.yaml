@@ -1,7 +1,7 @@
 schema_version: "1.0"
 production_id: "VID-OBS-EDITORIAL-001"
 solution_ref: "SOL-OBS-EDITORIAL-001"
-status: "READY_FOR_BUILD_BLOCKED_FOR_PUBLISH"
+status: "IMPLEMENTED_PENDING_RENDER_QA_BLOCKED_FOR_PUBLISH"
 
 output_decision:
   primary: "video"
@@ -95,7 +95,7 @@ cenas:
     funcao: "gancho"
     mensagem: "O problema não é falta de informação. É falta de estrutura."
     texto_na_tela: "Seu projeto está todo aqui. Mas está utilizável?"
-    locucao: "Você já tem as informações. O problema é conseguir operar com elas."
+    locucao: "Suas informações já existem. Falta uma estrutura."
     elementos:
       - "nota longa"
       - "tarefas misturadas"
@@ -114,7 +114,7 @@ cenas:
     funcao: "problema"
     mensagem: "Organizar manualmente exige separar contexto, tarefas, decisões e referências."
     texto_na_tela: "Contexto + decisões + tarefas + pesquisa"
-    locucao: "Separar tudo manualmente custa atenção e decisões repetidas de organização."
+    locucao: "Contexto, decisões e tarefas se misturam."
     elementos:
       - "chips de categorias"
       - "cursor"
@@ -131,7 +131,7 @@ cenas:
     funcao: "demonstracao"
     mensagem: "Descreva o resultado e transforme o material em arquitetura documental."
     texto_na_tela: "“Transforme este material em uma base operacional para Obsidian.”"
-    locucao: "Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada."
+    locucao: "Obsidian Editorial transforma seu briefing em documentação estruturada."
     elementos:
       - "campo de comando"
       - "cursor"
@@ -142,7 +142,7 @@ cenas:
       O comando é inserido; os blocos do material se reorganizam em uma árvore de arquivos
       com INDEX, CONTEXT, OBJECTIVES, DECISIONS, TASKS, RESEARCH e REFERENCES.
     estado_final: "Arquitetura documental completa e navegável."
-    sincronizacao_audio: "Transformação principal coincide com a palavra 'organizada'."
+    sincronizacao_audio: "Sincronizar transformação com 'documentação estruturada' após gravação."
     assets:
       - "estrutura_exemplo_lancamento_produto_x"
 
@@ -152,7 +152,7 @@ cenas:
     funcao: "prova"
     mensagem: "O conteúdo permanece conectado a uma estrutura que pode continuar crescendo."
     texto_na_tela: "Conteúdo bruto → estrutura → documentação navegável"
-    locucao: "O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando."
+    locucao: "Uma base navegável, pronta para continuar."
     elementos:
       - "árvore de arquivos"
       - "links"
@@ -160,7 +160,7 @@ cenas:
     estado_inicial: "Árvore de arquivos completa."
     acao_visual: "Alternância suave entre INDEX, TASKS e REFERENCES; links conectam os documentos."
     estado_final: "Visão geral limpa da base organizada."
-    sincronizacao_audio: "Último documento fecha junto da palavra 'atualizando'."
+    sincronizacao_audio: "Sincronizar conclusão com 'continuar' após gravação."
     assets: []
 
   - id: "C05"
@@ -169,7 +169,7 @@ cenas:
     funcao: "CTA"
     mensagem: "Comece com o conteúdo que você já tem."
     texto_na_tela: "Transforme um briefing seu."
-    locucao: "Comece com o conteúdo que você já tem. Transforme um briefing seu."
+    locucao: "Comece com seu conteúdo. Transforme um briefing seu."
     elementos:
       - "nome Obsidian Editorial"
       - "CTA"
@@ -182,11 +182,12 @@ cenas:
 
 audio:
   locucao: >-
-    Você já tem as informações. O problema é conseguir operar com elas.
-    Separar tudo manualmente custa atenção e decisões repetidas de organização.
-    Com o Obsidian Editorial, você descreve o resultado e a estrutura é organizada.
-    O resultado não é só texto mais bonito. É uma base que você pode continuar atualizando.
-    Comece com o conteúdo que você já tem. Transforme um briefing seu.
+    Suas informações já existem. Falta uma estrutura.
+    Contexto, decisões e tarefas se misturam.
+    Obsidian Editorial transforma seu briefing em documentação estruturada.
+    Uma base navegável, pronta para continuar.
+    Comece com seu conteúdo. Transforme um briefing seu.
+  recording_status: "PENDING_RECORDING_AND_TIMING_REVIEW"
   trilha: "PENDING_LICENSED_TRACK"
   efeitos:
     - "interface_click_soft"
@@ -207,7 +208,7 @@ execucao:
     tempo_deterministico: true
     fontes_carregadas: true
     assets_carregados: true
-    audio_sincronizado_por_timeline: true
+    audio_sincronizado_por_timeline: false # Pré-produção sem áudio; sincronização futura.
     total_frames: 600
   web:
     replay: true
@@ -234,6 +235,7 @@ validacao:
     blockers:
       - "Substituir PENDING_PUBLIC_TOOL_URL por URL pública aprovada."
       - "Selecionar trilha/efeitos e confirmar licenças."
+      - "Gravar locução, sincronizar, mixar e revisar versões com áudio."
 
 creative_quality:
   principle: >-

@@ -1,0 +1,35 @@
+name: Obsidian Editorial - render visual
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'D19__assets-e-cta/solution-store/obsidian-editorial/motion/**'
+      - '.github/workflows/obsidian-video.yml'
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: D19__assets-e-cta/solution-store/obsidian-editorial/motion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Render 3 variants and verify frames
+        run: npm run render
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: obsidian-editorial-visual-preproduction
+          path: |
+            D19__assets-e-cta/solution-store/obsidian-editorial/motion/exports/
+          if-no-files-found: warn
+          retention-days: 30
