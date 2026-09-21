@@ -1,0 +1,91 @@
+schema_version: "1.0"
+registry_id: "SOLUTION_PROFESSIONS"
+status: "canonical"
+id_policy: "stable_english_snake_case"
+external_codes_status: "future_mapping"
+
+professions:
+  - id: "lawyer"
+    label_pt_BR: "Advogado"
+    label_en: "Lawyer"
+    entity_type: "profession"
+    aliases: ["advocacia", "jurídico"]
+  - id: "accountant"
+    label_pt_BR: "Contador"
+    label_en: "Accountant"
+    entity_type: "profession"
+    aliases: ["contabilidade"]
+  - id: "teacher"
+    label_pt_BR: "Professor"
+    label_en: "Teacher"
+    entity_type: "profession"
+    aliases: ["docente", "educador"]
+  - id: "student"
+    label_pt_BR: "Estudante"
+    label_en: "Student"
+    entity_type: "learner_role"
+    aliases: ["aluno"]
+  - id: "researcher"
+    label_pt_BR: "Pesquisador"
+    label_en: "Researcher"
+    entity_type: "profession"
+    aliases: ["pesquisa", "cientista"]
+  - id: "designer"
+    label_pt_BR: "Designer"
+    label_en: "Designer"
+    entity_type: "profession"
+    aliases: ["design"]
+  - id: "engineer"
+    label_pt_BR: "Engenheiro"
+    label_en: "Engineer"
+    entity_type: "profession"
+    aliases: ["engenharia"]
+  - id: "software_developer"
+    label_pt_BR: "Desenvolvedor"
+    label_en: "Software Developer"
+    entity_type: "profession"
+    aliases: ["programador", "developer"]
+  - id: "product_manager"
+    label_pt_BR: "Gestor de Produto"
+    label_en: "Product Manager"
+    entity_type: "profession"
+    aliases: ["product manager", "PM"]
+  - id: "marketing_professional"
+    label_pt_BR: "Profissional de Marketing"
+    label_en: "Marketing Professional"
+    entity_type: "profession"
+    aliases: ["marketing"]
+  - id: "sales_professional"
+    label_pt_BR: "Profissional de Vendas"
+    label_en: "Sales Professional"
+    entity_type: "profession"
+    aliases: ["vendedor", "executivo de vendas"]
+  - id: "data_analyst"
+    label_pt_BR: "Analista de Dados"
+    label_en: "Data Analyst"
+    entity_type: "profession"
+    aliases: ["analytics"]
+  - id: "hr_professional"
+    label_pt_BR: "Profissional de RH"
+    label_en: "Human Resources Professional"
+    entity_type: "profession"
+    aliases: ["recursos humanos", "RH"]
+  - id: "entrepreneur"
+    label_pt_BR: "Empreendedor"
+    label_en: "Entrepreneur"
+    entity_type: "professional_role"
+    aliases: ["small business owner", "fundador"]
+  - id: "project_manager"
+    label_pt_BR: "Gestor de Projetos"
+    label_en: "Project Manager"
+    entity_type: "profession"
+    aliases: ["gerente de projetos", "project manager"]
+
+rules:
+  allow_multiple_professions_per_solution: true
+  distinguish_primary_and_related: true
+  require_use_case_or_rationale: true
+  do_not_infer_regulated_professional_suitability_from_category_alone: true
+  future_external_mapping:
+    cbo: null
+    isco: null
