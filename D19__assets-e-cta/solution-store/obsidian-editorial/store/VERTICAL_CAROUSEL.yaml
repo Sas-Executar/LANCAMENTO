@@ -1,0 +1,16 @@
+schema_version: "1.0"
+carousel_id: "CAROUSEL-OBS-EDITORIAL-001"
+solution_id: "SOL-OBS-EDITORIAL-001"
+orientation: "vertical"
+status: "STRUCTURE_READY_VISUAL_TOKENS_PENDING"
+
+slides:
+  - {id: "S01", role: "hook", headline: "Você já tem as informações.", body: "O problema é conseguir operar com elas."}
+  - {id: "S02", role: "problem", headline: "Notas, decisões, tarefas e referências misturadas.", body: "Organizar manualmente exige decisões repetidas de estrutura."}
+  - {id: "S03", role: "transformation", headline: "Descreva o resultado.", body: "O material é transformado em uma arquitetura documental."}
+  - {id: "S04", role: "best_use_case", headline: "Briefing disperso → base operacional.", body: "Contexto, objetivos, decisões, tarefas, pesquisa e referências passam a ter lugar."}
+  - {id: "S05", role: "result", headline: "Documentação navegável e atualizável.", body: "A estrutura continua crescendo com o projeto."}
+  - {id: "S06", role: "cta", headline: "Transforme um briefing seu.", body: "Start para começar ou Download quando o pacote estiver publicado."}
+
+visual_tokens_ref: null
+wireframe_tokens_ref: "../../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
