@@ -1,0 +1,349 @@
+super_schema_version: "1.1"
+schema_id: "SUPER_SCHEMA_SOLUTION"
+schema_status: "canonical"
+
+identity:
+  solution_id: null
+  solution_name: null
+  slug: null
+  solution_type: null
+  category: null
+  version: null
+  source_file_ref: null
+
+public_layer:
+  problem_statement: null
+  target_user: null
+  three_p_n_three:
+    problema_que_resolve: null
+    processo_aplicado: null
+    progresso_pretendido: null
+    next:
+      "01": null
+      "02": null
+      "03": null
+  tutorial:
+    title: null
+    introduction: null
+    instructions: []
+    expected_result: null
+  practical_example:
+    title: null
+    scenario: null
+    input_example: null
+    transformation: null
+    output_example: null
+    before_state: null
+    after_state: null
+    why_it_shines: null
+
+capability_contract:
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: []
+  output_generated: []
+  dependencies: []
+  limitations: []
+
+instruction_quality_5w2h_invisible:
+  validation: null
+  what_defined: false
+  why_defined: false
+  who_defined: false
+  where_defined: false
+  when_defined: false
+  how_defined: false
+  how_much_defined: false
+
+
+usage_fit:
+  best_use_cases:
+    - id: "BUC-01"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-02"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-03"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+  risk_of_use:
+    - id: "RISK-01"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-02"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-03"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+
+evidence_based_scoring:
+  methodology_id: "SEUS-v0.1"
+  methodology_name: "Solution Evidence Utility Score"
+  scale:
+    min: 0
+    max: 10
+  status: "CALIBRATION_REQUIRED"
+  principles:
+    no_estimated_scores: true
+    missing_evidence_value: null
+    separate_utility_and_confidence: true
+    benchmark_required_for_relative_dimensions: true
+    context_specific_score: true
+  benchmark_context:
+    population: null
+    geography: null
+    language: null
+    observation_window: null
+    comparison_set: null
+  fit_gate:
+    target_use_case_id: null
+    eligible_for_scoring: null
+    exclusion_reason: null
+  dimensions:
+    public_pain:
+      score: null
+      raw_metrics:
+        search_interest: null
+        problem_mentions: null
+        workaround_incidence: null
+        survey_prevalence: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; no score from unsupported impression."
+    steps_reduction:
+      baseline_steps: null
+      solution_steps: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    time_reduction:
+      baseline_minutes: null
+      solution_minutes: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    dependency_burden:
+      dependency_count: null
+      setup_minutes: null
+      paid_dependencies: null
+      specialist_dependencies: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; lower burden must map to higher score."
+    cognitive_load_reduction:
+      measurement_method: "NASA_TLX_or_equivalent_validated_measure"
+      baseline_value: null
+      solution_value: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "When comparable validated measures exist: score = clamp(0,10,10 * reduction_pct / 100)."
+    executive_function_relief:
+      functions:
+        working_memory:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        inhibitory_control:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        cognitive_flexibility:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        planning_organization:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+      score: null
+      confidence: null
+      scoring_rule: "No universal 0-10 conversion assumed; score requires an approved task-demand rubric or validated measurement."
+    reliability:
+      total_runs: null
+      successful_runs: null
+      success_rate_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = 10 * success_rate_pct / 100"
+    reuse_frequency:
+      observed_uses_per_user_period: null
+      period: null
+      benchmark_ref: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires cohort benchmark calibration."
+    overkill_risk:
+      unnecessary_complexity_rate_pct: null
+      abandonment_due_to_complexity_pct: null
+      simpler_alternative_success_rate_pct: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Risk dimension; calibration required before inclusion in an aggregate utility score."
+  overall:
+    utility_score: null
+    confidence_index: null
+    evidence_adjusted_score: null
+    weights: null
+    score_status: "NOT_COMPUTED"
+    aggregation_policy: >-
+      Do not publish an overall score until weights, benchmark population and minimum
+      evidence thresholds are approved and versioned. Missing dimensions remain null,
+      never zero.
+
+evidence_matrix_18:
+  schema_version: null
+  row_id: null
+  funcoes_fundamentais_gestao_projetos: null
+  funcoes_executivas_area_gestao_projetos: null
+  capacidades_humanas_operacionais_exigidas: null
+  funcao_deficit_tdah: null
+  fonte_clinica: null
+  fonte_cientifica: null
+  funcao_executiva_cognitiva: null
+  evidencia: null
+  impacto_operacional_funcao_afetada: null
+  impacto_operacional_mecanismo: null
+  impacto_operacional_consequencia: null
+  impacto_operacional_compensacao: null
+  conclusao_produto_design: null
+  classe_epistemica: null
+  estado_validacao: null
+  observacoes: null
+
+internal_control_24:
+  schema_version: null
+  solution_id: null
+  solution_name: null
+  problem_statement: null
+  target_user: null
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: null
+  output_generated: null
+  next_01: null
+  next_02: null
+  next_03: null
+  five_w_two_h_validation: null
+  dependencies: null
+  limitations: null
+  test_status: null
+  evidence_ref: null
+  public_tutorial_ref: null
+  source_file_ref: null
+  lifecycle_status: null
+  validation_status: null
+  version: null
+  observations: null
+
+internal_profile:
+  classification:
+    public_status: null
+    lifecycle_status: null
+    maturity: null
+    audience: []
+  problem:
+    statement: null
+    triggers: []
+  process:
+    summary: null
+  progress:
+    intended_state: null
+    success_conditions: []
+  next:
+    "01": null
+    "02": null
+    "03": null
+  hero_use_case:
+    problem: null
+    input: null
+    transformation: null
+    output: null
+    why_it_shines: null
+  contract:
+    inputs: []
+    outputs: []
+    dependencies: []
+    limitations: []
+  evidence:
+    test_case_id: null
+    expected_output_defined: false
+    tested: false
+  quality:
+    content_preservation: null
+    structural_consistency: null
+    usability_validation: null
+
+governance:
+  owner: null
+  source_of_truth: null
+  created_at: null
+  updated_at: null
+  review_cycle: null
+  validation_status: null
+  supersedes: null
+  changelog: []
+
+testing:
+  test_case_id: null
+  test_status: null
+  expected_output_defined: false
+  evidence_ref: null
+
+traceability:
+  source: null
+  evidence_sources: []
+  related_rows: []
+  tutorial_ref: null
+  example_ref: null
+  previous_version: null
+  current_version: null

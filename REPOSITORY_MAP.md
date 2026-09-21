@@ -6,6 +6,7 @@ Inventário do estado atual do repositório.
 ## Control plane
 
 - `.github/PULL_REQUEST_TEMPLATE.md`
+- `.github/workflows/import-executar-blog.yml`
 - `.github/workflows/setup-inicial.yml`
 - `.gitignore`
 - `AGENTS.md`
@@ -17,6 +18,8 @@ Inventário do estado atual do repositório.
 - `_governance/GOVERNANCE.md`
 - `_governance/ROUTES.json`
 - `_governance/RUNNER_INSTRUCTIONS.md`
+- `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
+- `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -137,6 +140,12 @@ Rota: `D18__contratos-e-esquemas`
 Rota: `D19__assets-e-cta`
 
 - `.gitkeep`
+- `solution-store/README.md`
+- `solution-store/SCORING_METHODOLOGY.md`
+- `solution-store/SUPER_SCHEMA_SOLUTION.yaml`
+- `solution-store/obsidian-editorial/EVIDENCIAS.md`
+- `solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
+- `solution-store/obsidian-editorial/solution.yaml`
 
 ## D20 — Plataformas e repositórios
 
