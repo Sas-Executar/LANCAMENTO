@@ -54,15 +54,20 @@ entrega:
   limite_arquivo_mb: null
 
 marca:
-  identidade_status: "direcao_criativa_provisoria"
+  identidade_status: "oficial"
   logo: null
   cores:
-    fundo: "#F7F7F8"
-    texto: "#17171A"
-    destaque: "#7C5CFC"
+    fundo: "{color.semantic.background.canvas}"
+    texto: "{color.semantic.text.primary}"
+    destaque: "{color.semantic.action.primary}"
   fontes:
-    - "system-ui"
+    - "IBM Plex Sans"
+    - "IBM Plex Mono"
+  design_system_binding_ref: "../../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+  design_system_source_commit: "3784189e789a5b16fc2bdaaa6854a4bdc1bcad77"
   referencias_visuais:
+    - "EXECUTAR Design System / DESIGN-SPEC.md"
+    - "EXECUTAR Design System / tokens/design-tokens.json"
     - "Interface editorial limpa"
     - "Markdown e árvore de arquivos como elementos visuais centrais"
     - "Animação de interface com profundidade mínima e foco em legibilidade"
