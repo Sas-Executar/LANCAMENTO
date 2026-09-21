@@ -7,6 +7,7 @@ Inventário do estado atual do repositório.
 
 - `.github/PULL_REQUEST_TEMPLATE.md`
 - `.github/workflows/import-executar-blog.yml`
+- `.github/workflows/obsidian-video.yml`
 - `.github/workflows/setup-inicial.yml`
 - `.gitignore`
 - `AGENTS.md`
@@ -21,6 +22,7 @@ Inventário do estado atual do repositório.
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
+- `_governance/receipts/2026-09/D19-VIDEO-BUILD-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -147,6 +149,13 @@ Rota: `D19__assets-e-cta`
 - `solution-store/obsidian-editorial/EVIDENCIAS.md`
 - `solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
 - `solution-store/obsidian-editorial/VIDEO_PRODUCTION.yaml`
+- `solution-store/obsidian-editorial/motion/README.md`
+- `solution-store/obsidian-editorial/motion/STATUS.json`
+- `solution-store/obsidian-editorial/motion/captions.srt`
+- `solution-store/obsidian-editorial/motion/index.html`
+- `solution-store/obsidian-editorial/motion/package.json`
+- `solution-store/obsidian-editorial/motion/render.mjs`
+- `solution-store/obsidian-editorial/motion/test-timeline.cjs`
 - `solution-store/obsidian-editorial/solution.yaml`
 
 ## D20 — Plataformas e repositórios
