@@ -1,0 +1,59 @@
+name: Setup inicial
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "D*/**"
+      - "MASTER_INDEX.md"
+      - ".github/workflows/setup-inicial.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-structure:
+    name: Validar estrutura inicial
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validar diretórios do master index
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            "D01__gestao-empresarial"
+            "D02__juridico-riscos-e-conformidade"
+            "D03__financas"
+            "D04__pessoas-e-recursos-humanos"
+            "D05__dados"
+            "D06__conhecimento-e-busca-corporativa"
+            "D07__produtividade-e-execucao"
+            "D08__operacoes"
+            "D09__pesquisa-e-inovacao"
+            "D10__gestao-de-produto"
+            "D11__experiencia-e-projeto"
+            "D12__engenharia"
+            "D13__mercado-e-geracao-de-demanda"
+            "D14__vendas"
+            "D15__atendimento-e-sucesso-do-cliente"
+            "D16__midias-sociais-e-comunicacao-digital"
+            "D17__emprego-e-portfolio"
+            "D18__contratos-e-esquemas"
+            "D19__assets-e-cta"
+            "D20__plataformas-e-repositorios"
+            "D21__workbook"
+            "D22__decision-and-register-log 2"
+            "D23__blueprints"
+          )
+
+          for dir in "${required[@]}"; do
+            test -d "$dir" || { echo "Diretório ausente: $dir"; exit 1; }
+          done
+
+          test -f MASTER_INDEX.md || { echo "MASTER_INDEX.md ausente"; exit 1; }
+          echo "Estrutura inicial validada com sucesso."
