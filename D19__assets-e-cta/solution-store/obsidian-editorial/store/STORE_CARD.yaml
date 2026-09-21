@@ -1,5 +1,6 @@
 schema_version: "1.0"
 card:
+  variant: "solution"
   solution_id: "SOL-OBS-EDITORIAL-001"
   release_id: "REL-OBS-EDITORIAL-001"
   content:
