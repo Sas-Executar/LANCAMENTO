@@ -25,6 +25,14 @@ definition_of_done:
   G5_STORE_SUBMISSION_COMPLETE: "listing, media, CTA/download e metadados prontos"
   G6_PUBLISHED: "publicado na Oficina e indexado"
 
+storefront:
+  primary_discovery_unit: "card"
+  card_family_shared_with_blog_articles: true
+  vertical_carousel: true
+  start_and_download_are_distinct_actions: true
+  video_loop_with_gif_fallback: true
+  onboarding_html_supported: true
+
 canonical_assets:
   common: ["store_card", "poster", "video_loop", "gif_fallback", "vertical_carousel", "store_listing"]
   conditional: ["video_master", "video_variants", "screenshots", "onboarding_html", "download_package"]
