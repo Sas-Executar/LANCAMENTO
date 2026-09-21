@@ -3,6 +3,15 @@ contract_id: "OFICINA_REACT_COMPONENT_CONTRACT"
 status: "canonical"
 purpose: "Separar dados do Super Schema e regras de storefront da camada de renderização React."
 
+design_system:
+  binding_ref: "../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+  tokens_ref: "../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/tokens/design-tokens.json"
+  component_spec_ref: "../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/COMPONENT-SPEC.md"
+  responsive_spec_ref: "../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/RESPONSIVE-SPEC.md"
+  accessibility_ref: "../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/ACCESSIBILITY.md"
+  motion_ref: "../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/MOTION-SPEC.md"
+  semantic_tokens_required: true
+
 routes:
   store: "/tools"
   solution_detail: "/tools/:slug"
@@ -54,6 +63,7 @@ data_contract:
   components_must_not_infer_professions: true
   components_must_not_infer_claims: true
   components_must_not_infer_visual_tokens: true
+  components_must_consume_semantic_design_tokens: true
 
 rendering:
   SSR_compatible: true
