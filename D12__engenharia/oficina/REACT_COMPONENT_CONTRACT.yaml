@@ -24,13 +24,18 @@ components:
     consumes: ["sort_options", "selected_sort"]
     emits: ["sort_change"]
   CollectionSection:
-    children: ["SolutionCard"]
+    children: ["ContentCard"]
+  ContentCard:
+    consumes: ["card_variant", "content", "media", "actions"]
+    emits: ["open_detail", "primary_action", "secondary_action"]
   SolutionCard:
     schema_ref: "../../D19__assets-e-cta/solution-store/STORE_CARD_SCHEMA.yaml"
     consumes: ["solution_card"]
     emits: ["start", "download", "open_detail"]
   SolutionDetail:
-    children: ["SolutionHeader", "SolutionTabs", "TryItList", "DependencyPanel", "StartDownloadActions"]
+    children: ["SolutionHeader", "SolutionTabs", "TryItList", "CapabilityList", "DependencyPanel", "StartDownloadActions"]
+  CapabilityList:
+    consumes: ["tools", "prompts", "connectors"]
   LearnPage:
     children: ["FeaturedCard", "TutorialCard", "RoleCardGrid"]
   RoleCardGrid:
