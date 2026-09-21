@@ -2,7 +2,7 @@ schema_version: "1.1"
 submission:
   submission_id: "STORE-OBS-EDITORIAL-001"
   solution_id: "SOL-OBS-EDITORIAL-001"
-  solution_version: "1.4.0"
+  solution_version: "1.4.1"
   taxonomy_version: "1.1"
   product_type: "skill_workflow"
   release_id: "REL-OBS-EDITORIAL-001"
@@ -50,6 +50,5 @@ publication:
   claims_review: "PASS_WITH_DOCUMENTED_LIMITATIONS"
   final_approval: "PENDING"
   blockers:
-    - "Tokens visuais finais pendentes."
     - "URL pública da ferramenta pendente."
     - "Assets finais e licenças de áudio pendentes."

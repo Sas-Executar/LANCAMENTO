@@ -22,7 +22,7 @@ O contrato técnico é `D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml`.
 
 ## Restrições
 
-React não deve inferir claims, profissões, categorias, product type ou tokens visuais. A identidade visual será conectada por um futuro VISUAL_TOKENS fornecido pelo mantenedor.
+React não deve inferir claims, profissões, categorias, product type ou tokens visuais. A identidade visual deve consumir os tokens semânticos do Design System EXECUTAR pinado no submodule `D11__experiencia-e-projeto/oficina/design-system-source`, conforme `DESIGN_SYSTEM_BINDING.yaml`.
 
 ## Consequências
 

@@ -15,7 +15,7 @@ A Oficina é uma loja multiformato com soluções organizadas como cards e pági
 
 Adotar cinco superfícies: **Discover**, **Collections**, **Solution Detail**, **Learn** e **Onboarding**. Cards são a unidade primária de descoberta e formam uma família compartilhada entre soluções, artigos e conteúdos de aprendizagem. Start e Download são ações semanticamente distintas.
 
-A estrutura de wireframe é canônica em `D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml`. A identidade visual não é derivada das referências e será fornecida separadamente.
+A estrutura de wireframe é canônica em `D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml`. A identidade visual é consumida do Design System EXECUTAR pinado em `D11__experiencia-e-projeto/oficina/design-system-source`, com binding em `DESIGN_SYSTEM_BINDING.yaml`. As referências de terceiros continuam válidas apenas para arquitetura/layout, nunca como fonte de cor.
 
 ## Consequências
 

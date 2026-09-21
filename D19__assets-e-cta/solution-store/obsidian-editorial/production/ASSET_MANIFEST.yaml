@@ -4,7 +4,7 @@ manifest:
   solution_id: "SOL-OBS-EDITORIAL-001"
   release_id: "REL-OBS-EDITORIAL-001"
   product_type: "skill_workflow"
-  visual_tokens_version: null
+  visual_tokens_version: "EXECUTAR-DS@3784189e789a5b16fc2bdaaa6854a4bdc1bcad77"
 
 assets:
   store_card:
@@ -13,7 +13,7 @@ assets:
     output_ref: "../store/STORE_CARD.yaml"
   poster:
     required: true
-    status: "VISUAL_TOKENS_PENDING"
+    status: "BRIEF_READY"
     output_ref: null
   video_master:
     required: true
@@ -53,6 +53,5 @@ assets:
     output_ref: "../store_submission.yaml"
 
 blockers:
-  - "VISUAL_TOKENS não fornecidos."
   - "Render e derivados ainda não produzidos."
   - "Pacote final de download e URLs públicas ainda não definidos."

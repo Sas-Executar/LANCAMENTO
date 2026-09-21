@@ -1,4 +1,4 @@
-super_schema_version: "1.4"
+super_schema_version: "1.4.1"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -38,6 +38,12 @@ classification:
 
 oficina:
   runbook_ref: "OFICINA_PRODUCTION_RUNBOOK.yaml"
+  design_system:
+    binding_ref: "../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+    required_for_visual_production: true
+    status: null
+    source_commit: null
+
   product:
     product_type: null
     product_subtype: null
@@ -644,8 +650,4 @@ traceability:
   release_manifest_ref: null
   wireframe_tokens_ref: null
   react_component_contract_ref: null
-  product_types_registry_ref: null
-  asset_manifest_ref: null
-  release_manifest_ref: null
-  wireframe_tokens_ref: null
-  react_component_contract_ref: null
+  design_system_binding_ref: null

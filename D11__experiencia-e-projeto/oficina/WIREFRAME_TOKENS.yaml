@@ -15,8 +15,13 @@ source_images:
   - "IMG_3203.png"
   - "IMG_3201.png"
 
+design_system_binding_ref: "DESIGN_SYSTEM_BINDING.yaml"
+
 visual_tokens:
-  status: "EXTERNAL_PENDING"
+  status: "BOUND_CANONICAL"
+  ref: "design-system-source/design-system/tokens/design-tokens.json"
+  source_commit: "3784189e789a5b16fc2bdaaa6854a4bdc1bcad77"
+  consumption_rule: "Use semantic tokens from the imported design system; do not infer replacements."
   forbidden_to_infer:
     - "font_family"
     - "font_size"

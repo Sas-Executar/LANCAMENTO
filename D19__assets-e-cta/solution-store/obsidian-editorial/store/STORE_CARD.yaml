@@ -44,5 +44,7 @@ card:
     media_has_text_alternative: true
 
 visual_tokens:
-  status: "PENDING_OWNER_INPUT"
-  ref: null
+  status: "BOUND_CANONICAL"
+  ref: "../../../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/tokens/design-tokens.json"
+  binding_ref: "../../../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+  source_commit: "3784189e789a5b16fc2bdaaa6854a4bdc1bcad77"
