@@ -26,6 +26,7 @@ Inventário do estado atual do repositório.
 - `_governance/receipts/2026-09/D19-OFICINA-V1-4-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
+- `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-BENCH-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -214,3 +215,5 @@ Rota: `D22__decision-and-register-log 2`
 Rota: `D23__blueprints`
 
 - `.gitkeep`
+- `Executar Blog/_benchmarks/BENCH-001/MANIFEST.csv`
+- `Executar Blog/_benchmarks/BENCH-001/README.md`
