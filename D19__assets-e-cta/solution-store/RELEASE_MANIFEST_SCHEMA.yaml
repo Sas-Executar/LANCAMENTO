@@ -1,0 +1,40 @@
+schema_version: "1.0"
+schema_id: "OFICINA_RELEASE_MANIFEST"
+status: "canonical"
+
+release:
+  release_id: null
+  solution_id: null
+  solution_version: null
+  product_type: null
+  handoff_id: null
+  submission_id: null
+  asset_manifest_id: null
+
+lifecycle:
+  current_state: "INGESTED"
+  previous_state: null
+  next_state: null
+  blockers: []
+
+gates:
+  G1_SCHEMA_COMPLETE: false
+  G2_BUNDLE_COMPLETE: false
+  G3_EDITORIAL_ASSETS_COMPLETE: false
+  G4_QA_COMPLETE: false
+  G5_STORE_SUBMISSION_COMPLETE: false
+  G6_PUBLISHED: false
+
+refs:
+  solution: null
+  bundle: null
+  asset_manifest: null
+  store_submission: null
+  card: null
+  carousel: null
+  onboarding: null
+
+publication:
+  url: null
+  published_at: null
+  final_approval: null
