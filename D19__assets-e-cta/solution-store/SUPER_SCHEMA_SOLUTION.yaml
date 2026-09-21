@@ -1,4 +1,4 @@
-super_schema_version: "1.1"
+super_schema_version: "1.2"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -111,6 +111,125 @@ usage_fit:
       likelihood: null
       mitigation: null
       evidence_refs: []
+
+
+commercial_production:
+  enabled: false
+  brief_schema_version: "1.0"
+  production_id: null
+  output_decision:
+    primary: null # video | web_interativa | ambos
+    rule: >-
+      HTML/CSS/JS interativo não se torna automaticamente MP4. Para vídeo,
+      renderizar quadros determinísticos e sincronizar áudio explicitamente.
+  projeto:
+    nome: null
+    produto: null
+    objetivo: null # apresentar | demonstrar | converter
+    publico: null
+    canal: null # site | Instagram | YouTube | anúncio
+    idioma: "pt-BR"
+  mensagem:
+    problema_do_publico: null
+    promessa_principal: null
+    diferencial: null
+    evidencias: []
+    chamada_para_acao: null
+    destino_cta: null
+  entrega:
+    tipo: "video" # video | web_interativa | ambos
+    duracao_segundos: 20
+    proporcao: "9:16"
+    resolucao_px: [1080, 1920]
+    fps: 30
+    formato: "mp4"
+    variantes: []
+    limite_arquivo_mb: null
+  marca:
+    identidade_status: null # oficial | direcao_criativa_provisoria
+    logo: null
+    cores:
+      fundo: null
+      texto: null
+      destaque: null
+    fontes: []
+    referencias_visuais: []
+    evitar: []
+  direcao:
+    estilo: "demonstracao_de_interface"
+    tom: null
+    ritmo: null
+    enquadramento: null
+    movimento:
+      entrada: "fade + deslocamento"
+      transicao: null
+      intensidade: "moderada"
+    area_segura_px:
+      topo: null
+      direita: null
+      inferior: null
+      esquerda: null
+  cenas:
+    - id: "C01"
+      inicio_s: 0
+      duracao_s: 4
+      funcao: "gancho" # problema | demonstracao | prova | CTA
+      mensagem: null
+      texto_na_tela: null
+      locucao: null
+      elementos: []
+      estado_inicial: null
+      acao_visual: null
+      estado_final: null
+      sincronizacao_audio: null
+      assets: []
+  audio:
+    locucao: null
+    trilha: null
+    efeitos: []
+    licencas_confirmadas: false
+    legendas: true
+  execucao:
+    tecnica: "HTML_CSS_JS"
+    dados: "ficticios_identificados"
+    tempo_controlado_por: "timeline"
+    frame_time_rule: "t = frame / fps"
+    deterministic_render_required: true
+    prohibit_set_interval_for_render: true
+    prohibit_scroll_dependency_for_render: true
+    render_video:
+      pipeline: "browser_frames + encoder"
+      tempo_deterministico: true
+      fontes_carregadas: true
+      assets_carregados: true
+      audio_sincronizado_por_timeline: true
+    web:
+      replay: true
+      movimento_reduzido: true
+  validacao:
+    responsavel_aprovacao: null
+    criterios:
+      - "Mensagem compreensível sem áudio"
+      - "Texto legível no celular"
+      - "Sem cortes, sobreposições ou overflow"
+      - "Sem dados pessoais ou alegações sem evidência"
+      - "Áudio sincronizado e sem distorção"
+      - "CTA legível e com tempo de leitura"
+    publication_gate:
+      claims_supported: null
+      destino_cta_confirmado: null
+      assets_autorizados: null
+      licencas_audio_confirmadas: null
+      status: null
+  creative_quality:
+    priority_order:
+      - "roteiro_claro"
+      - "tipografia"
+      - "composicao"
+      - "ritmo"
+      - "audio"
+      - "efeitos"
+    effects_policy: "Efeitos servem à mensagem; quantidade de efeitos não é métrica de qualidade."
 
 evidence_based_scoring:
   methodology_id: "SEUS-v0.1"
