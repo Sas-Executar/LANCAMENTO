@@ -13,6 +13,11 @@ Este diretório concentra o padrão reutilizável para ferramentas publicadas na
 ```text
 SUPER_SCHEMA_SOLUTION
 ├── identidade
+├── classificação / taxonomia
+│   ├── áreas
+│   ├── profissões
+│   ├── tipos de tarefa
+│   └── tipos de artefato
 ├── camada pública
 │   ├── 3PN3
 │   ├── tutorial
@@ -31,6 +36,8 @@ SUPER_SCHEMA_SOLUTION
 │   ├── roteiro temporal
 │   ├── direção visual
 │   └── pipeline de render determinístico
+├── store submission
+├── production/release handoff
 ├── governança
 ├── qualidade e testes
 └── rastreabilidade
@@ -43,6 +50,9 @@ SUPER_SCHEMA_SOLUTION
 - **18 campos** formam a matriz epistemológica/operacional associada.
 - **24 campos** formam o controle interno mínimo da solução.
 - O **Super Schema** é o contrato padrão; cada ferramenta é uma instância preenchida.
+- A classificação usa registries canônicos para **áreas, profissões, tarefas e artefatos**, permitindo cruzamentos por nodes tipados.
+- O vínculo com profissão deve ter caso de uso ou justificativa; não é inferido apenas pela categoria da solução.
+- O **Production Handoff Bundle** é a saída oficial quando a solução está pronta para produção, divulgação e submissão na loja.
 - Cada solução deve registrar **3 melhores casos de uso** e **3 riscos/anti-use cases**.
 - O **SEUS (Solution Evidence Utility Score)** usa escala 0–10, mas proíbe pontuação inventada: dimensão sem medição/evidência permanece `null`.
 - O score agregado só pode ser publicado após pesos, benchmarks e limiares mínimos de evidência serem calibrados e versionados.
@@ -52,6 +62,14 @@ SUPER_SCHEMA_SOLUTION
 ## Arquivos
 
 - `SUPER_SCHEMA_SOLUTION.yaml` — contrato canônico reutilizável.
+- `PRODUCTION_HANDOFF_SCHEMA.yaml` — contrato do bundle oficial de release.
+- `STORE_SUBMISSION_SCHEMA.yaml` — contrato de submissão/listing da loja.
+- `taxonomy/AREAS.yaml` — 15 áreas principais normalizadas e categorias originais.
+- `taxonomy/PROFESSIONS.yaml` — registry de profissões/roles.
+- `taxonomy/TASK_TYPES.yaml` — tipos canônicos de tarefa.
+- `taxonomy/ARTIFACT_TYPES.yaml` — tipos canônicos de artefato.
+- `taxonomy/TAGGING_RULES.yaml` — regras de tags e node keys.
+- `instructions/PRODUCTION_HANDOFF_INSTRUCTIONS.md` — instrução de geração e gates.
 - `obsidian-editorial/solution.yaml` — primeira instância preenchida.
 - `obsidian-editorial/TUTORIAL_PUBLICO.md` — camada visível ao usuário.
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
