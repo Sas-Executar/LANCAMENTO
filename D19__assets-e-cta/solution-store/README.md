@@ -50,7 +50,7 @@ SUPER_SCHEMA_SOLUTION
 - **18 campos** formam a matriz epistemológica/operacional associada.
 - **24 campos** formam o controle interno mínimo da solução.
 - O **Super Schema** é o contrato padrão; cada ferramenta é uma instância preenchida.
-- A classificação usa registries canônicos para **áreas, profissões, tarefas e artefatos**, permitindo cruzamentos por nodes tipados.
+- A classificação usa registries canônicos para **product type, áreas, profissões, tarefas e artefatos**, permitindo cruzamentos por nodes tipados.
 - O vínculo com profissão deve ter caso de uso ou justificativa; não é inferido apenas pela categoria da solução.
 - O **Production Handoff Bundle** é a saída oficial quando a solução está pronta para produção, divulgação e submissão na loja.
 - Cada solução deve registrar **3 melhores casos de uso** e **3 riscos/anti-use cases**.
@@ -75,3 +75,10 @@ SUPER_SCHEMA_SOLUTION
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
 - `obsidian-editorial/VIDEO_PRODUCTION.yaml` — briefing comercial preenchido para produção do vídeo da solução.
 - `SCORING_METHODOLOGY.md` — regras de medição, normalização, confiança e agregação do score.
+
+
+## Oficina v1.4
+
+Pipeline: INGEST → CLASSIFY → SCHEMA → BUNDLE → EDITORIAL PRODUCTION → DERIVE → QA → STORE SUBMISSION → PUBLISH.
+
+Wireframes e React são contratos separados da identidade visual. As referências de UI definem arquitetura, hierarquia e interação; cores, tipografia, sombras, radius, spacing final e motion tokens permanecem pendentes de input oficial.
