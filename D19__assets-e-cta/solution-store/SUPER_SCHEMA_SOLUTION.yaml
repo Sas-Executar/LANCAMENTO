@@ -1,0 +1,166 @@
+super_schema_version: "1.0"
+schema_id: "SUPER_SCHEMA_SOLUTION"
+schema_status: "canonical"
+
+identity:
+  solution_id: null
+  solution_name: null
+  slug: null
+  solution_type: null
+  category: null
+  version: null
+  source_file_ref: null
+
+public_layer:
+  problem_statement: null
+  target_user: null
+  three_p_n_three:
+    problema_que_resolve: null
+    processo_aplicado: null
+    progresso_pretendido: null
+    next:
+      "01": null
+      "02": null
+      "03": null
+  tutorial:
+    title: null
+    introduction: null
+    instructions: []
+    expected_result: null
+  practical_example:
+    title: null
+    scenario: null
+    input_example: null
+    transformation: null
+    output_example: null
+    before_state: null
+    after_state: null
+    why_it_shines: null
+
+capability_contract:
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: []
+  output_generated: []
+  dependencies: []
+  limitations: []
+
+instruction_quality_5w2h_invisible:
+  validation: null
+  what_defined: false
+  why_defined: false
+  who_defined: false
+  where_defined: false
+  when_defined: false
+  how_defined: false
+  how_much_defined: false
+
+evidence_matrix_18:
+  schema_version: null
+  row_id: null
+  funcoes_fundamentais_gestao_projetos: null
+  funcoes_executivas_area_gestao_projetos: null
+  capacidades_humanas_operacionais_exigidas: null
+  funcao_deficit_tdah: null
+  fonte_clinica: null
+  fonte_cientifica: null
+  funcao_executiva_cognitiva: null
+  evidencia: null
+  impacto_operacional_funcao_afetada: null
+  impacto_operacional_mecanismo: null
+  impacto_operacional_consequencia: null
+  impacto_operacional_compensacao: null
+  conclusao_produto_design: null
+  classe_epistemica: null
+  estado_validacao: null
+  observacoes: null
+
+internal_control_24:
+  schema_version: null
+  solution_id: null
+  solution_name: null
+  problem_statement: null
+  target_user: null
+  process_applied: null
+  intended_progress: null
+  hero_use_case: null
+  input_required: null
+  output_generated: null
+  next_01: null
+  next_02: null
+  next_03: null
+  five_w_two_h_validation: null
+  dependencies: null
+  limitations: null
+  test_status: null
+  evidence_ref: null
+  public_tutorial_ref: null
+  source_file_ref: null
+  lifecycle_status: null
+  validation_status: null
+  version: null
+  observations: null
+
+internal_profile:
+  classification:
+    public_status: null
+    lifecycle_status: null
+    maturity: null
+    audience: []
+  problem:
+    statement: null
+    triggers: []
+  process:
+    summary: null
+  progress:
+    intended_state: null
+    success_conditions: []
+  next:
+    "01": null
+    "02": null
+    "03": null
+  hero_use_case:
+    problem: null
+    input: null
+    transformation: null
+    output: null
+    why_it_shines: null
+  contract:
+    inputs: []
+    outputs: []
+    dependencies: []
+    limitations: []
+  evidence:
+    test_case_id: null
+    expected_output_defined: false
+    tested: false
+  quality:
+    content_preservation: null
+    structural_consistency: null
+    usability_validation: null
+
+governance:
+  owner: null
+  source_of_truth: null
+  created_at: null
+  updated_at: null
+  review_cycle: null
+  validation_status: null
+  supersedes: null
+  changelog: []
+
+testing:
+  test_case_id: null
+  test_status: null
+  expected_output_defined: false
+  evidence_ref: null
+
+traceability:
+  source: null
+  evidence_sources: []
+  related_rows: []
+  tutorial_ref: null
+  example_ref: null
+  previous_version: null
+  current_version: null
