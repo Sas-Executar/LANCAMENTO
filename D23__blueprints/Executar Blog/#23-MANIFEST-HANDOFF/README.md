@@ -13,9 +13,9 @@ Ver `MANIFEST.csv` para a lista completa com hashes. Resumo por área em `../_be
 
 ## O que ficou como lacuna (não inventado)
 
-`#05-VOZ-TOM`, `#06-PILARES-TAXONOMIA`, `#07-ARTIGOS-PRONTOS`, `#10-IMAGENS-CAPAS`, `#11-IMAGENS-ARTIGOS`, `#12-AUTORES-BIOS`, `#13-SEO`, `#14-COPY-SITE`, `#15-NAVEGACAO-IA`, `#16-LEGAL-EDITORIAL`, `#18-NEWSLETTER-CTA`, `#19-ANALYTICS-KPI`, `#20-ACESSIBILIDADE-PERFORMANCE`, `#21-QA-TESTES`, `#22-RELEASE-DEPLOY` — cada pasta tem um `GAP.md` explicando o escopo esperado e a ausência de fonte. `#00-BRIEF/referencias-ecossistema/` também tem um `GAP.md` (falta `EXECUTAR_APP_cinco_paginas.pdf`).
+`#05-VOZ-TOM`, `#06-PILARES-TAXONOMIA`, `#07-ARTIGOS-PRONTOS`, `#10-IMAGENS-CAPAS`, `#11-IMAGENS-ARTIGOS`, `#13-SEO`, `#14-COPY-SITE`, `#15-NAVEGACAO-IA`, `#16-LEGAL-EDITORIAL`, `#18-NEWSLETTER-CTA`, `#19-ANALYTICS-KPI`, `#20-ACESSIBILIDADE-PERFORMANCE`, `#21-QA-TESTES`, `#22-RELEASE-DEPLOY` — cada pasta tem um `GAP.md` explicando o escopo esperado e a ausência de fonte. `#00-BRIEF/referencias-ecossistema/` também tem um `GAP.md` (falta `EXECUTAR_APP_cinco_paginas.pdf`).
 
-Faltam ainda: `DOC-0019 Sobre o autor.zip` (autores/bios) e `EXECUTAR_APP_cinco_paginas.pdf` — nenhum dos dois veio no `DOCS.zip`.
+`#12-AUTORES-BIOS` foi preenchido posteriormente: `DOC-0019 Sobre o autor.zip` foi enviado pelo mantenedor, hash conferido contra `BENCH-001/MANIFEST.csv` (`7b945058...`), e materializado como `DOC-0019__Sobre-o-autor.md` (ver receipt, seção "Atualização"). Falta ainda apenas `EXECUTAR_APP_cinco_paginas.pdf`.
 
 ## O que foi deliberadamente excluído
 

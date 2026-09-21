@@ -3,7 +3,7 @@ task_id: D23-EXECUTAR-BLOG-IMPORT-001
 agent: Claude
 timestamp_utc: 2026-09-21T11:10:00Z
 primary_route: D23
-status: partial
+status: completed
 ---
 
 # Change Receipt
@@ -49,3 +49,12 @@ status: partial
 ## Handoff
 - pendências: DOC-0019 e o PDF de referências (acima); execução do pipeline BLOG-03…18 fica para tarefa futura no repositório `01-Executar-Echo`, mediante autorização do mantenedor.
 - próximo passo: revisão do mantenedor via PR; se aprovado, seguir para a tarefa D18 relacionada (mesma branch/PR) e, depois, decidir se/quando iniciar a implementação em `01-Executar-Echo`.
+
+## Atualização — 2026-09-21T11:30:00Z
+
+- `DOC-0019 Sobre o autor.zip` foi enviado pelo mantenedor após a materialização inicial.
+- SHA-256 do zip conferido byte a byte contra o valor já registrado em `_benchmarks/BENCH-001/MANIFEST.csv` (`7b945058cc3da82ef4fb1d5691c2fda94fa8ebc4af577f01484f2e6287aff528`) — confirma que é a mesma fonte prevista desde o intake original, não um documento novo.
+- Materializado como `#12-AUTORES-BIOS/DOC-0019__Sobre-o-autor.md`, removendo o `GAP.md` daquela pasta.
+- `BENCH-001/MANIFEST.csv` e `README.md`, `#23-MANIFEST-HANDOFF/README.md` e `#23-MANIFEST-HANDOFF/MANIFEST.csv` atualizados de acordo.
+- Pendência restante: apenas `EXECUTAR_APP_cinco_paginas.pdf` (referências-ecossistema).
+- status geral da task passa de `partial` para `completed` quanto ao escopo de `DOCS.zip` + `DOC-0019`; o PDF de referências permanece como pendência isolada, não bloqueante.

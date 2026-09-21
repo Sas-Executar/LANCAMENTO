@@ -338,7 +338,7 @@ Rota: `D23__blueprints`
 - `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/campanha_tdah_gestao_projetos_12_abas_numbers_print.xlsx`
 - `Executar Blog/#10-IMAGENS-CAPAS/GAP.md`
 - `Executar Blog/#11-IMAGENS-ARTIGOS/GAP.md`
-- `Executar Blog/#12-AUTORES-BIOS/GAP.md`
+- `Executar Blog/#12-AUTORES-BIOS/DOC-0019__Sobre-o-autor.md`
 - `Executar Blog/#13-SEO/GAP.md`
 - `Executar Blog/#14-COPY-SITE/GAP.md`
 - `Executar Blog/#15-NAVEGACAO-IA/GAP.md`
