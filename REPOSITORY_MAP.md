@@ -19,6 +19,7 @@ Inventário do estado atual do repositório.
 - `_governance/ROUTES.json`
 - `_governance/RUNNER_INSTRUCTIONS.md`
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
+- `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
@@ -145,6 +146,7 @@ Rota: `D19__assets-e-cta`
 - `solution-store/SUPER_SCHEMA_SOLUTION.yaml`
 - `solution-store/obsidian-editorial/EVIDENCIAS.md`
 - `solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
+- `solution-store/obsidian-editorial/VIDEO_PRODUCTION.yaml`
 - `solution-store/obsidian-editorial/solution.yaml`
 
 ## D20 — Plataformas e repositórios

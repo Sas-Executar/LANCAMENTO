@@ -26,6 +26,11 @@ SUPER_SCHEMA_SOLUTION
 │   ├── 3 melhores casos de uso
 │   └── riscos / overkill
 ├── scoring baseado em evidência
+├── produção comercial
+│   ├── briefing de animação
+│   ├── roteiro temporal
+│   ├── direção visual
+│   └── pipeline de render determinístico
 ├── governança
 ├── qualidade e testes
 └── rastreabilidade
@@ -41,6 +46,8 @@ SUPER_SCHEMA_SOLUTION
 - Cada solução deve registrar **3 melhores casos de uso** e **3 riscos/anti-use cases**.
 - O **SEUS (Solution Evidence Utility Score)** usa escala 0–10, mas proíbe pontuação inventada: dimensão sem medição/evidência permanece `null`.
 - O score agregado só pode ser publicado após pesos, benchmarks e limiares mínimos de evidência serem calibrados e versionados.
+- A camada **commercial_production** padroniza briefings para vídeo e web interativa, incluindo mensagem, marca, cenas, áudio, execução e validação.
+- Para vídeo, o tempo de cada quadro deve ser explícito (`t = frame / fps`); renderização não deve depender de `setInterval`, scroll ou relógio de parede.
 
 ## Arquivos
 
@@ -48,4 +55,5 @@ SUPER_SCHEMA_SOLUTION
 - `obsidian-editorial/solution.yaml` — primeira instância preenchida.
 - `obsidian-editorial/TUTORIAL_PUBLICO.md` — camada visível ao usuário.
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
+- `obsidian-editorial/VIDEO_PRODUCTION.yaml` — briefing comercial preenchido para produção do vídeo da solução.
 - `SCORING_METHODOLOGY.md` — regras de medição, normalização, confiança e agregação do score.
