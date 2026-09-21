@@ -2,7 +2,7 @@ schema_version: "1.0"
 carousel_id: "CAROUSEL-OBS-EDITORIAL-001"
 solution_id: "SOL-OBS-EDITORIAL-001"
 orientation: "vertical"
-status: "STRUCTURE_READY_VISUAL_TOKENS_PENDING"
+status: "BRIEF_READY"
 
 slides:
   - {id: "S01", role: "hook", headline: "Você já tem as informações.", body: "O problema é conseguir operar com elas."}
@@ -12,5 +12,6 @@ slides:
   - {id: "S05", role: "result", headline: "Documentação navegável e atualizável.", body: "A estrutura continua crescendo com o projeto."}
   - {id: "S06", role: "cta", headline: "Transforme um briefing seu.", body: "Start para começar ou Download quando o pacote estiver publicado."}
 
-visual_tokens_ref: null
+visual_tokens_ref: "../../../../D11__experiencia-e-projeto/oficina/design-system-source/design-system/tokens/design-tokens.json"
+design_system_binding_ref: "../../../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
 wireframe_tokens_ref: "../../../../D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
