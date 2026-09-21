@@ -6,7 +6,7 @@
 - **classification:** update + create
 - **source:** solicitação explícita do mantenedor.
 - **objective:** elevar o macro schema, instituir taxonomia de áreas/profissões/tarefas/artefatos e transformar o YAML bundle em saída oficial para produção, divulgação e submissão na loja.
-- **status:** partial
+- **status:** completed
 
 ## Decisões
 
@@ -40,10 +40,12 @@
 
 ## Validação
 
-- Governança: pendente do workflow do PR.
-- Bundle: será gerado após estabilização dos arquivos canônicos nesta branch.
-- Índices: serão sincronizados antes do PR final.
+- Governança: **PASS** — Repository Governance run #14.
+- Bundle: **GENERATED** — bundle v1.1 com 5 documentos YAML e snapshots v1.3.
+- Índices: **PASS** — `REPOSITORY_MAP.md` sincronizado e validado pelo workflow.
 
 ## Handoff
 
 Branch: `feat/d19-taxonomy-release-handoff`.
+PR: `#4`.
+Autorização de merge: concedida pelo mantenedor; merge após workflow verde.
