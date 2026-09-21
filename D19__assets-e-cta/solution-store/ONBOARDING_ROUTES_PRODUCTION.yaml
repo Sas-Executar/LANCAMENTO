@@ -1,0 +1,167 @@
+schema_version: "1.0"
+onboarding_id: "OFICINA_ROUTES_PRODUCTION_ONBOARDING"
+status: "canonical"
+primary_route: "D19"
+purpose: >-
+  Ensinar pessoas e agentes a resolver a rota correta de cada artefato da Oficina
+  e conduzir uma solução do ingresso até publicação sem duplicar fontes canônicas.
+
+entrypoint:
+  required_reading:
+    - "README.md"
+    - "AGENTS.md"
+    - "MASTER_INDEX.md"
+    - "_governance/ROUTES.json"
+    - "REPOSITORY_MAP.md"
+    - "_governance/ENTRY_PROTOCOL.md"
+    - "_governance/EXIT_PROTOCOL.md"
+  oficina_reading:
+    - "D19__assets-e-cta/solution-store/README.md"
+    - "D19__assets-e-cta/solution-store/OFICINA_PRODUCTION_RUNBOOK.yaml"
+    - "D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+    - "D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+
+routing_model:
+  policy: "primary-purpose"
+  rule: >-
+    O arquivo vive na rota de sua finalidade primária. Dependências entre áreas
+    são referências cruzadas; não duplicar a fonte canônica.
+  fallback: "_governance/triage"
+  production_routes:
+    D11:
+      role: "UX, wireframes, Design System e experiência"
+      canonical_refs:
+        - "D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+        - "D11__experiencia-e-projeto/oficina/WIREFRAME_TOKENS.yaml"
+    D12:
+      role: "Engenharia, componentes, renderização e integração"
+      canonical_refs:
+        - "D12__engenharia/oficina/REACT_COMPONENT_CONTRACT.yaml"
+    D19:
+      role: "Rota primária da solução, assets, handoff, submissão e release"
+      canonical_refs:
+        - "D19__assets-e-cta/solution-store/SUPER_SCHEMA_SOLUTION.yaml"
+        - "D19__assets-e-cta/solution-store/OFICINA_PRODUCTION_RUNBOOK.yaml"
+        - "D19__assets-e-cta/solution-store/PRODUCTION_HANDOFF_SCHEMA.yaml"
+        - "D19__assets-e-cta/solution-store/PUBLICATION_ASSET_SCHEMA.yaml"
+        - "D19__assets-e-cta/solution-store/STORE_SUBMISSION_SCHEMA.yaml"
+        - "D19__assets-e-cta/solution-store/RELEASE_MANIFEST_SCHEMA.yaml"
+    D22:
+      role: "ADRs, decisões formais e trilha de mudança"
+      canonical_refs:
+        - "D22__decision-and-register-log 2/oficina/"
+    D23:
+      role: "Blueprints reutilizáveis quando um padrão de implementação transcende uma solução"
+      canonical_refs:
+        - "D23__blueprints/"
+  domain_routes:
+    rule: >-
+      D01-D17 e D20-D21 continuam sendo fontes canônicas quando o conteúdo pertence
+      ao domínio. A solução publicada em D19 referencia essas fontes em vez de copiá-las.
+
+production_pipeline:
+  - id: "P00"
+    state: "SOURCE_IDENTIFIED"
+    action: "identificar origem, objetivo, owner e rota primária"
+    route: "governance + domain"
+    exit: "task_id e source refs definidos"
+  - id: "P01"
+    state: "INGESTED"
+    action: "registrar a entrada da solução"
+    route: "D19"
+    exit: "registro rastreável"
+  - id: "P02"
+    state: "CLASSIFIED"
+    action: "resolver product type, áreas, profissões, tarefas, artefatos e nodes"
+    route: "D19"
+    exit: "classificação válida contra registries"
+  - id: "P03"
+    state: "SCHEMA_COMPLETE"
+    action: "preencher e validar o Super Schema"
+    route: "D19"
+    exit: "G1_SCHEMA_COMPLETE"
+  - id: "P04"
+    state: "BUNDLE_READY"
+    action: "gerar Production Handoff Bundle imutável"
+    route: "D19"
+    exit: "G2_BUNDLE_COMPLETE"
+  - id: "P05"
+    state: "IN_EDITORIAL_PRODUCTION"
+    action: "produzir cards, vídeo, loop/GIF, carousel, screenshots e onboarding"
+    route: "D19 + D11 + D12"
+    exit: "assets requeridos produzidos"
+  - id: "P06"
+    state: "ASSETS_READY"
+    action: "derivar variantes por canal e formato"
+    route: "D19"
+    exit: "G3_EDITORIAL_ASSETS_COMPLETE"
+  - id: "P07"
+    state: "QA_READY"
+    action: "validar claims, links, acessibilidade, mídia, formatos e licenças"
+    route: "D19"
+    exit: "G4_QA_COMPLETE"
+  - id: "P08"
+    state: "STORE_READY"
+    action: "fechar listing, mídia, CTA/download e metadados"
+    route: "D19"
+    exit: "G5_STORE_SUBMISSION_COMPLETE"
+  - id: "P09"
+    state: "PUBLISHED"
+    action: "publicar, registrar URL/data e indexar"
+    route: "D19"
+    exit: "G6_PUBLISHED"
+
+handoff_rules:
+  between_routes:
+    - from: "D19"
+      to: "D11"
+      when: "há decisão de UX, wireframe ou aplicação do Design System"
+      pass:
+        - "solution_id"
+        - "asset requirements"
+        - "wireframe/context refs"
+    - from: "D11"
+      to: "D12"
+      when: "o contrato visual precisa virar implementação"
+      pass:
+        - "design system binding"
+        - "wireframe contract"
+        - "interaction states"
+    - from: "D12"
+      to: "D19"
+      when: "implementação ou render está pronto para produção/publicação"
+      pass:
+        - "build artifact refs"
+        - "render refs"
+        - "known limitations"
+    - from: "any"
+      to: "D22"
+      when: "há decisão arquitetural ou de governança que precisa ser preservada"
+      pass:
+        - "context"
+        - "decision"
+        - "consequences"
+
+agent_fast_start:
+  - "1. Resolva a rota pelo objetivo primário."
+  - "2. Procure fonte canônica existente antes de criar."
+  - "3. Para solução de loja, use D19 como rota primária."
+  - "4. Classifique antes de produzir."
+  - "5. Preencha o Super Schema antes do bundle."
+  - "6. Gere bundle antes da produção editorial."
+  - "7. Consuma o Design System de D11; não invente tokens."
+  - "8. Use o contrato React de D12 quando houver implementação."
+  - "9. Registre decisões estruturais em D22."
+  - "10. Só publique após G1-G5 verdes; registre G6 após publicação."
+
+golden_reference:
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  path: "D19__assets-e-cta/solution-store/obsidian-editorial/"
+  purpose: "exemplo preenchido para aprender o fluxo de ponta a ponta"
+
+completion:
+  requires:
+    - "receipt criado"
+    - "REPOSITORY_MAP sincronizado"
+    - "governance validation verde"
+    - "PR revisado/mergeado"

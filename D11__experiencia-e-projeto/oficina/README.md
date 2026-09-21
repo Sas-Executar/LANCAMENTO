@@ -17,6 +17,10 @@ A Oficina consome o Design System EXECUTAR como fonte visual canônica.
 
 O submodule preserva o repositório completo. Dentro dele, `design-system/` é o package de especificação e `references/` mantém as fontes, imagens e rastreabilidade.
 
+## Entrada operacional
+
+Para entender quando o trabalho chega em D11 e como retorna à produção, consulte `../../D19__assets-e-cta/solution-store/ONBOARDING_ROUTES_PRODUCTION.md`.
+
 ## Contratos locais
 
 - `DESIGN_SYSTEM_BINDING.yaml` — binding, SOT e regras de consumo.

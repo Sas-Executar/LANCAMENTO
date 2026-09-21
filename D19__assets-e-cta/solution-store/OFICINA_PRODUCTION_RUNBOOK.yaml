@@ -1,6 +1,7 @@
 schema_version: "1.0"
 runbook_id: "OFICINA_PRODUCTION_RUNBOOK"
 status: "canonical"
+onboarding_ref: "ONBOARDING_ROUTES_PRODUCTION.yaml"
 context: >-
   A Oficina é uma loja de ferramentas multiformatos. Todas as soluções e assets do
   ecossistema entram por classificação, enriquecimento de schema, geração de bundle,
@@ -42,4 +43,6 @@ rules:
   bundle_is_production_contract: true
   product_type_controls_required_assets: true
   visual_tokens_are_external_to_wireframe_contract: true
+  canonical_visual_source: "../../D11__experiencia-e-projeto/oficina/DESIGN_SYSTEM_BINDING.yaml"
+  route_onboarding_required_before_first_write: true
   build_ready_does_not_imply_publish_ready: true

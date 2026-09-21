@@ -8,6 +8,8 @@ route: D19
 
 Este diretório concentra o padrão reutilizável para ferramentas publicadas na loja.
 
+**Comece por:** `ONBOARDING_ROUTES_PRODUCTION.md` para entender roteamento, handoffs e pipeline de produção de ponta a ponta.
+
 ## Arquitetura
 
 ```text
@@ -65,6 +67,8 @@ SUPER_SCHEMA_SOLUTION
 - `PRODUCTION_HANDOFF_SCHEMA.yaml` — contrato do bundle oficial de release.
 - `STORE_SUBMISSION_SCHEMA.yaml` — contrato de submissão/listing da loja.
 - `OFICINA_PRODUCTION_RUNBOOK.yaml` — pipeline canônico da Oficina e Definition of Done.
+- `ONBOARDING_ROUTES_PRODUCTION.md` — onboarding humano de rotas, handoffs e produção.
+- `ONBOARDING_ROUTES_PRODUCTION.yaml` — versão legível por máquina do onboarding.
 - `PUBLICATION_ASSET_SCHEMA.yaml` — contrato do manifesto de assets editoriais.
 - `STORE_CARD_SCHEMA.yaml` — família estrutural de cards para soluções/artigos/conteúdo.
 - `RELEASE_MANIFEST_SCHEMA.yaml` — lifecycle, gates e referências de release.
@@ -90,4 +94,4 @@ SUPER_SCHEMA_SOLUTION
 
 Pipeline: INGEST → CLASSIFY → SCHEMA → BUNDLE → EDITORIAL PRODUCTION → DERIVE → QA → STORE SUBMISSION → PUBLISH.
 
-Wireframes e React são contratos separados da identidade visual. As referências de UI definem arquitetura, hierarquia e interação; cores, tipografia, sombras, radius, spacing final e motion tokens permanecem pendentes de input oficial.
+Wireframes e React são contratos separados da identidade visual. As referências de UI definem arquitetura, hierarquia e interação. A identidade visual oficial é consumida do Design System EXECUTAR importado em `D11__experiencia-e-projeto/oficina/design-system-source` por meio de `DESIGN_SYSTEM_BINDING.yaml`.

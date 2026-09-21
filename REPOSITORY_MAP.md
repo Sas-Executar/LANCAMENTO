@@ -22,6 +22,7 @@ Inventário do estado atual do repositório.
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
 - `_governance/receipts/2026-09/D11-OFICINA-DESIGN-SYSTEM-IMPORT-001.md`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
+- `_governance/receipts/2026-09/D19-OFICINA-ONBOARDING-ROUTES-PRODUCTION-001.md`
 - `_governance/receipts/2026-09/D19-OFICINA-V1-4-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
@@ -150,6 +151,8 @@ Rota: `D19__assets-e-cta`
 
 - `.gitkeep`
 - `solution-store/OFICINA_PRODUCTION_RUNBOOK.yaml`
+- `solution-store/ONBOARDING_ROUTES_PRODUCTION.md`
+- `solution-store/ONBOARDING_ROUTES_PRODUCTION.yaml`
 - `solution-store/PRODUCTION_HANDOFF_SCHEMA.yaml`
 - `solution-store/PUBLICATION_ASSET_SCHEMA.yaml`
 - `solution-store/README.md`
