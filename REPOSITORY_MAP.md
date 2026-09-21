@@ -9,6 +9,7 @@ Inventário do estado atual do repositório.
 - `.github/workflows/import-executar-blog.yml`
 - `.github/workflows/setup-inicial.yml`
 - `.gitignore`
+- `.gitmodules`
 - `AGENTS.md`
 - `MASTER_INDEX.md`
 - `README.md`
@@ -19,6 +20,7 @@ Inventário do estado atual do repositório.
 - `_governance/ROUTES.json`
 - `_governance/RUNNER_INSTRUCTIONS.md`
 - `_governance/imports/EXECUTAR_BLOG_INPUT_00-23.tar.xz`
+- `_governance/receipts/2026-09/D11-OFICINA-DESIGN-SYSTEM-IMPORT-001.md`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-OFICINA-V1-4-001.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
@@ -95,6 +97,8 @@ Rota: `D10__gestao-de-produto`
 Rota: `D11__experiencia-e-projeto`
 
 - `.gitkeep`
+- `oficina/DESIGN_SYSTEM_BINDING.yaml`
+- `oficina/README.md`
 - `oficina/WIREFRAME_TOKENS.yaml`
 
 ## D12 — Engenharia
@@ -165,6 +169,7 @@ Rota: `D19__assets-e-cta`
 - `solution-store/obsidian-editorial/production/ASSET_MANIFEST.yaml`
 - `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE.yaml`
 - `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml`
+- `solution-store/obsidian-editorial/production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.5.yaml`
 - `solution-store/obsidian-editorial/release/RELEASE_MANIFEST.yaml`
 - `solution-store/obsidian-editorial/solution.yaml`
 - `solution-store/obsidian-editorial/store/ONBOARDING.yaml`
