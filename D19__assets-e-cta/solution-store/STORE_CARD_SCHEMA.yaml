@@ -1,0 +1,43 @@
+schema_version: "1.0"
+schema_id: "OFICINA_STORE_CARD"
+status: "canonical"
+
+card:
+  solution_id: null
+  release_id: null
+  content:
+    eyebrow: null
+    title: null
+    short_description: null
+    product_type: null
+    primary_area: null
+    professions: []
+    tags: []
+    metadata: []
+  media:
+    poster: null
+    video_loop: null
+    gif_fallback: null
+  actions:
+    primary: {type: "start", label: "Start", target: null}
+    secondary: {type: "download", label: "Download", enabled: null, target: null}
+  states:
+    idle: true
+    hover: true
+    focus: true
+    playing: true
+    loading: true
+    error: true
+  interaction:
+    autoplay_muted_loop: true
+    plays_inline: true
+    reduced_motion_fallback: "poster"
+  accessibility:
+    keyboard_operable: true
+    focus_visible: true
+    media_has_text_alternative: true
+
+visual_tokens:
+  status: "PENDING_OWNER_INPUT"
+  ref: null
+  rule: "Wireframe/component contract must not infer final colors, typography, shadows, radii or motion tokens."
