@@ -22,6 +22,10 @@ SUPER_SCHEMA_SOLUTION
 ├── matriz de evidências — 18 campos
 ├── controle interno — 24 campos
 ├── ficha interna expandida
+├── adequação de uso
+│   ├── 3 melhores casos de uso
+│   └── riscos / overkill
+├── scoring baseado em evidência
 ├── governança
 ├── qualidade e testes
 └── rastreabilidade
@@ -34,6 +38,9 @@ SUPER_SCHEMA_SOLUTION
 - **18 campos** formam a matriz epistemológica/operacional associada.
 - **24 campos** formam o controle interno mínimo da solução.
 - O **Super Schema** é o contrato padrão; cada ferramenta é uma instância preenchida.
+- Cada solução deve registrar **3 melhores casos de uso** e **3 riscos/anti-use cases**.
+- O **SEUS (Solution Evidence Utility Score)** usa escala 0–10, mas proíbe pontuação inventada: dimensão sem medição/evidência permanece `null`.
+- O score agregado só pode ser publicado após pesos, benchmarks e limiares mínimos de evidência serem calibrados e versionados.
 
 ## Arquivos
 
@@ -41,3 +48,4 @@ SUPER_SCHEMA_SOLUTION
 - `obsidian-editorial/solution.yaml` — primeira instância preenchida.
 - `obsidian-editorial/TUTORIAL_PUBLICO.md` — camada visível ao usuário.
 - `obsidian-editorial/EVIDENCIAS.md` — fontes e limites epistemológicos.
+- `SCORING_METHODOLOGY.md` — regras de medição, normalização, confiança e agregação do score.
