@@ -1,0 +1,47 @@
+schema_version: "1.0"
+card:
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  release_id: "REL-OBS-EDITORIAL-001"
+  content:
+    eyebrow: "Skill & Workflow"
+    title: "Obsidian Editorial"
+    short_description: "Transforme conteúdo bruto em documentação Markdown estruturada e navegável."
+    product_type: "skill_workflow"
+    primary_area: "productivity"
+    professions: ["project_manager", "researcher", "student", "teacher"]
+    tags: ["obsidian", "markdown", "knowledge_management"]
+    metadata:
+      - {key: "status", value: "BUNDLE_READY"}
+  media:
+    poster: null
+    video_loop: null
+    gif_fallback: null
+  actions:
+    primary:
+      type: "start"
+      label: "Start"
+      target: "PENDING_PUBLIC_TOOL_URL"
+    secondary:
+      type: "download"
+      label: "Download"
+      enabled: true
+      target: "PENDING_DOWNLOAD_PACKAGE_URL"
+  states:
+    idle: true
+    hover: true
+    focus: true
+    playing: true
+    loading: true
+    error: true
+  interaction:
+    autoplay_muted_loop: true
+    plays_inline: true
+    reduced_motion_fallback: "poster"
+  accessibility:
+    keyboard_operable: true
+    focus_visible: true
+    media_has_text_alternative: true
+
+visual_tokens:
+  status: "PENDING_OWNER_INPUT"
+  ref: null
