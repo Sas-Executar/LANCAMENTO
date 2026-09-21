@@ -7,7 +7,7 @@
 - **source:** solicitação explícita do mantenedor em conversa.
 - **objective:** ampliar o Super Schema com uma camada padronizada de produção comercial e criar o template preenchido de vídeo do Obsidian Editorial.
 - **output:** YAML canônico + instância de produção.
-- **status:** partial
+- **status:** completed
 
 ## Arquivos afetados
 
@@ -32,10 +32,12 @@
 
 ## Validação
 
-- Governança: pendente do workflow do PR.
-- Índices: serão sincronizados antes do merge.
+- Governança: **PASS** — Repository Governance run #10.
+- Índices: **PASS** — `REPOSITORY_MAP.md` sincronizado e verificado pelo workflow.
 - Revisão de claims: nenhuma métrica quantitativa não medida foi adicionada.
 
 ## Handoff
 
 Branch: `feat/d19-commercial-video-schema`.
+PR: `#2`.
+Autorização de merge: concedida pelo mantenedor; merge permitido após workflow verde.
