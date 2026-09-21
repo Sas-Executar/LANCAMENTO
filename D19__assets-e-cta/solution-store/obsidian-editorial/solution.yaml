@@ -614,6 +614,8 @@ store_submission:
   submission_id: "STORE-OBS-EDITORIAL-001"
   schema_ref: "../STORE_SUBMISSION_SCHEMA.yaml"
   instance_ref: "store_submission.yaml"
+  product_type: "skill_workflow"
+  release_id: "REL-OBS-EDITORIAL-001"
   readiness:
     schema_complete: true
     evidence_complete: true
@@ -658,10 +660,21 @@ store_submission:
       - "projetos"
       - "pesquisa"
       - "knowledge-management"
+    node_keys:
+      - "area:productivity"
+      - "profession:project_manager"
+      - "task:document"
+      - "artifact:markdown_document"
   media:
+    card_ref: "store/STORE_CARD.yaml"
     hero_image: null
     demo_video: null
+    video_loop: null
+    gif_fallback: null
+    vertical_carousel: "store/VERTICAL_CAROUSEL.yaml"
     screenshots: []
+    onboarding_html: "store/ONBOARDING.yaml"
+    download_package: null
   publication:
     cta_url: null
     privacy_review: "PASS_NO_PERSONAL_DATA_REQUIRED"
