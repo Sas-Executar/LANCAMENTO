@@ -1,0 +1,266 @@
+super_schema_version: "1.0"
+schema_id: "SUPER_SCHEMA_SOLUTION"
+schema_status: "canonical"
+
+identity:
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_name: "Obsidian Editorial"
+  slug: "obsidian-editorial"
+  solution_type: "AI_SKILL"
+  category: "Knowledge Management"
+  version: "1.0.0"
+  source_file_ref: "obsidian-editorial.skill"
+
+public_layer:
+  problem_statement: >-
+    Informações brutas e dispersas exigem esforço manual para virar documentação
+    consistente, navegável e reutilizável no Obsidian.
+  target_user: "Usuários de Obsidian que organizam conhecimento, projetos e documentação."
+  three_p_n_three:
+    problema_que_resolve: >-
+      Reduz o trabalho de transformar notas, briefings, decisões, tarefas e referências
+      dispersas em documentação estruturada.
+    processo_aplicado: >-
+      Recebe conteúdo, interpreta o objetivo, aplica uma estrutura editorial,
+      organiza a saída em Markdown e valida consistência estrutural.
+    progresso_pretendido: >-
+      Converter informação não estruturada em uma base navegável, persistente e
+      reutilizável no Obsidian.
+    next:
+      "01": "Fornecer o conteúdo bruto."
+      "02": "Definir o resultado ou formato desejado."
+      "03": "Executar a transformação e validar a saída."
+  tutorial:
+    title: "Obsidian Editorial — de conteúdo bruto para documentação estruturada"
+    introduction: >-
+      Use a ferramenta quando você tiver conteúdo útil, mas ainda sem arquitetura
+      clara para utilização contínua no Obsidian.
+    instructions:
+      - "Cole ou anexe o conteúdo que deseja organizar."
+      - "Descreva o resultado desejado ou selecione o perfil de saída."
+      - "Execute a transformação e incorpore a estrutura validada ao vault."
+    expected_result: "Markdown estruturado, navegável e pronto para continuidade."
+  practical_example:
+    title: "De briefing caótico para documentação operacional"
+    scenario: >-
+      Um projeto de lançamento possui prazo, tarefas, responsáveis, concorrentes,
+      reuniões e referências misturados em uma única nota.
+    input_example: |-
+      Projeto: Lançamento Produto X
+      - lançamento previsto para novembro
+      - definir landing page
+      - João cuida do design
+      - falta confirmar orçamento
+      - concorrentes: A, B e C
+      - reunião sexta
+      - pesquisar estratégia de SEO
+      - campanha precisa estar pronta antes do dia 15
+      - referência: campanha anterior
+    transformation: >-
+      Separar contexto, objetivos, decisões, tarefas, pesquisa e referências em uma
+      arquitetura documental coerente.
+    output_example: |-
+      LANCAMENTO-PRODUTO-X/
+      ├── 00_INDEX.md
+      ├── 01_CONTEXT.md
+      ├── 02_OBJECTIVES.md
+      ├── 03_DECISIONS.md
+      ├── 04_TASKS.md
+      ├── 05_RESEARCH.md
+      └── 06_REFERENCES.md
+    before_state: "Informação dispersa e difícil de reutilizar."
+    after_state: "Base operacional navegável e atualizável."
+    why_it_shines: >-
+      A ferramenta demonstra maior valor quando precisa converter conteúdo heterogêneo
+      e desestruturado em uma arquitetura persistente sem exigir organização manual prévia.
+
+capability_contract:
+  process_applied: "Análise do conteúdo → estrutura editorial → Markdown → validação."
+  intended_progress: "Base Markdown organizada e reutilizável."
+  hero_use_case: "Briefing disperso → sistema documental operacional no Obsidian."
+  input_required:
+    - "texto"
+    - "markdown"
+    - "documentos"
+    - "notas"
+  output_generated:
+    - "markdown estruturado"
+    - "documentação navegável"
+  dependencies:
+    - "Obsidian para uso final da estrutura"
+  limitations:
+    - "Não valida automaticamente a veracidade factual do conteúdo-fonte."
+    - "Não constitui intervenção clínica, diagnóstico ou tratamento."
+
+instruction_quality_5w2h_invisible:
+  validation: "PASS"
+  what_defined: true
+  why_defined: true
+  who_defined: true
+  where_defined: true
+  when_defined: true
+  how_defined: true
+  how_much_defined: true
+
+evidence_matrix_18:
+  schema_version: "1.0"
+  row_id: "OBS-EDITORIAL-TDAH-PM-001"
+  funcoes_fundamentais_gestao_projetos: >-
+    Planejar, organizar, executar, monitorar e controlar entregas, escopo,
+    comunicação e trabalho associado ao projeto.
+  funcoes_executivas_area_gestao_projetos: >-
+    Priorizar, decompor trabalho, sequenciar ações, manter contexto,
+    acompanhar estado e concluir tarefas.
+  capacidades_humanas_operacionais_exigidas: >-
+    Atenção sustentada, memória de trabalho, planejamento, organização,
+    controle inibitório, gestão do tempo e retomada de contexto.
+  funcao_deficit_tdah: >-
+    Vulnerabilidades possíveis em memória de trabalho, inibição, vigilância,
+    planejamento e organização; não presentes de forma idêntica em todas as pessoas.
+  fonte_clinica:
+    title: "NIMH — Attention-Deficit/Hyperactivity Disorder: What You Need to Know"
+    url: "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+  fonte_cientifica:
+    title: "Willcutt et al. — Validity of the executive function theory of ADHD: a meta-analytic review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/15950006/"
+  funcao_executiva_cognitiva: >-
+    Planejamento/organização, memória de trabalho, inibição e atenção sustentada.
+  evidencia: >-
+    A literatura identifica diferenças médias em funções executivas associadas ao TDAH
+    e evidência de benefício para estratégias estruturadas de organização e planejamento.
+  impacto_operacional_funcao_afetada: >-
+    Planejamento, priorização, acompanhamento, retomada e conclusão de projetos.
+  impacto_operacional_mecanismo: >-
+    Alta dependência de memória interna e autorregulação pode aumentar perda de contexto,
+    esquecimento e dificuldade de sequenciamento.
+  impacto_operacional_consequencia: >-
+    Pode contribuir para procrastinação, tarefas esquecidas, fragmentação do projeto,
+    dificuldade de retomada e de finalização.
+  impacto_operacional_compensacao: >-
+    Externalizar contexto, estado, próxima ação, estrutura, evidência e critérios de
+    conclusão em documentação persistente.
+  conclusao_produto_design: >-
+    O design da ferramenta deve reduzir carga operacional ao converter conteúdo em
+    estrutura navegável, passos limitados, checkpoints e informação persistente.
+  classe_epistemica: "EVIDENCIA_CLINICA_INDIRETA + INFERENCIA_DE_DESIGN"
+  estado_validacao: "VALIDADO_PARCIALMENTE"
+  observacoes: >-
+    A associação entre TDAH e funções executivas possui suporte científico, porém a
+    eficácia clínica específica do Obsidian Editorial não foi testada.
+
+internal_control_24:
+  schema_version: "1.0"
+  solution_id: "SOL-OBS-EDITORIAL-001"
+  solution_name: "Obsidian Editorial"
+  problem_statement: "Conteúdo disperso sem estrutura operacional persistente."
+  target_user: "Usuários de Obsidian e trabalhadores do conhecimento."
+  process_applied: "Estruturação editorial automatizada em Markdown."
+  intended_progress: "Base navegável, consistente e reutilizável."
+  hero_use_case: "Briefing desorganizado transformado em documentação operacional."
+  input_required: "Texto, Markdown, notas ou documentos."
+  output_generated: "Markdown estruturado e documentação navegável."
+  next_01: "Fornecer conteúdo."
+  next_02: "Definir ou selecionar o resultado."
+  next_03: "Executar e validar a transformação."
+  five_w_two_h_validation: "PASS"
+  dependencies: "Obsidian para uso final."
+  limitations: "Sem validação factual automática; não é ferramenta clínica."
+  test_status: "DEFINED"
+  evidence_ref: "OBS-EDITORIAL-TDAH-PM-001"
+  public_tutorial_ref: "TUTORIAL_PUBLICO.md"
+  source_file_ref: "obsidian-editorial.skill"
+  lifecycle_status: "ACTIVE"
+  validation_status: "REVIEW"
+  version: "1.0.0"
+  observations: "Primeira instância do Super Schema Solution."
+
+internal_profile:
+  classification:
+    public_status: "PUBLISHED_READY"
+    lifecycle_status: "ACTIVE"
+    maturity: "STABLE_DRAFT"
+    audience:
+      - "knowledge_workers"
+      - "researchers"
+      - "project_managers"
+      - "obsidian_users"
+  problem:
+    statement: "Converter conteúdo bruto em documentação estruturada sem organização manual extensa."
+    triggers:
+      - "notas_desorganizadas"
+      - "briefing_bruto"
+      - "documentos_sem_estrutura"
+      - "projeto_com_contexto_fragmentado"
+  process:
+    summary: "Entrada → interpretação → estruturação → Markdown → validação."
+  progress:
+    intended_state: "Documentação navegável, persistente e pronta para continuidade."
+    success_conditions:
+      - "estrutura_criada"
+      - "conteudo_preservado"
+      - "markdown_valido"
+      - "navegacao_funcional"
+  next:
+    "01": "Fornecer conteúdo."
+    "02": "Escolher o resultado."
+    "03": "Executar a transformação."
+  hero_use_case:
+    problem: "Briefing de projeto disperso."
+    input: "Notas, decisões, tarefas e referências misturadas."
+    transformation: "Arquitetura documental operacional."
+    output: "Base organizada no Obsidian."
+    why_it_shines: "Elimina organização manual prévia e preserva continuidade do projeto."
+  contract:
+    inputs:
+      - "text"
+      - "markdown"
+      - "documents"
+    outputs:
+      - "markdown"
+      - "structured_documentation"
+    dependencies:
+      - "Obsidian"
+    limitations:
+      - "Não substitui validação factual."
+      - "Não substitui avaliação clínica."
+  evidence:
+    test_case_id: "TC-OBS-001"
+    expected_output_defined: true
+    tested: false
+  quality:
+    content_preservation: "REQUIRED"
+    structural_consistency: "REQUIRED"
+    usability_validation: "REQUIRED"
+
+governance:
+  owner: "D19 / Solution Store"
+  source_of_truth: "D19__assets-e-cta/solution-store/obsidian-editorial/solution.yaml"
+  created_at: "2026-09-21"
+  updated_at: "2026-09-21"
+  review_cycle: "90D"
+  validation_status: "REVIEW"
+  supersedes: null
+  changelog:
+    - version: "1.0.0"
+      date: "2026-09-21"
+      change: "Criação da primeira instância do Super Schema Solution."
+
+testing:
+  test_case_id: "TC-OBS-001"
+  test_status: "DEFINED_NOT_EXECUTED"
+  expected_output_defined: true
+  evidence_ref: "EVIDENCIAS.md"
+
+traceability:
+  source: "Conversation design + obsidian-editorial.skill reference"
+  evidence_sources:
+    - "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+    - "https://pubmed.ncbi.nlm.nih.gov/15950006/"
+    - "https://www.pmi.org/about/what-is-project-management"
+    - "https://help.obsidian.md/properties"
+  related_rows:
+    - "OBS-EDITORIAL-TDAH-PM-001"
+  tutorial_ref: "TUTORIAL_PUBLICO.md"
+  example_ref: "TUTORIAL_PUBLICO.md#exemplo-prático"
+  previous_version: null
+  current_version: "1.0.0"
