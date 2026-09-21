@@ -38,6 +38,10 @@ category_filter:
   single_select_primary: true
   multiple_taxonomy_membership_in_data: true
 
+card_family:
+  variants: ["solution", "article", "tutorial", "course"]
+  shared_behavior: ["open_detail", "keyboard_focus", "media_preview"]
+
 solution_card:
   slots:
     - "icon_or_poster"
@@ -58,6 +62,10 @@ solution_detail:
   tabs: ["overview", "contents", "examples", "dependencies"]
   example_pattern: "try_it"
   dependency_panel: true
+  conditional_capability_sections:
+    - "tools"
+    - "prompts"
+    - "connectors"
 
 learn_page:
   sections: ["featured", "getting_started", "browse_by_role"]
