@@ -3,7 +3,7 @@
 - **task_id:** D19-SOLUTION-SCHEMA-001
 - **date:** 2026-09-21
 - **primary_route:** D19 — `D19__assets-e-cta`
-- **classification:** create
+- **classification:** create + update
 - **request:** consolidar 3PN3, 5W2H invisível, matriz de 18 campos, controle interno de 24 campos, ficha interna, evidências e exemplo prático em um Super Schema YAML padrão para a loja.
 - **source:** solicitação do mantenedor em conversa.
 - **status:** partial
@@ -15,6 +15,7 @@
 - `D19__assets-e-cta/solution-store/obsidian-editorial/solution.yaml`
 - `D19__assets-e-cta/solution-store/obsidian-editorial/TUTORIAL_PUBLICO.md`
 - `D19__assets-e-cta/solution-store/obsidian-editorial/EVIDENCIAS.md`
+- `D19__assets-e-cta/solution-store/SCORING_METHODOLOGY.md`
 - `_governance/receipts/2026-09/D19-SOLUTION-SCHEMA-001.md`
 
 ## Decisões
@@ -26,6 +27,10 @@
 5. A matriz de 18 campos foi preservada com os mesmos nomes.
 6. O controle interno contém exatamente os 24 campos definidos anteriormente.
 7. Evidência clínica/científica foi separada de inferências de design.
+8. Schema elevado para versão 1.1 com três best-use cases e três riscos/anti-use cases.
+9. Adicionado SEUS-v0.1 para scoring 0–10 baseado em métricas observáveis.
+10. Dimensões sem evidência permanecem `null`; ausência de dados nunca é convertida em zero.
+11. Score agregado fica bloqueado até calibração e versionamento de pesos, benchmarks e limiares de confiança.
 
 ## Fontes externas registradas
 
