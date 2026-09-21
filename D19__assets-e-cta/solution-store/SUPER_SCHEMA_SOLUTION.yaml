@@ -1,4 +1,4 @@
-super_schema_version: "1.2"
+super_schema_version: "1.3"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -10,6 +10,27 @@ identity:
   category: null
   version: null
   source_file_ref: null
+
+
+classification:
+  taxonomy_version: "1.1"
+  registries:
+    areas: "taxonomy/AREAS.yaml"
+    professions: "taxonomy/PROFESSIONS.yaml"
+    task_types: "taxonomy/TASK_TYPES.yaml"
+    artifact_types: "taxonomy/ARTIFACT_TYPES.yaml"
+    tagging_rules: "taxonomy/TAGGING_RULES.yaml"
+  areas:
+    primary: null
+    secondary: []
+    original_categories: []
+  professions:
+    primary: []
+    related: []
+  task_types: []
+  artifact_types: []
+  semantic_tags: []
+  node_keys: []
 
 public_layer:
   problem_statement: null
@@ -442,6 +463,57 @@ internal_profile:
     structural_consistency: null
     usability_validation: null
 
+
+store_submission:
+  submission_id: null
+  schema_ref: "STORE_SUBMISSION_SCHEMA.yaml"
+  readiness:
+    schema_complete: false
+    evidence_complete: false
+    tutorial_complete: false
+    production_handoff_complete: false
+    assets_complete: false
+    publication_ready: false
+  listing:
+    title: null
+    short_description: null
+    long_description: null
+    primary_area: null
+    secondary_areas: []
+    professions: []
+    task_types: []
+    artifact_types: []
+    search_tags: []
+  media:
+    hero_image: null
+    demo_video: null
+    screenshots: []
+  publication:
+    cta_url: null
+    privacy_review: null
+    claims_review: null
+    final_approval: null
+
+production_handoff:
+  handoff_id: null
+  schema_ref: "PRODUCTION_HANDOFF_SCHEMA.yaml"
+  required_when: "READY_FOR_PRODUCTION"
+  bundle_path: null
+  bundle_schema_version: "1.1"
+  immutable_snapshot: true
+  generation_status: null
+  includes:
+    solution_snapshot: true
+    super_schema_snapshot: true
+    commercial_production_snapshot: true
+    store_submission_snapshot: true
+    evidence_refs: true
+    asset_manifest: true
+    timeline: true
+    implementation_contract: true
+    qa_acceptance: true
+    publication_gate: true
+
 governance:
   owner: null
   source_of_truth: null
@@ -466,3 +538,9 @@ traceability:
   example_ref: null
   previous_version: null
   current_version: null
+  taxonomy_version: null
+  area_registry_ref: null
+  profession_registry_ref: null
+  handoff_id: null
+  submission_id: null
+  bundle_ref: null
