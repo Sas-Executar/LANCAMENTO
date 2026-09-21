@@ -688,7 +688,7 @@ production_handoff:
   handoff_id: "HANDOFF-OBS-EDITORIAL-001"
   schema_ref: "../PRODUCTION_HANDOFF_SCHEMA.yaml"
   required_when: "READY_FOR_PRODUCTION"
-  bundle_path: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.2.yaml"
+  bundle_path: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.3.yaml"
   bundle_schema_version: "1.2"
   immutable_snapshot: true
   generation_status: "GENERATED"
@@ -755,7 +755,7 @@ traceability:
   profession_registry_ref: "../taxonomy/PROFESSIONS.yaml"
   handoff_id: "HANDOFF-OBS-EDITORIAL-001"
   submission_id: "STORE-OBS-EDITORIAL-001"
-  bundle_ref: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.2.yaml"
+  bundle_ref: "production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.3.yaml"
   product_types_registry_ref: "../taxonomy/PRODUCT_TYPES.yaml"
   asset_manifest_ref: "production/ASSET_MANIFEST.yaml"
   release_manifest_ref: "release/RELEASE_MANIFEST.yaml"
