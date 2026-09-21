@@ -1,4 +1,4 @@
-super_schema_version: "1.0"
+super_schema_version: "1.1"
 schema_id: "SUPER_SCHEMA_SOLUTION"
 schema_status: "canonical"
 
@@ -55,6 +55,189 @@ instruction_quality_5w2h_invisible:
   when_defined: false
   how_defined: false
   how_much_defined: false
+
+
+usage_fit:
+  best_use_cases:
+    - id: "BUC-01"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-02"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+    - id: "BUC-03"
+      title: null
+      problem: null
+      scenario: null
+      why_this_tool: null
+      expected_gain: null
+      fit_conditions: []
+      evidence_refs: []
+  risk_of_use:
+    - id: "RISK-01"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-02"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+    - id: "RISK-03"
+      scenario: null
+      failure_mode: null
+      overkill_reason: null
+      better_alternative: null
+      severity: null
+      likelihood: null
+      mitigation: null
+      evidence_refs: []
+
+evidence_based_scoring:
+  methodology_id: "SEUS-v0.1"
+  methodology_name: "Solution Evidence Utility Score"
+  scale:
+    min: 0
+    max: 10
+  status: "CALIBRATION_REQUIRED"
+  principles:
+    no_estimated_scores: true
+    missing_evidence_value: null
+    separate_utility_and_confidence: true
+    benchmark_required_for_relative_dimensions: true
+    context_specific_score: true
+  benchmark_context:
+    population: null
+    geography: null
+    language: null
+    observation_window: null
+    comparison_set: null
+  fit_gate:
+    target_use_case_id: null
+    eligible_for_scoring: null
+    exclusion_reason: null
+  dimensions:
+    public_pain:
+      score: null
+      raw_metrics:
+        search_interest: null
+        problem_mentions: null
+        workaround_incidence: null
+        survey_prevalence: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; no score from unsupported impression."
+    steps_reduction:
+      baseline_steps: null
+      solution_steps: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    time_reduction:
+      baseline_minutes: null
+      solution_minutes: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = clamp(0,10,10 * reduction_pct / 100)"
+    dependency_burden:
+      dependency_count: null
+      setup_minutes: null
+      paid_dependencies: null
+      specialist_dependencies: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires benchmark calibration; lower burden must map to higher score."
+    cognitive_load_reduction:
+      measurement_method: "NASA_TLX_or_equivalent_validated_measure"
+      baseline_value: null
+      solution_value: null
+      reduction_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "When comparable validated measures exist: score = clamp(0,10,10 * reduction_pct / 100)."
+    executive_function_relief:
+      functions:
+        working_memory:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        inhibitory_control:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        cognitive_flexibility:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+        planning_organization:
+          burden_before: null
+          burden_after: null
+          evidence_refs: []
+      score: null
+      confidence: null
+      scoring_rule: "No universal 0-10 conversion assumed; score requires an approved task-demand rubric or validated measurement."
+    reliability:
+      total_runs: null
+      successful_runs: null
+      success_rate_pct: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "score = 10 * success_rate_pct / 100"
+    reuse_frequency:
+      observed_uses_per_user_period: null
+      period: null
+      benchmark_ref: null
+      score: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Requires cohort benchmark calibration."
+    overkill_risk:
+      unnecessary_complexity_rate_pct: null
+      abandonment_due_to_complexity_pct: null
+      simpler_alternative_success_rate_pct: null
+      score: null
+      benchmark_ref: null
+      evidence_refs: []
+      confidence: null
+      scoring_rule: "Risk dimension; calibration required before inclusion in an aggregate utility score."
+  overall:
+    utility_score: null
+    confidence_index: null
+    evidence_adjusted_score: null
+    weights: null
+    score_status: "NOT_COMPUTED"
+    aggregation_policy: >-
+      Do not publish an overall score until weights, benchmark population and minimum
+      evidence thresholds are approved and versioned. Missing dimensions remain null,
+      never zero.
 
 evidence_matrix_18:
   schema_version: null
