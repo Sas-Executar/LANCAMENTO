@@ -27,7 +27,7 @@ gates:
 
 refs:
   solution: "../solution.yaml"
-  bundle: "../production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.3.yaml"
+  bundle: "../production/OBSIDIAN_EDITORIAL_PRODUCTION_HANDOFF_BUNDLE_v1.4.yaml"
   asset_manifest: "../production/ASSET_MANIFEST.yaml"
   store_submission: "../store_submission.yaml"
   card: "../store/STORE_CARD.yaml"
