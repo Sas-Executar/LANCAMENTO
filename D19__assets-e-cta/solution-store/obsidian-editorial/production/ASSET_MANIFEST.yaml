@@ -10,7 +10,7 @@ assets:
   store_card:
     required: true
     status: "STRUCTURE_READY"
-    output_ref: "store/STORE_CARD.yaml"
+    output_ref: "../store/STORE_CARD.yaml"
   poster:
     required: true
     status: "VISUAL_TOKENS_PENDING"
@@ -18,7 +18,7 @@ assets:
   video_master:
     required: true
     status: "BRIEF_READY"
-    output_ref: "VIDEO_PRODUCTION.yaml"
+    output_ref: "../VIDEO_PRODUCTION.yaml"
   video_variants:
     required: true
     status: "PENDING"
@@ -34,7 +34,7 @@ assets:
   vertical_carousel:
     required: true
     status: "STRUCTURE_READY"
-    output_ref: "store/VERTICAL_CAROUSEL.yaml"
+    output_ref: "../store/VERTICAL_CAROUSEL.yaml"
   screenshots:
     required: true
     status: "PENDING"
@@ -42,7 +42,7 @@ assets:
   onboarding_html:
     required: true
     status: "STRUCTURE_READY"
-    output_ref: "store/ONBOARDING.yaml"
+    output_ref: "../store/ONBOARDING.yaml"
   download_package:
     required: true
     status: "PENDING"
@@ -50,7 +50,7 @@ assets:
   store_listing:
     required: true
     status: "STRUCTURE_READY"
-    output_ref: "store_submission.yaml"
+    output_ref: "../store_submission.yaml"
 
 blockers:
   - "VISUAL_TOKENS não fornecidos."
