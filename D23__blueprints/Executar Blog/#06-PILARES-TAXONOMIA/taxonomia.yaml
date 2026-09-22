@@ -1,0 +1,123 @@
+# Taxonomia canônica do domínio Blog (Risco Cognitivo)
+source: MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx, aba 07_TAXONOMIES (LANCAMENTO, receipt
+  D23-EXECUTAR-BLOG-IMPORT-001, atualização de reconciliação)
+taxonomias:
+  asset_format:
+  - code: CAR
+    value: Carrossel
+    definition: Formato derivado do mesmo problema/solução.
+  - code: REEL
+    value: Reel
+    definition: Formato derivado do mesmo problema/solução.
+  - code: STORY
+    value: Story
+    definition: Formato derivado do mesmo problema/solução.
+  - code: PROMPT
+    value: Prompt
+    definition: Formato derivado do mesmo problema/solução.
+  - code: HTML
+    value: HTML
+    definition: Formato derivado do mesmo problema/solução.
+  - code: ART
+    value: Artigo
+    definition: Formato derivado do mesmo problema/solução.
+  - code: IMG
+    value: Imagem
+    definition: Formato derivado do mesmo problema/solução.
+  - code: PDF
+    value: PDF
+    definition: Formato derivado do mesmo problema/solução.
+  - code: PRISMA
+    value: Prisma
+    definition: Formato derivado do mesmo problema/solução.
+  - code: NEWS
+    value: Newsletter
+    definition: Formato derivado do mesmo problema/solução.
+  - code: CTA
+    value: CTA
+    definition: Formato derivado do mesmo problema/solução.
+  - code: LINKEDIN
+    value: LinkedIn
+    definition: Formato derivado do mesmo problema/solução.
+  solution_family:
+  - code: CONVERSOR
+    value: Conversor
+    definition: Família proprietária de solução editorial.
+  - code: SCANNER
+    value: Scanner
+    definition: Família proprietária de solução editorial.
+  - code: MAPA
+    value: Mapa
+    definition: Família proprietária de solução editorial.
+  - code: CHECKLIST
+    value: Checklist
+    definition: Família proprietária de solução editorial.
+  - code: PRISMA
+    value: Prisma
+    definition: Família proprietária de solução editorial.
+  - code: PROTOCOLO
+    value: Protocolo
+    definition: Família proprietária de solução editorial.
+  funnel_stage:
+  - code: DESCOBERTA
+    value: Descoberta
+    definition: Etapa do funil editorial.
+  - code: RESOLUÇÃO
+    value: Resolução
+    definition: Etapa do funil editorial.
+  - code: APROFUNDAMENTO
+    value: Aprofundamento
+    definition: Etapa do funil editorial.
+  - code: CONVERSÃO
+    value: Conversão
+    definition: Etapa do funil editorial.
+  - code: RETENÇÃO
+    value: Retenção
+    definition: Etapa do funil editorial.
+  editorial_pillar:
+  - code: null
+    value: Cognição e Neurodivergência
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Comportamento e Autogerenciamento
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Riscos Cognitivos
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Processos e Projetos Neuroadaptados
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Controles e Ergonomia
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Tecnologia e Automação
+    definition: Pilar editorial canônico.
+  - code: null
+    value: Aplicação e Evidência
+    definition: Pilar editorial canônico.
+  awareness_level:
+  - code: null
+    value: Inconsciente do problema
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente do problema
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente do mecanismo
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente do risco
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente da solução
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente do método
+    definition: Nível de consciência.
+  - code: null
+    value: Consciente do produto
+    definition: Nível de consciência.
+  - code: null
+    value: Pronto para ação
+    definition: Nível de consciência.

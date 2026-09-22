@@ -1,0 +1,57 @@
+# Arquitetura narrativa canônica (CENA -> ... -> CTA)
+source: MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx, aba 04_CONTENT_ARCHITECTURE
+arquitetura_narrativa:
+- order: 1
+  editorial_stage: CENA
+  question: Onde esse problema aparece na vida real?
+  purpose: Contextualizar
+  typical_output: Imagem/cena cotidiana
+  rule: Começar pelo ambiente, não pela teoria.
+- order: 2
+  editorial_stage: PROBLEMA
+  question: O que a pessoa percebe?
+  purpose: Reconhecimento
+  typical_output: Dor/situação
+  rule: Descrever sem diagnosticar.
+- order: 3
+  editorial_stage: RECONHECIMENTO
+  question: Como a pessoa identifica isso nela/contexto?
+  purpose: Autoidentificação
+  typical_output: Sinais observáveis
+  rule: Usar manifestações concretas.
+- order: 4
+  editorial_stage: EXPLICAÇÃO
+  question: Qual mecanismo/princípio explica?
+  purpose: Educação
+  typical_output: Mecanismo + evidência
+  rule: Separar evidência de inferência.
+- order: 5
+  editorial_stage: SOLUÇÃO
+  question: Qual intervenção reduz a barreira?
+  purpose: Direção
+  typical_output: Intervenção
+  rule: Não prometer sucesso; reduzir exposição/custo.
+- order: 6
+  editorial_stage: DEMONSTRAÇÃO
+  question: Como mostrar antes/depois?
+  purpose: Prova visual
+  typical_output: Exemplo transformado
+  rule: Resultado deve ser observável.
+- order: 7
+  editorial_stage: FERRAMENTA
+  question: O que a pessoa usa agora?
+  purpose: Aplicação
+  typical_output: Conversor/checklist/mapa/etc.
+  rule: Ferramenta materializa o método.
+- order: 8
+  editorial_stage: RESULTADO
+  question: O que deve mudar?
+  purpose: Valor
+  typical_output: Métrica/resultado
+  rule: Registrar baseline e evidência de uso.
+- order: 9
+  editorial_stage: CTA
+  question: Qual é a próxima ação?
+  purpose: Continuidade
+  typical_output: CTA único
+  rule: Um asset = uma próxima ação principal.

@@ -1,0 +1,48 @@
+# CTAs canônicos roteados por funil (Risco Cognitivo)
+source: MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx, aba 05_CTA_ROUTING
+ctas:
+- cta_id: RC-CTA-001
+  cta_name: Teste com seu relatório
+  intent: Uso
+  funnel_stage: Resolução
+  next_step: Usar ferramenta
+  destination_type: Ferramenta
+  destination: Conversor de Relatório
+  primary_metric: Usos
+  copy_template: Teste com seu relatório e compare o antes e depois.
+- cta_id: RC-CTA-002
+  cta_name: Acesse o guia
+  intent: Aprofundamento
+  funnel_stage: Aprofundamento
+  next_step: Abrir guia/recurso
+  destination_type: Conteúdo
+  destination: Guia Custo Cognitivo
+  primary_metric: Cliques
+  copy_template: Acesse o guia e aplique o processo completo.
+- cta_id: RC-CTA-003
+  cta_name: Veja o método completo
+  intent: Autoridade
+  funnel_stage: Aprofundamento
+  next_step: Ler artigo/método
+  destination_type: Blog
+  destination: Gestão de Riscos Cognitivos
+  primary_metric: Leitura
+  copy_template: Veja o método completo e entenda por que a intervenção funciona.
+- cta_id: RC-CTA-004
+  cta_name: Envie seu problema
+  intent: Pesquisa/Lead
+  funnel_stage: Conversão
+  next_step: Submeter problema
+  destination_type: Formulário
+  destination: Banco de Problemas Cognitivos
+  primary_metric: Submissões
+  copy_template: Envie uma situação real para análise e transformação.
+- cta_id: RC-CTA-005
+  cta_name: Peça ajuda
+  intent: Comercial
+  funnel_stage: Conversão
+  next_step: Solicitar atendimento
+  destination_type: Serviço
+  destination: Consultoria Executar
+  primary_metric: Leads
+  copy_template: Se o problema exige adaptação ao seu contexto, peça uma análise.

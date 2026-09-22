@@ -1,5 +1,5 @@
-# Sem fonte recebida
+# Parcialmente coberto
 
-Escopo esperado: Runbook de release e deploy.
+`automation-map.yaml` (nesta pasta) cobre os 8 gates de produção→publicação→medição de um asset editorial individual (fonte: `MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx`, aba `08_AUTOMATION_MAP`).
 
-Esta área não teve nenhum arquivo-fonte correspondente em `DOCS.zip` (task `D23-EXECUTAR-BLOG-IMPORT-001`). Por política do repositório (`AGENTS.md`), não preenchemos lacunas por inferência. Aguardando insumo do mantenedor.
+Ainda faltam, sem fonte no corpus recebido: runbook de deploy da aplicação (build/CI/CD do Blog em si — isso já existe no nível do repositório `01-Executar-Echo`, não precisa ser recriado aqui) e critérios específicos de release por post (ex.: checklist de "pronto para publicar" além dos QA-01..08 já em `#11-IMAGENS-ARTIGOS`). Por política do repositório (`AGENTS.md`), não preenchemos essas lacunas por inferência.

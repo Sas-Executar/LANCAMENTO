@@ -1,0 +1,67 @@
+# Gates de produção -> publicação -> medição (workflow de release editorial)
+source: MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx, aba 08_AUTOMATION_MAP
+gates:
+- step: 1
+  trigger: Novo PROBLEM
+  required_condition: problem_id + título + contexto
+  system_action: Criar registro canônico
+  output: RC-PROBLEM-NNN
+  gate: Pesquisa necessária
+  human_decision: Aprovar relevância
+  status: Ativo
+- step: 2
+  trigger: Status = Pesquisa
+  required_condition: Problema definido
+  system_action: Relacionar risco/custo/evidência/domínios
+  output: Brief metodológico
+  gate: Evidência suficiente
+  human_decision: Validar claims
+  status: Ativo
+- step: 3
+  trigger: Status = Validado
+  required_condition: Solução definida
+  system_action: Criar/ligar RC-SOLUTION-NNN
+  output: Solution record
+  gate: Solução materializável
+  human_decision: Aprovar intervenção
+  status: Ativo
+- step: 4
+  trigger: Solution = Ativa
+  required_condition: Brief 10Q completo
+  system_action: Gerar 12 registros de asset
+  output: CAR/REEL/STORY/PROMPT/HTML/ART/IMG/PDF/PRISMA/NEWS/CTA/LINKEDIN
+  gate: Todos herdam fonte canônica
+  human_decision: Priorizar produção
+  status: Ativo
+- step: 5
+  trigger: Asset = Produção
+  required_condition: Template disponível
+  system_action: Adaptar copy e formato sem refazer pesquisa
+  output: Asset V1
+  gate: Revisão editorial
+  human_decision: Revisar
+  status: Ativo
+- step: 6
+  trigger: Asset = Aprovado
+  required_condition: Canal/data definidos
+  system_action: Agendar/publicar
+  output: URL/publicação
+  gate: CTA + tracking
+  human_decision: Autorizar publicação
+  status: Ativo
+- step: 7
+  trigger: Asset = Publicado
+  required_condition: Métricas disponíveis
+  system_action: Registrar views/saves/shares/clicks/uses/leads
+  output: Métrica por asset/problema
+  gate: Janela de medição
+  human_decision: Interpretar resultado
+  status: Ativo
+- step: 8
+  trigger: Status = Medido
+  required_condition: Resultado comparável
+  system_action: Decidir reciclar/atualizar/arquivar
+  output: Nova versão ou encerramento
+  gate: Aprendizado registrado
+  human_decision: Aprovar próxima iteração
+  status: Ativo
