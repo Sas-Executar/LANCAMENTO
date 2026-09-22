@@ -1,0 +1,377 @@
+# 12 assets derivados planejados a partir de RC-PROBLEM-001 / TP-001
+source: MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx, aba 03_ASSET_FACTORY
+assets_planejados:
+- asset_id: RC-PROBLEM-001-CAR-01
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Carrossel
+  format_code: CAR
+  sequence: 1
+  funnel_stage: Descoberta
+  channel: Instagram
+  objective: Reconhecimento + explicação
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Por que um relatório de 20 páginas pode gerar mais custo cognitivo do que
+    ajudar?
+  cta_id: RC-CTA-001
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Salvamentos
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-REEL-02
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Reel
+  format_code: REEL
+  sequence: 2
+  funnel_stage: Descoberta
+  channel: Instagram/Reels
+  objective: Alcance + reconhecimento
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Seu relatório está exigindo memória em vez de ajudar você a decidir.
+  cta_id: RC-CTA-001
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Retenção
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-STORY-03
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Story
+  format_code: STORY
+  sequence: 3
+  funnel_stage: Descoberta
+  channel: Instagram/Stories
+  objective: Interação + diagnóstico
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Você termina relatórios longos lembrando do que realmente importa?
+  cta_id: RC-CTA-004
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Respostas
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-PROMPT-04
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Prompt
+  format_code: PROMPT
+  sequence: 4
+  funnel_stage: Resolução
+  channel: Chat/IA
+  objective: Aplicação imediata
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Transforme este relatório em uma leitura cognitivamente mais simples.
+  cta_id: RC-CTA-001
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Usos
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-HTML-05
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: HTML
+  format_code: HTML
+  sequence: 5
+  funnel_stage: Resolução
+  channel: Web
+  objective: Ferramenta prática
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Cole seu conteúdo e gere uma versão estruturada para leitura e ação.
+  cta_id: RC-CTA-002
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Usos
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-ART-06
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Artigo
+  format_code: ART
+  sequence: 6
+  funnel_stage: Aprofundamento
+  channel: Blog
+  objective: Autoridade + evidência
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Como estrutura, hierarquia e carga informacional afetam a leitura.
+  cta_id: RC-CTA-003
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Leitura completa
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-IMG-07
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Imagem
+  format_code: IMG
+  sequence: 7
+  funnel_stage: Descoberta
+  channel: Social
+  objective: Síntese visual
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: 'Antes: informação dispersa. Depois: hierarquia, decisão e próxima ação.'
+  cta_id: RC-CTA-002
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Compartilhamentos
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-PDF-08
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: PDF
+  format_code: PDF
+  sequence: 8
+  funnel_stage: Aprofundamento
+  channel: Download
+  objective: Material de referência
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Guia prático para reduzir custo cognitivo em relatórios.
+  cta_id: RC-CTA-003
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Downloads
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-PRISMA-09
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Prisma
+  format_code: PRISMA
+  sequence: 9
+  funnel_stage: Resolução
+  channel: Físico/Impressão
+  objective: Levar o controle ao ambiente
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Atalho físico para converter e revisar relatórios com menor carga.
+  cta_id: RC-CTA-002
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Uso recorrente
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-NEWS-10
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: Newsletter
+  format_code: NEWS
+  sequence: 10
+  funnel_stage: Aprofundamento
+  channel: E-mail
+  objective: Relacionamento + educação
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: O problema não é só o tamanho do relatório; é o que ele exige da cognição.
+  cta_id: RC-CTA-003
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Cliques
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-CTA-11
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: CTA
+  format_code: CTA
+  sequence: 11
+  funnel_stage: Conversão
+  channel: Cross-channel
+  objective: Próxima ação
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Teste com um relatório real e compare o antes e depois.
+  cta_id: RC-CTA-001
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Cliques
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.
+- asset_id: RC-PROBLEM-001-LINKEDIN-12
+  problem_id: RC-PROBLEM-001
+  solution_id: RC-SOLUTION-001
+  asset_format: LinkedIn
+  format_code: LINKEDIN
+  sequence: 12
+  funnel_stage: Aprofundamento
+  channel: LinkedIn
+  objective: Autoridade profissional
+  core_message: O mesmo problema, princípio e solução são adaptados ao formato sem
+    refazer a pesquisa.
+  hook: Relatórios deveriam externalizar contexto, não exigir que o leitor reconstrua
+    tudo mentalmente.
+  cta_id: RC-CTA-003
+  source_evidence_ids: SCI-WM-001; WEB-W3C-001; WEB-W3C-003
+  production_owner: Leonardo
+  status: Planejado
+  version: 1
+  planned_date: null
+  published_date: null
+  url: null
+  primary_kpi: Interações
+  views: 0
+  saves: 0
+  shares: 0
+  clicks: 0
+  tool_uses: 0
+  leads: 0
+  conversions: 0
+  engagement_rate: 0
+  reuse_status: Novo
+  notes: Derivado automaticamente do problema canônico.

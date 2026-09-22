@@ -11,11 +11,24 @@ Inventário desta materialização de `D23__blueprints/Executar Blog`.
 
 Ver `MANIFEST.csv` para a lista completa com hashes. Resumo por área em `../_benchmarks/BENCH-001/MANIFEST.csv` (rota candidata original) e no receipt.
 
-## O que ficou como lacuna (não inventado)
+## Atualização — reconciliação (`D23-EXECUTAR-BLOG-RECONCILIATION-001`)
 
-`#05-VOZ-TOM`, `#06-PILARES-TAXONOMIA`, `#07-ARTIGOS-PRONTOS`, `#10-IMAGENS-CAPAS`, `#11-IMAGENS-ARTIGOS`, `#13-SEO`, `#14-COPY-SITE`, `#15-NAVEGACAO-IA`, `#16-LEGAL-EDITORIAL`, `#18-NEWSLETTER-CTA`, `#19-ANALYTICS-KPI`, `#20-ACESSIBILIDADE-PERFORMANCE`, `#21-QA-TESTES`, `#22-RELEASE-DEPLOY` — cada pasta tem um `GAP.md` explicando o escopo esperado e a ausência de fonte. `#00-BRIEF/referencias-ecossistema/` também tem um `GAP.md` (falta `EXECUTAR_APP_cinco_paginas.pdf`).
+A materialização inicial classificou como GAP conteúdo que na verdade já existia dentro de arquivos grandes (docx/xlsx) que tinham sido lidos só por nome, não por inteiro. Releitura completa corrigiu isso:
 
-`#12-AUTORES-BIOS` foi preenchido posteriormente: `DOC-0019 Sobre o autor.zip` foi enviado pelo mantenedor, hash conferido contra `BENCH-001/MANIFEST.csv` (`7b945058...`), e materializado como `DOC-0019__Sobre-o-autor.md` (ver receipt, seção "Atualização"). Falta ainda apenas `EXECUTAR_APP_cinco_paginas.pdf`.
+- **`#07-ARTIGOS-PRONTOS`**: deixou de ser GAP. `TP-001-fatores-de-risco-cognitivo.md` é um artigo completo, extraído verbatim de `RC-KNW-001....docx`.
+- **`#09-BACKLOG-EDITORIAL/scanner-spec/`**: PRD/FRD/UX/Agent/Tech/ADR/Data/NFR/Safety/Delivery Spec completo do "Scanner Interativo de Fatores de Risco Cognitivo", também extraído do mesmo docx.
+- **`#11-IMAGENS-ARTIGOS`**: deixou de ser GAP quanto à *especificação* — spec de produção visual completa (6 peças + infográfico + roteiro de vídeo + 7 derivados + QA de 8 pontos). A mídia final (imagens/vídeo renderizados) continua GAP real — é produção, não redistribuição.
+- **`#06-PILARES-TAXONOMIA`**: deixou de ser GAP. `taxonomia.yaml` com 5 taxonomias (38 valores), extraído de `MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx`.
+- **`#04-LINHA-EDITORIAL`**: `arquitetura-narrativa.yaml` (9 estágios) adicionado, mesma fonte.
+- **`#18-NEWSLETTER-CTA`**: deixou de ser GAP. `ctas.yaml` com 5 CTAs roteados por funil.
+- **`#22-RELEASE-DEPLOY`**: parcialmente coberto — `automation-map.yaml` (8 gates de produção→publicação→medição); runbook de deploy da aplicação em si segue fora do escopo (vive no repositório `01-Executar-Echo`).
+- **`#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks`**: confirmado que o catálogo já tem **299 Quick Frameworks** reais (`catalog/frameworks.jsonl`) — não é um placeholder.
+
+**GAPs reais que permanecem** (verificados por busca exaustiva, não por falta de leitura): `#05-VOZ-TOM`, `#10-IMAGENS-CAPAS` (mídia final), `#13-SEO`, `#14-COPY-SITE`, `#15-NAVEGACAO-IA`, `#16-LEGAL-EDITORIAL`, `#19-ANALYTICS-KPI`, `#20-ACESSIBILIDADE-PERFORMANCE`, `#21-QA-TESTES`; `EXECUTAR_APP_cinco_paginas.pdf`; 2 dos "3 artigos principais" citados como meta em `Quickframes-Executar-Blog.md` (só TP-001 está redigido); a colisão de ID `RC-SOLUTION-001` (Conversor de Relatório vs. Scanner) segue sem resolução — `USER_ACTION_REQUIRED`.
+
+`#12-AUTORES-BIOS`: `DOC-0019 Sobre o autor.zip` foi enviado pelo mantenedor, hash conferido contra `BENCH-001/MANIFEST.csv` (`7b945058...`), materializado como `DOC-0019__Sobre-o-autor.md`.
+
+Ver `PLANO-MESTRE-END-TO-END.md` (nesta pasta) para o grafo completo de execução até `RELEASED + VERIFIED`.
 
 ## O que foi deliberadamente excluído
 

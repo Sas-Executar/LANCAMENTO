@@ -28,6 +28,7 @@ Inventário do estado atual do repositório.
 - `_governance/receipts/2026-09/D19-TAXONOMY-RELEASE-HANDOFF-001.md`
 - `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-BENCH-001.md`
 - `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-IMPORT-001.md`
+- `_governance/receipts/2026-09/D23-EXECUTAR-BLOG-RECONCILIATION-001.md`
 - `_governance/receipts/2026-09/GOV-BOOTSTRAP-001.md`
 - `_governance/receipts/README.md`
 - `_governance/templates/CHANGE_RECEIPT.md`
@@ -326,18 +327,21 @@ Rota: `D23__blueprints`
 - `Executar Blog/#03-DESIGN-TOKENS/natgeo-hybrid/tokens-hybrid.json`
 - `Executar Blog/#04-LINHA-EDITORIAL/PD-CLB-20260906-F01-DOC-V01__process-doc-padrao-multiplataforma.docx`
 - `Executar Blog/#04-LINHA-EDITORIAL/Quickframes-Executar-Blog.md`
+- `Executar Blog/#04-LINHA-EDITORIAL/arquitetura-narrativa.yaml`
 - `Executar Blog/#05-VOZ-TOM/GAP.md`
-- `Executar Blog/#06-PILARES-TAXONOMIA/GAP.md`
-- `Executar Blog/#07-ARTIGOS-PRONTOS/GAP.md`
+- `Executar Blog/#06-PILARES-TAXONOMIA/taxonomia.yaml`
+- `Executar Blog/#07-ARTIGOS-PRONTOS/TP-001-fatores-de-risco-cognitivo.md`
 - `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/DOC-0037__PMI-X-TDHA-X-Evidencias-21-08-docx.export.txt`
 - `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/PMI-X-TDHA-X-Evidencias-21-08.docx`
 - `Executar Blog/#08-ARTIGOS-REVISAO/PMI-TDAH-evidencias/TDHA-E-VERBO.txt`
 - `Executar Blog/#08-ARTIGOS-REVISAO/RC-KNW-001/RC-KNW-001__knowledge-pack-tp001-fatores-risco-cognitivo__v01.docx`
+- `Executar Blog/#09-BACKLOG-EDITORIAL/asset-factory.yaml`
 - `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/MASTER_EDITORIAL_RISCO_COGNITIVO_V1.xlsx`
 - `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/Risco_Cognitivo_Hub_Editorial_CMS_v1.0.xlsx`
 - `Executar Blog/#09-BACKLOG-EDITORIAL/planilhas/campanha_tdah_gestao_projetos_12_abas_numbers_print.xlsx`
+- `Executar Blog/#09-BACKLOG-EDITORIAL/scanner-spec/RC-SCAN-001-PRD-FRD-UX-AGENT-TECH-ADR-SPEC.md`
 - `Executar Blog/#10-IMAGENS-CAPAS/GAP.md`
-- `Executar Blog/#11-IMAGENS-ARTIGOS/GAP.md`
+- `Executar Blog/#11-IMAGENS-ARTIGOS/TP-001-visual-infografico-video-derivados-spec.md`
 - `Executar Blog/#12-AUTORES-BIOS/DOC-0019__Sobre-o-autor.md`
 - `Executar Blog/#13-SEO/GAP.md`
 - `Executar Blog/#14-COPY-SITE/GAP.md`
@@ -398,12 +402,14 @@ Rota: `D23__blueprints`
 - `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/evidence-ledger.csv`
 - `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/framework-card.md`
 - `Executar Blog/#17-INTEGRACOES-ECOSSISTEMA/skills/executar-safe-frameworks/templates/framework-report.md`
-- `Executar Blog/#18-NEWSLETTER-CTA/GAP.md`
+- `Executar Blog/#18-NEWSLETTER-CTA/ctas.yaml`
 - `Executar Blog/#19-ANALYTICS-KPI/GAP.md`
 - `Executar Blog/#20-ACESSIBILIDADE-PERFORMANCE/GAP.md`
 - `Executar Blog/#21-QA-TESTES/GAP.md`
 - `Executar Blog/#22-RELEASE-DEPLOY/GAP.md`
+- `Executar Blog/#22-RELEASE-DEPLOY/automation-map.yaml`
 - `Executar Blog/#23-MANIFEST-HANDOFF/MANIFEST.csv`
+- `Executar Blog/#23-MANIFEST-HANDOFF/PLANO-MESTRE-END-TO-END.md`
 - `Executar Blog/#23-MANIFEST-HANDOFF/README.md`
 - `Executar Blog/_benchmarks/BENCH-001/MANIFEST.csv`
 - `Executar Blog/_benchmarks/BENCH-001/README.md`
