@@ -3,7 +3,7 @@ task_id: D17-UIPATH-CERT-STUDY-001
 agent: ChatGPT
 timestamp_utc: 2026-09-24T13:46:00Z
 primary_route: D17
-status: partial
+status: completed
 ---
 
 # Change Receipt
@@ -21,7 +21,7 @@ status: partial
 ## Changes
 - arquivos lidos: README.md; AGENTS.md; MASTER_INDEX.md; _governance/ROUTES.json; REPOSITORY_MAP.md; _governance/ENTRY_PROTOCOL.md; _governance/EXIT_PROTOCOL.md; _governance/templates/CHANGE_RECEIPT.md
 - arquivos criados: D17__emprego-e-portfolio/uipath/PLANO_CERTIFICACAO_UIPATH.md; _governance/receipts/2026-09/D17-UIPATH-CERT-STUDY-001.md
-- arquivos alterados: pendente de sincronização de índices
+- arquivos alterados: REPOSITORY_MAP.md
 - arquivos movidos/removidos: nenhum
 
 ## Decisions
@@ -29,9 +29,9 @@ status: partial
 - conteúdo canônico afetado: novo plano de capacitação profissional em D17
 
 ## Validation
-- `python scripts/sync_indexes.py`: pendente
-- `python scripts/validate_governance.py`: pendente
+- `python scripts/sync_indexes.py`: índice sincronizado para os novos arquivos; `python scripts/sync_indexes.py --check` validado com sucesso no GitHub Actions run 36008739984
+- `python scripts/validate_governance.py`: sucesso no GitHub Actions run 36008739984
 
 ## Handoff
-- pendências: executar sincronização/validação, criar issue de acompanhamento e PR
-- próximo passo: validar branch estudos e publicar handoff
+- pendências: execução do plano de estudos e gates de certificação
+- próximo passo: acompanhar execução na issue #12; PR #13 contém o plano canônico e receipt
