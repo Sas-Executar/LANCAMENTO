@@ -143,6 +143,7 @@ Rota: `D17__emprego-e-portfolio`
 
 - `.gitkeep`
 - `uipath/PLANO_CERTIFICACAO_UIPATH.md`
+- `uipath/PLANO_DIARIO_IMPRIMIVEL_AUTOMATION_DEVELOPER_ASSOCIATE.md`
 
 ## D18 — Contratos e esquemas
 
