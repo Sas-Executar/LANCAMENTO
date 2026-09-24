@@ -20,6 +20,8 @@ Inventário do estado atual do repositório.
 - `_governance/ROUTES.json`
 - `_governance/RUNNER_INSTRUCTIONS.md`
 - `_governance/receipts/2026-09/D11-OFICINA-DESIGN-SYSTEM-IMPORT-001.md`
+- `_governance/receipts/2026-09/D17-UIPATH-CERT-STUDY-001.md`
+- `_governance/receipts/2026-09/D17-UIPATH-CERT-STUDY-002.md`
 - `_governance/receipts/2026-09/D18-RC-UNIFIED-GOVERNANCE-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-COMMERCIAL-VIDEO-SCHEMA-001.md`
 - `_governance/receipts/2026-09/D19-OFICINA-ONBOARDING-ROUTES-PRODUCTION-001.md`
@@ -141,6 +143,8 @@ Rota: `D16__midias-sociais-e-comunicacao-digital`
 Rota: `D17__emprego-e-portfolio`
 
 - `.gitkeep`
+- `uipath/PLANO_CERTIFICACAO_UIPATH.md`
+- `uipath/PLANO_DIARIO_IMPRIMIVEL_AUTOMATION_DEVELOPER_ASSOCIATE.md`
 
 ## D18 — Contratos e esquemas
 
