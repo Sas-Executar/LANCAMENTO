@@ -1,5 +1,5 @@
 ---
-status: review
+status: canonical
 task_id: D17-UIPATH-CERT-STUDY-001
 primary_route: D17
 related_routes:
